@@ -8,5 +8,6 @@ namespace Datos
 {
     public class Class1
     {
+        Console.WriteLine("Hola Mundo");
     }
 }
