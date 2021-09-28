@@ -1,7 +1,7 @@
 ﻿
 namespace Presentación
 {
-    partial class FrmUsuario_Registrar
+    partial class FrmPlanes_Registrar
     {
         /// <summary>
         /// Required designer variable.
@@ -31,16 +31,15 @@ namespace Presentación
         {
             this.SuspendLayout();
             // 
-            // FrmUsuario_Registrar
+            // FrmPlanes_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(131)))), ((int)(((byte)(149)))));
-            this.ClientSize = new System.Drawing.Size(820, 567);
-            this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmUsuario_Registrar";
-            this.Text = "FrmUsuario_Registrar";
+            this.Name = "FrmPlanes_Registrar";
+            this.Text = "FrmPlanes_Registrar";
             this.ResumeLayout(false);
 
         }

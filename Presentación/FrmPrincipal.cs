@@ -42,37 +42,8 @@ namespace Presentación
             PanelContabilidad.Location = new Point(0, 258);
         }
 
-        //ABRIR SUBVENTANAS
 
-        /*   private Form frmActual = null;
-           private void AbrirFromHijo(Form frmHijo)
-           {
-               if (frmActual != null)
-               {
-                   if (frmActual.GetType() != frmHijo.GetType())
-                   {
-                       frmActual.Close();
-                       frmActual = frmHijo;
-                       frmHijo.TopLevel = false;
-                       frmHijo.Dock = DockStyle.Fill;
-                       PnlCentral.Controls.Add(frmHijo);
-                       PnlCentral.Tag = frmHijo;
-                       frmHijo.BringToFront();
-                       frmHijo.Show();
-                   }
-               }
-               else
-               {
-                   frmActual = frmHijo;
-                   frmHijo.TopLevel = false;
-                   frmHijo.Dock = DockStyle.Fill;
-                   PnlCentral.Controls.Add(frmHijo);
-                   PnlCentral.Tag = frmHijo;
-                   frmHijo.BringToFront();
-                   frmHijo.Show();
-               }
-           }
-        */
+        //ABRIR SUBVENTANAS
 
         private Form frmActual = null;
         private void AbrirFormHijo(Form frmHijo)
@@ -173,6 +144,7 @@ namespace Presentación
         {
 
             SubMenuUsuarios.Visible = false;
+            AbrirFormHijo(new FrmUsuario_Consultar());
             PosicionInicial();
         }
 
@@ -180,6 +152,7 @@ namespace Presentación
         {
 
             SubMenuUsuarios.Visible = false;
+            AbrirFormHijo(new FrmUsuario_Informe());
             PosicionInicial();
         }
 
@@ -187,6 +160,7 @@ namespace Presentación
         {
 
             SubMenuUsuarios.Visible = false;
+            AbrirFormHijo(new FrmUsuario_Modificar());
             PosicionInicial();
         }
 
@@ -220,24 +194,28 @@ namespace Presentación
         private void BtnEntrenadores_registrar_Click(object sender, EventArgs e)
         {
             SubMenuEntrenadores.Visible = false;
+            AbrirFormHijo(new FrmEntrenadores_Registrar());
             PosicionInicial();
         }
 
         private void BtnEntrenadores_consultar_Click(object sender, EventArgs e)
         {
             SubMenuEntrenadores.Visible = false;
+            AbrirFormHijo(new FrmEntrenadores_Consultar());
             PosicionInicial();
         }
 
         private void BtnEntrenadores_informe_Click(object sender, EventArgs e)
         {
             SubMenuEntrenadores.Visible = false;
+            AbrirFormHijo(new FrmEntrenadores_Informe());
             PosicionInicial();
         }
 
         private void BtnEntrenadores_modificar_Click(object sender, EventArgs e)
         {
             SubMenuEntrenadores.Visible = false;
+            AbrirFormHijo(new FrmEntrenadores_Modificar());
             PosicionInicial();
         }
 
@@ -269,18 +247,21 @@ namespace Presentación
         private void BtnPlanes_registrar_Click(object sender, EventArgs e)
         {
             SubMenuPalnes.Visible = false;
+            AbrirFormHijo(new FrmPlanes_Registrar());
             PosicionInicial();
         }
 
         private void BtnPlanes_consultar_Click(object sender, EventArgs e)
         {
             SubMenuPalnes.Visible = false;
+            AbrirFormHijo(new FrmPlanes_Consultar());
             PosicionInicial();
         }
 
         private void BtnPlanes_modificar_Click(object sender, EventArgs e)
         {
             SubMenuPalnes.Visible = false;
+            AbrirFormHijo(new FrmPlanes_Modificar());
             PosicionInicial();
         }
 
@@ -289,7 +270,7 @@ namespace Presentación
 
         private void BtnContabilidad_Click(object sender, EventArgs e)
         {
-
+            AbrirFormHijo(new FrmContabilidad());
         }
 
         

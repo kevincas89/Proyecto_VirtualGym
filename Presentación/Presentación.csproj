@@ -46,17 +46,83 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmContabilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContabilidad.Designer.cs">
+      <DependentUpon>FrmContabilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEntrenadores_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEntrenadores_Consultar.Designer.cs">
+      <DependentUpon>FrmEntrenadores_Consultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEntrenadores_Informe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEntrenadores_Informe.Designer.cs">
+      <DependentUpon>FrmEntrenadores_Informe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEntrenadores_Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEntrenadores_Modificar.Designer.cs">
+      <DependentUpon>FrmEntrenadores_Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEntrenadores_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEntrenadores_Registrar.Designer.cs">
+      <DependentUpon>FrmEntrenadores_Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPlanes_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlanes_Consultar.Designer.cs">
+      <DependentUpon>FrmPlanes_Consultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPlanes_Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlanes_Modificar.Designer.cs">
+      <DependentUpon>FrmPlanes_Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPlanes_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPlanes_Registrar.Designer.cs">
+      <DependentUpon>FrmPlanes_Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuario_Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuario_Consultar.Designer.cs">
+      <DependentUpon>FrmUsuario_Consultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuario_Informe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuario_Informe.Designer.cs">
+      <DependentUpon>FrmUsuario_Informe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuario_Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuario_Modificar.Designer.cs">
+      <DependentUpon>FrmUsuario_Modificar.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuario_Registrar.cs">
       <SubType>Form</SubType>
@@ -66,11 +132,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmContabilidad.resx">
+      <DependentUpon>FrmContabilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntrenadores_Consultar.resx">
+      <DependentUpon>FrmEntrenadores_Consultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntrenadores_Informe.resx">
+      <DependentUpon>FrmEntrenadores_Informe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntrenadores_Modificar.resx">
+      <DependentUpon>FrmEntrenadores_Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntrenadores_Registrar.resx">
+      <DependentUpon>FrmEntrenadores_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlanes_Consultar.resx">
+      <DependentUpon>FrmPlanes_Consultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlanes_Modificar.resx">
+      <DependentUpon>FrmPlanes_Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPlanes_Registrar.resx">
+      <DependentUpon>FrmPlanes_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuario_Consultar.resx">
+      <DependentUpon>FrmUsuario_Consultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuario_Informe.resx">
+      <DependentUpon>FrmUsuario_Informe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuario_Modificar.resx">
+      <DependentUpon>FrmUsuario_Modificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario_Registrar.resx">
       <DependentUpon>FrmUsuario_Registrar.cs</DependentUpon>
