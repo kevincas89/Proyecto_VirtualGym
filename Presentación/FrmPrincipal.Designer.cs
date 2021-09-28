@@ -90,9 +90,6 @@ namespace Presentación
             this.BtnMinimizar = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.PnlCentral = new System.Windows.Forms.Panel();
-            this.LblFecha = new System.Windows.Forms.Label();
-            this.LblHora = new System.Windows.Forms.Label();
-            this.PictureInicio = new System.Windows.Forms.PictureBox();
             this.MenuVertical.SuspendLayout();
             this.PanelContabilidad.SuspendLayout();
             this.SubMenuPalnes.SuspendLayout();
@@ -118,8 +115,6 @@ namespace Presentación
             this.PnlBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).BeginInit();
-            this.PnlCentral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -314,12 +309,12 @@ namespace Presentación
             this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInicio.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnInicio.Image = ((System.Drawing.Image)(resources.GetObject("BtnInicio.Image")));
-            this.BtnInicio.Location = new System.Drawing.Point(12, 7);
+            this.BtnInicio.Location = new System.Drawing.Point(13, 3);
             this.BtnInicio.Name = "BtnInicio";
             this.BtnInicio.Size = new System.Drawing.Size(162, 106);
             this.BtnInicio.TabIndex = 10;
             this.BtnInicio.UseVisualStyleBackColor = true;
-          //  this.BtnInicio.Click += new System.EventHandler(this.BtnInicio_Click_1);
+            this.BtnInicio.Click += new System.EventHandler(this.BtnInicio_Click_1);
             // 
             // PanelPlanes
             // 
@@ -773,6 +768,7 @@ namespace Presentación
             this.PnlBarraTitulo.Name = "PnlBarraTitulo";
             this.PnlBarraTitulo.Size = new System.Drawing.Size(990, 26);
             this.PnlBarraTitulo.TabIndex = 2;
+            this.PnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlBarraTitulo_MouseDown_1);
             // 
             // BtnMinimizar
             // 
@@ -802,52 +798,20 @@ namespace Presentación
             // 
             // PnlCentral
             // 
+            this.PnlCentral.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PnlCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(131)))), ((int)(((byte)(149)))));
-            this.PnlCentral.Controls.Add(this.LblFecha);
-            this.PnlCentral.Controls.Add(this.LblHora);
-            this.PnlCentral.Controls.Add(this.PictureInicio);
             this.PnlCentral.Location = new System.Drawing.Point(179, 25);
             this.PnlCentral.Name = "PnlCentral";
             this.PnlCentral.Size = new System.Drawing.Size(820, 567);
             this.PnlCentral.TabIndex = 3;
-            // 
-            // LblFecha
-            // 
-            this.LblFecha.AutoSize = true;
-            this.LblFecha.Font = new System.Drawing.Font("Bahnschrift Condensed", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFecha.Location = new System.Drawing.Point(331, 454);
-            this.LblFecha.Name = "LblFecha";
-            this.LblFecha.Size = new System.Drawing.Size(99, 48);
-            this.LblFecha.TabIndex = 2;
-            this.LblFecha.Text = "Fecha";
-            // 
-            // LblHora
-            // 
-            this.LblHora.AutoSize = true;
-            this.LblHora.Font = new System.Drawing.Font("Bahnschrift Condensed", 65.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHora.Location = new System.Drawing.Point(291, 358);
-            this.LblHora.Name = "LblHora";
-            this.LblHora.Size = new System.Drawing.Size(177, 104);
-            this.LblHora.TabIndex = 1;
-            this.LblHora.Text = "Hora";
-            // 
-            // PictureInicio
-            // 
-            this.PictureInicio.Image = ((System.Drawing.Image)(resources.GetObject("PictureInicio.Image")));
-            this.PictureInicio.Location = new System.Drawing.Point(230, 52);
-            this.PictureInicio.Name = "PictureInicio";
-            this.PictureInicio.Size = new System.Drawing.Size(355, 279);
-            this.PictureInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureInicio.TabIndex = 0;
-            this.PictureInicio.TabStop = false;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 584);
-            this.Controls.Add(this.PnlCentral);
             this.Controls.Add(this.PnlBarraTitulo);
+            this.Controls.Add(this.PnlCentral);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPrincipal";
@@ -877,9 +841,6 @@ namespace Presentación
             this.PnlBarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnCerrar)).EndInit();
-            this.PnlCentral.ResumeLayout(false);
-            this.PnlCentral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureInicio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -946,9 +907,6 @@ namespace Presentación
         private System.Windows.Forms.PictureBox BtnMinimizar;
         private System.Windows.Forms.PictureBox BtnCerrar;
         private System.Windows.Forms.Panel PnlCentral;
-        private System.Windows.Forms.Label LblFecha;
-        private System.Windows.Forms.Label LblHora;
-        private System.Windows.Forms.PictureBox PictureInicio;
     }
 }
 

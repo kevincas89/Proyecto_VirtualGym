@@ -18,6 +18,7 @@ namespace Presentación
         public FrmPrincipal()
         {
             InitializeComponent();
+            AbrirFormHijo(new FrmInicio());
             BtnEntrenadores.Location = new Point(4, 170);
             panel_entrenadores.Location = new Point(0, 170);
             SubMenuEntrenadores.Location = new Point(48, 200);
@@ -129,16 +130,10 @@ namespace Presentación
 
        private void BtnInicio_Click_1(object sender, EventArgs e)
         {
-            AbrirFormHijo(new FrmPrincipal());
-            PnlCentral.Visible = true;
-
+            AbrirFormHijo(new FrmInicio());
         }
 
-        private void HoraFecha_Tick(object sender, EventArgs e)
-        {
-            LblHora.Text = DateTime.Now.ToString("h:mm:ss");
-            LblFecha.Text = DateTime.Now.ToShortDateString();
-        }
+        
 
 
         //USUARIOS FUNCIONES
@@ -169,11 +164,8 @@ namespace Presentación
 
         private void BtnUsuario_registrar_Click(object sender, EventArgs e)
         {
-
              SubMenuUsuarios.Visible = false;
-
              AbrirFormHijo(new FrmUsuario_Registrar());
-             PnlCentral.Visible = false;
              PosicionInicial();
         }
 

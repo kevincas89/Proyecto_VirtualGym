@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Presentación
 {
@@ -16,5 +17,13 @@ namespace Presentación
         {
             InitializeComponent();
         }
+
+        private void HoraFecha_Tick(object sender, EventArgs e)
+        {
+            LblHora.Text = DateTime.Now.ToString("h:mm:ss");
+            LblFecha.Text = DateTime.Now.ToShortDateString();
+        }
+
+        
     }
 }

@@ -38,6 +38,7 @@ namespace Presentación
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(820, 567);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmUsuario_Registrar";
             this.Text = "FrmUsuario_Registrar";
             this.ResumeLayout(false);
