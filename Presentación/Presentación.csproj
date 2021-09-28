@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\elipscontrol.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FrmContabilidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,5 +209,6 @@
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
