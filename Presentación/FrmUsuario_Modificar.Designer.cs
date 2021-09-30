@@ -29,18 +29,27 @@ namespace Presentación
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario_Modificar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtIdentificacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BtnGuardar_UsuarioModificar = new CustomControls.RJControls.RJButton();
+            this.BtnCancelar_UsuarioModificar = new CustomControls.RJControls.RJButton();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.BtnGuardar_UsuarioModificar);
+            this.panel1.Controls.Add(this.BtnCancelar_UsuarioModificar);
+            this.panel1.Controls.Add(this.TxtIdentificacion);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.rjButton2);
             this.panel1.Controls.Add(this.rjButton1);
@@ -49,6 +58,18 @@ namespace Presentación
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(527, 434);
             this.panel1.TabIndex = 3;
+            // 
+            // TxtIdentificacion
+            // 
+            this.TxtIdentificacion.BackColor = System.Drawing.Color.Gray;
+            this.TxtIdentificacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TxtIdentificacion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIdentificacion.Location = new System.Drawing.Point(192, 151);
+            this.TxtIdentificacion.Name = "TxtIdentificacion";
+            this.TxtIdentificacion.Size = new System.Drawing.Size(133, 23);
+            this.TxtIdentificacion.TabIndex = 10;
+            this.TxtIdentificacion.Validating += new System.ComponentModel.CancelEventHandler(this.TxtIdentificacion_Validating);
+            this.TxtIdentificacion.Validated += new System.EventHandler(this.TxtIdentificacion_Validated);
             // 
             // label3
             // 
@@ -61,6 +82,51 @@ namespace Presentación
             this.label3.Size = new System.Drawing.Size(210, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ingrese Identificación";
+            // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
+            // BtnGuardar_UsuarioModificar
+            // 
+            this.BtnGuardar_UsuarioModificar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnGuardar_UsuarioModificar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnGuardar_UsuarioModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnGuardar_UsuarioModificar.BorderRadius = 3;
+            this.BtnGuardar_UsuarioModificar.BorderSize = 0;
+            this.BtnGuardar_UsuarioModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnGuardar_UsuarioModificar.FlatAppearance.BorderSize = 0;
+            this.BtnGuardar_UsuarioModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar_UsuarioModificar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar_UsuarioModificar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar_UsuarioModificar.Location = new System.Drawing.Point(429, 400);
+            this.BtnGuardar_UsuarioModificar.Name = "BtnGuardar_UsuarioModificar";
+            this.BtnGuardar_UsuarioModificar.Size = new System.Drawing.Size(86, 21);
+            this.BtnGuardar_UsuarioModificar.TabIndex = 16;
+            this.BtnGuardar_UsuarioModificar.Text = "Buscar";
+            this.BtnGuardar_UsuarioModificar.TextColor = System.Drawing.Color.White;
+            this.BtnGuardar_UsuarioModificar.UseVisualStyleBackColor = false;
+            // 
+            // BtnCancelar_UsuarioModificar
+            // 
+            this.BtnCancelar_UsuarioModificar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnCancelar_UsuarioModificar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnCancelar_UsuarioModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnCancelar_UsuarioModificar.BorderRadius = 3;
+            this.BtnCancelar_UsuarioModificar.BorderSize = 0;
+            this.BtnCancelar_UsuarioModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelar_UsuarioModificar.FlatAppearance.BorderSize = 0;
+            this.BtnCancelar_UsuarioModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar_UsuarioModificar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar_UsuarioModificar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar_UsuarioModificar.Location = new System.Drawing.Point(12, 400);
+            this.BtnCancelar_UsuarioModificar.Name = "BtnCancelar_UsuarioModificar";
+            this.BtnCancelar_UsuarioModificar.Size = new System.Drawing.Size(86, 21);
+            this.BtnCancelar_UsuarioModificar.TabIndex = 15;
+            this.BtnCancelar_UsuarioModificar.Text = "Cancelar";
+            this.BtnCancelar_UsuarioModificar.TextColor = System.Drawing.Color.White;
+            this.BtnCancelar_UsuarioModificar.UseVisualStyleBackColor = false;
+            this.BtnCancelar_UsuarioModificar.Click += new System.EventHandler(this.BtnCancelar_UsuarioModificar_Click);
             // 
             // rjButton2
             // 
@@ -112,6 +178,7 @@ namespace Presentación
             this.Text = "FrmUsuario_Modificar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,5 +189,9 @@ namespace Presentación
         private System.Windows.Forms.Label label3;
         private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton1;
+        private System.Windows.Forms.TextBox TxtIdentificacion;
+        private System.Windows.Forms.ErrorProvider error;
+        private CustomControls.RJControls.RJButton BtnCancelar_UsuarioModificar;
+        private CustomControls.RJControls.RJButton BtnGuardar_UsuarioModificar;
     }
 }

@@ -156,6 +156,7 @@ namespace Presentación
             // 
             // BtnContabilidad
             // 
+            this.BtnContabilidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnContabilidad.FlatAppearance.BorderSize = 0;
             this.BtnContabilidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnContabilidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -203,6 +204,7 @@ namespace Presentación
             // 
             // BtnPlanes_modificar
             // 
+            this.BtnPlanes_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnPlanes_modificar.FlatAppearance.BorderSize = 0;
             this.BtnPlanes_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnPlanes_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -237,6 +239,7 @@ namespace Presentación
             // 
             // BtnPlanes_consultar
             // 
+            this.BtnPlanes_consultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnPlanes_consultar.FlatAppearance.BorderSize = 0;
             this.BtnPlanes_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnPlanes_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -271,6 +274,7 @@ namespace Presentación
             // 
             // BtnPlanes_registrar
             // 
+            this.BtnPlanes_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnPlanes_registrar.FlatAppearance.BorderSize = 0;
             this.BtnPlanes_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnPlanes_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -288,6 +292,7 @@ namespace Presentación
             // 
             // BtnPlanes
             // 
+            this.BtnPlanes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnPlanes.FlatAppearance.BorderSize = 0;
             this.BtnPlanes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnPlanes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -305,6 +310,7 @@ namespace Presentación
             // 
             // BtnInicio
             // 
+            this.BtnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnInicio.FlatAppearance.BorderSize = 0;
             this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInicio.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -367,6 +373,7 @@ namespace Presentación
             // 
             // BtnEntrenadores_modificar
             // 
+            this.BtnEntrenadores_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEntrenadores_modificar.FlatAppearance.BorderSize = 0;
             this.BtnEntrenadores_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnEntrenadores_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -401,6 +408,7 @@ namespace Presentación
             // 
             // BtnEntrenadores_informe
             // 
+            this.BtnEntrenadores_informe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEntrenadores_informe.FlatAppearance.BorderSize = 0;
             this.BtnEntrenadores_informe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnEntrenadores_informe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -435,6 +443,7 @@ namespace Presentación
             // 
             // BtnEntrenadores_consultar
             // 
+            this.BtnEntrenadores_consultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEntrenadores_consultar.FlatAppearance.BorderSize = 0;
             this.BtnEntrenadores_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnEntrenadores_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -469,6 +478,7 @@ namespace Presentación
             // 
             // BtnEntrenadores_registrar
             // 
+            this.BtnEntrenadores_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEntrenadores_registrar.FlatAppearance.BorderSize = 0;
             this.BtnEntrenadores_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnEntrenadores_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -486,6 +496,7 @@ namespace Presentación
             // 
             // BtnEntrenadores
             // 
+            this.BtnEntrenadores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnEntrenadores.FlatAppearance.BorderSize = 0;
             this.BtnEntrenadores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnEntrenadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -537,6 +548,7 @@ namespace Presentación
             // 
             // BtnUsuarios
             // 
+            this.BtnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUsuarios.FlatAppearance.BorderSize = 0;
             this.BtnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -605,6 +617,7 @@ namespace Presentación
             // 
             // BtnUsuarios_modificar
             // 
+            this.BtnUsuarios_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUsuarios_modificar.FlatAppearance.BorderSize = 0;
             this.BtnUsuarios_modificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnUsuarios_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -657,6 +670,7 @@ namespace Presentación
             // 
             // BtnUsuario_registrar
             // 
+            this.BtnUsuario_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUsuario_registrar.FlatAppearance.BorderSize = 0;
             this.BtnUsuario_registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnUsuario_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -674,6 +688,7 @@ namespace Presentación
             // 
             // BtnUsuarios_informe
             // 
+            this.BtnUsuarios_informe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUsuarios_informe.FlatAppearance.BorderSize = 0;
             this.BtnUsuarios_informe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnUsuarios_informe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -743,6 +758,7 @@ namespace Presentación
             // 
             // BtnUsuarios_consultar
             // 
+            this.BtnUsuarios_consultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUsuarios_consultar.FlatAppearance.BorderSize = 0;
             this.BtnUsuarios_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.BtnUsuarios_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
