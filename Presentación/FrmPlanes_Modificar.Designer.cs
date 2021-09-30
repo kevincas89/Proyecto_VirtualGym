@@ -29,18 +29,27 @@ namespace Presentación
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPlanes_Modificar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.TxtCodigoPlan = new System.Windows.Forms.TextBox();
+            this.BtnGuardar_PlanesModificar = new CustomControls.RJControls.RJButton();
+            this.BtnCancelar_PlanesModificar = new CustomControls.RJControls.RJButton();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.BtnGuardar_PlanesModificar);
+            this.panel1.Controls.Add(this.BtnCancelar_PlanesModificar);
+            this.panel1.Controls.Add(this.TxtCodigoPlan);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.rjButton2);
             this.panel1.Controls.Add(this.rjButton1);
@@ -100,6 +109,63 @@ namespace Presentación
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
+            // TxtCodigoPlan
+            // 
+            this.TxtCodigoPlan.BackColor = System.Drawing.Color.Gray;
+            this.TxtCodigoPlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TxtCodigoPlan.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigoPlan.Location = new System.Drawing.Point(201, 153);
+            this.TxtCodigoPlan.Name = "TxtCodigoPlan";
+            this.TxtCodigoPlan.Size = new System.Drawing.Size(133, 23);
+            this.TxtCodigoPlan.TabIndex = 11;
+            this.TxtCodigoPlan.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCodigoPlan_Validating);
+            this.TxtCodigoPlan.Validated += new System.EventHandler(this.TxtIdentificacion_Validated);
+            // 
+            // BtnGuardar_PlanesModificar
+            // 
+            this.BtnGuardar_PlanesModificar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnGuardar_PlanesModificar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnGuardar_PlanesModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnGuardar_PlanesModificar.BorderRadius = 3;
+            this.BtnGuardar_PlanesModificar.BorderSize = 0;
+            this.BtnGuardar_PlanesModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnGuardar_PlanesModificar.FlatAppearance.BorderSize = 0;
+            this.BtnGuardar_PlanesModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar_PlanesModificar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar_PlanesModificar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar_PlanesModificar.Location = new System.Drawing.Point(430, 398);
+            this.BtnGuardar_PlanesModificar.Name = "BtnGuardar_PlanesModificar";
+            this.BtnGuardar_PlanesModificar.Size = new System.Drawing.Size(86, 21);
+            this.BtnGuardar_PlanesModificar.TabIndex = 18;
+            this.BtnGuardar_PlanesModificar.Text = "Buscar";
+            this.BtnGuardar_PlanesModificar.TextColor = System.Drawing.Color.White;
+            this.BtnGuardar_PlanesModificar.UseVisualStyleBackColor = false;
+            // 
+            // BtnCancelar_PlanesModificar
+            // 
+            this.BtnCancelar_PlanesModificar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnCancelar_PlanesModificar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnCancelar_PlanesModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnCancelar_PlanesModificar.BorderRadius = 3;
+            this.BtnCancelar_PlanesModificar.BorderSize = 0;
+            this.BtnCancelar_PlanesModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelar_PlanesModificar.FlatAppearance.BorderSize = 0;
+            this.BtnCancelar_PlanesModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar_PlanesModificar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar_PlanesModificar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar_PlanesModificar.Location = new System.Drawing.Point(13, 398);
+            this.BtnCancelar_PlanesModificar.Name = "BtnCancelar_PlanesModificar";
+            this.BtnCancelar_PlanesModificar.Size = new System.Drawing.Size(86, 21);
+            this.BtnCancelar_PlanesModificar.TabIndex = 17;
+            this.BtnCancelar_PlanesModificar.Text = "Cancelar";
+            this.BtnCancelar_PlanesModificar.TextColor = System.Drawing.Color.White;
+            this.BtnCancelar_PlanesModificar.UseVisualStyleBackColor = false;
+            this.BtnCancelar_PlanesModificar.Click += new System.EventHandler(this.BtnCancelar_PlanesModificar_Click);
+            // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
             // FrmPlanes_Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +178,7 @@ namespace Presentación
             this.Text = "FrmPlanes_Modificar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,5 +189,9 @@ namespace Presentación
         private System.Windows.Forms.Label label3;
         private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton1;
+        private System.Windows.Forms.TextBox TxtCodigoPlan;
+        private CustomControls.RJControls.RJButton BtnGuardar_PlanesModificar;
+        private CustomControls.RJControls.RJButton BtnCancelar_PlanesModificar;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }

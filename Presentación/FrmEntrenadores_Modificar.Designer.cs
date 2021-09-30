@@ -29,18 +29,27 @@ namespace Presentación
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEntrenadores_Modificar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.TxtIdentificacion = new System.Windows.Forms.TextBox();
+            this.BtnGuardar_EntrenadoresModificar = new CustomControls.RJControls.RJButton();
+            this.BtnCancelar_EntrenadoresModificar = new CustomControls.RJControls.RJButton();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.BtnGuardar_EntrenadoresModificar);
+            this.panel1.Controls.Add(this.BtnCancelar_EntrenadoresModificar);
+            this.panel1.Controls.Add(this.TxtIdentificacion);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.rjButton2);
             this.panel1.Controls.Add(this.rjButton1);
@@ -100,6 +109,63 @@ namespace Presentación
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
+            // TxtIdentificacion
+            // 
+            this.TxtIdentificacion.BackColor = System.Drawing.Color.Gray;
+            this.TxtIdentificacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TxtIdentificacion.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.TxtIdentificacion.Location = new System.Drawing.Point(191, 155);
+            this.TxtIdentificacion.Name = "TxtIdentificacion";
+            this.TxtIdentificacion.Size = new System.Drawing.Size(133, 23);
+            this.TxtIdentificacion.TabIndex = 19;
+            this.TxtIdentificacion.Validating += new System.ComponentModel.CancelEventHandler(this.TxtIdentificacion_Validating);
+            this.TxtIdentificacion.Validated += new System.EventHandler(this.TxtIdentificacion_Validated);
+            // 
+            // BtnGuardar_EntrenadoresModificar
+            // 
+            this.BtnGuardar_EntrenadoresModificar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnGuardar_EntrenadoresModificar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnGuardar_EntrenadoresModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnGuardar_EntrenadoresModificar.BorderRadius = 3;
+            this.BtnGuardar_EntrenadoresModificar.BorderSize = 0;
+            this.BtnGuardar_EntrenadoresModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnGuardar_EntrenadoresModificar.FlatAppearance.BorderSize = 0;
+            this.BtnGuardar_EntrenadoresModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar_EntrenadoresModificar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar_EntrenadoresModificar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar_EntrenadoresModificar.Location = new System.Drawing.Point(429, 397);
+            this.BtnGuardar_EntrenadoresModificar.Name = "BtnGuardar_EntrenadoresModificar";
+            this.BtnGuardar_EntrenadoresModificar.Size = new System.Drawing.Size(86, 21);
+            this.BtnGuardar_EntrenadoresModificar.TabIndex = 21;
+            this.BtnGuardar_EntrenadoresModificar.Text = "Buscar";
+            this.BtnGuardar_EntrenadoresModificar.TextColor = System.Drawing.Color.White;
+            this.BtnGuardar_EntrenadoresModificar.UseVisualStyleBackColor = false;
+            // 
+            // BtnCancelar_EntrenadoresModificar
+            // 
+            this.BtnCancelar_EntrenadoresModificar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnCancelar_EntrenadoresModificar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnCancelar_EntrenadoresModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnCancelar_EntrenadoresModificar.BorderRadius = 3;
+            this.BtnCancelar_EntrenadoresModificar.BorderSize = 0;
+            this.BtnCancelar_EntrenadoresModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelar_EntrenadoresModificar.FlatAppearance.BorderSize = 0;
+            this.BtnCancelar_EntrenadoresModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar_EntrenadoresModificar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar_EntrenadoresModificar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar_EntrenadoresModificar.Location = new System.Drawing.Point(12, 397);
+            this.BtnCancelar_EntrenadoresModificar.Name = "BtnCancelar_EntrenadoresModificar";
+            this.BtnCancelar_EntrenadoresModificar.Size = new System.Drawing.Size(86, 21);
+            this.BtnCancelar_EntrenadoresModificar.TabIndex = 20;
+            this.BtnCancelar_EntrenadoresModificar.Text = "Cancelar";
+            this.BtnCancelar_EntrenadoresModificar.TextColor = System.Drawing.Color.White;
+            this.BtnCancelar_EntrenadoresModificar.UseVisualStyleBackColor = false;
+            this.BtnCancelar_EntrenadoresModificar.Click += new System.EventHandler(this.BtnCancelar_EntrenadoresModificar_Click);
+            // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
             // FrmEntrenadores_Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +178,7 @@ namespace Presentación
             this.Text = "FrmEntrenadores_Modificar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,5 +189,9 @@ namespace Presentación
         private System.Windows.Forms.Label label3;
         private CustomControls.RJControls.RJButton rjButton2;
         private CustomControls.RJControls.RJButton rjButton1;
+        private System.Windows.Forms.TextBox TxtIdentificacion;
+        private CustomControls.RJControls.RJButton BtnGuardar_EntrenadoresModificar;
+        private CustomControls.RJControls.RJButton BtnCancelar_EntrenadoresModificar;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }

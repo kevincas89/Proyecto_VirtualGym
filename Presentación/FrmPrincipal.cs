@@ -271,6 +271,10 @@ namespace Presentación
         private void BtnContabilidad_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new FrmContabilidad());
+            SubMenuEntrenadores.Visible = false;
+            SubMenuUsuarios.Visible = false;
+            SubMenuPalnes.Visible = false;
+            PosicionInicial();
         }
 
         
