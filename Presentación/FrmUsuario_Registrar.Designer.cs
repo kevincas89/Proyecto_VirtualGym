@@ -32,6 +32,7 @@ namespace Presentación
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario_Registrar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.BtnGuardar_UsuarioRegistro = new CustomControls.RJControls.RJButton();
             this.BtnCancelar_UsuarioRegistro = new CustomControls.RJControls.RJButton();
             this.CbxPlanes = new System.Windows.Forms.ComboBox();
@@ -51,6 +52,13 @@ namespace Presentación
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtPeso = new System.Windows.Forms.TextBox();
+            this.TxtAltura = new System.Windows.Forms.TextBox();
+            this.CbxSexo = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +67,14 @@ namespace Presentación
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.CbxSexo);
+            this.panel1.Controls.Add(this.TxtAltura);
+            this.panel1.Controls.Add(this.TxtPeso);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.BtnGuardar_UsuarioRegistro);
             this.panel1.Controls.Add(this.BtnCancelar_UsuarioRegistro);
             this.panel1.Controls.Add(this.CbxPlanes);
@@ -83,6 +99,18 @@ namespace Presentación
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(527, 434);
             this.panel1.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(243, 220);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 19);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Sexo";
             // 
             // BtnGuardar_UsuarioRegistro
             // 
@@ -132,7 +160,7 @@ namespace Presentación
             this.CbxPlanes.FormattingEnabled = true;
             this.CbxPlanes.Location = new System.Drawing.Point(182, 348);
             this.CbxPlanes.Name = "CbxPlanes";
-            this.CbxPlanes.Size = new System.Drawing.Size(133, 24);
+            this.CbxPlanes.Size = new System.Drawing.Size(112, 24);
             this.CbxPlanes.TabIndex = 13;
             // 
             // TxtCelular
@@ -141,7 +169,7 @@ namespace Presentación
             this.TxtCelular.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TxtCelular.Location = new System.Drawing.Point(182, 306);
             this.TxtCelular.Name = "TxtCelular";
-            this.TxtCelular.Size = new System.Drawing.Size(133, 23);
+            this.TxtCelular.Size = new System.Drawing.Size(112, 23);
             this.TxtCelular.TabIndex = 12;
             this.TxtCelular.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCelular_Validating);
             this.TxtCelular.Validated += new System.EventHandler(this.TxtCelular_Validated);
@@ -326,6 +354,86 @@ namespace Presentación
             // 
             this.error.ContainerControl = this;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(323, 307);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 19);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Altura";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(323, 353);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 19);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Peso";
+            // 
+            // TxtPeso
+            // 
+            this.TxtPeso.BackColor = System.Drawing.Color.Gray;
+            this.TxtPeso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TxtPeso.Location = new System.Drawing.Point(387, 348);
+            this.TxtPeso.Name = "TxtPeso";
+            this.TxtPeso.Size = new System.Drawing.Size(47, 23);
+            this.TxtPeso.TabIndex = 21;
+            this.TxtPeso.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPeso_Validating);
+            this.TxtPeso.Validated += new System.EventHandler(this.TxtPeso_Validated);
+            // 
+            // TxtAltura
+            // 
+            this.TxtAltura.BackColor = System.Drawing.Color.Gray;
+            this.TxtAltura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TxtAltura.Location = new System.Drawing.Point(387, 306);
+            this.TxtAltura.Name = "TxtAltura";
+            this.TxtAltura.Size = new System.Drawing.Size(47, 23);
+            this.TxtAltura.TabIndex = 22;
+            this.TxtAltura.Validating += new System.ComponentModel.CancelEventHandler(this.TxtAltura_Validating);
+            this.TxtAltura.Validated += new System.EventHandler(this.TxtAltura_Validated);
+            // 
+            // CbxSexo
+            // 
+            this.CbxSexo.BackColor = System.Drawing.Color.Gray;
+            this.CbxSexo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CbxSexo.FormattingEnabled = true;
+            this.CbxSexo.Location = new System.Drawing.Point(300, 216);
+            this.CbxSexo.Name = "CbxSexo";
+            this.CbxSexo.Size = new System.Drawing.Size(63, 24);
+            this.CbxSexo.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(440, 310);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(25, 16);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Mt";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(440, 354);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(26, 16);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Kg";
+            // 
             // FrmUsuario_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -369,5 +477,13 @@ namespace Presentación
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.TextBox TxtIdentificacion;
         private System.Windows.Forms.ErrorProvider error;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox CbxSexo;
+        private System.Windows.Forms.TextBox TxtAltura;
+        private System.Windows.Forms.TextBox TxtPeso;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

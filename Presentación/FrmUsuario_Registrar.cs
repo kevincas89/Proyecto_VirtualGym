@@ -157,5 +157,39 @@ namespace Presentación
         {
             error.SetError(TxtCelular, "");
         }
+
+
+        //VALIDANDO ALTURA
+        private void TxtAltura_Validating(object sender, CancelEventArgs e)
+        {
+            if (!ValidarCampoNumerico(TxtAltura.Text, out string mensaje))
+            {
+                error.SetError(TxtAltura, mensaje);
+                e.Cancel = true;
+                TxtAltura.Select(0, TxtAltura.Text.Length);
+            }
+        }
+
+        private void TxtAltura_Validated(object sender, EventArgs e)
+        {
+            error.SetError(TxtAltura, "");
+        }
+
+
+        //VALIDANDO PESO
+        private void TxtPeso_Validating(object sender, CancelEventArgs e)
+        {
+            if (!ValidarCampoNumerico(TxtPeso.Text, out string mensaje))
+            {
+                error.SetError(TxtPeso, mensaje);
+                e.Cancel = true;
+                TxtPeso.Select(0, TxtPeso.Text.Length);
+            }
+        }
+
+        private void TxtPeso_Validated(object sender, EventArgs e)
+        {
+            error.SetError(TxtPeso, "");
+        }
     }
 }
