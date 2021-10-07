@@ -32,6 +32,8 @@ namespace Presentación
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEntrenadores_Registrar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CbxSexo = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.BtnGuardar_EntrenadoresRegistro = new CustomControls.RJControls.RJButton();
             this.BtnCancelar_EntrenadoresRegistro = new CustomControls.RJControls.RJButton();
             this.TxtSueldo = new System.Windows.Forms.TextBox();
@@ -51,8 +53,6 @@ namespace Presentación
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label8 = new System.Windows.Forms.Label();
-            this.CbxSexo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,33 @@ namespace Presentación
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(527, 434);
             this.panel1.TabIndex = 1;
+            // 
+            // CbxSexo
+            // 
+            this.CbxSexo.BackColor = System.Drawing.Color.Gray;
+            this.CbxSexo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CbxSexo.FormattingEnabled = true;
+            this.CbxSexo.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.CbxSexo.Location = new System.Drawing.Point(293, 221);
+            this.CbxSexo.Name = "CbxSexo";
+            this.CbxSexo.Size = new System.Drawing.Size(63, 21);
+            this.CbxSexo.TabIndex = 26;
+            this.CbxSexo.Validating += new System.ComponentModel.CancelEventHandler(this.CbxSexo_Validating);
+            this.CbxSexo.Validated += new System.EventHandler(this.CbxSexo_Validated);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(236, 220);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 19);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Sexo";
             // 
             // BtnGuardar_EntrenadoresRegistro
             // 
@@ -337,28 +364,6 @@ namespace Presentación
             // error
             // 
             this.error.ContainerControl = this;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(236, 220);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 19);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Sexo";
-            // 
-            // CbxSexo
-            // 
-            this.CbxSexo.BackColor = System.Drawing.Color.Gray;
-            this.CbxSexo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CbxSexo.FormattingEnabled = true;
-            this.CbxSexo.Location = new System.Drawing.Point(293, 221);
-            this.CbxSexo.Name = "CbxSexo";
-            this.CbxSexo.Size = new System.Drawing.Size(63, 21);
-            this.CbxSexo.TabIndex = 26;
             // 
             // FrmEntrenadores_Registrar
             // 

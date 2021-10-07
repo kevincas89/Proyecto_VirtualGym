@@ -159,6 +159,8 @@ namespace Presentación
             error.SetError(TxtCelular, "");
         }
 
+
+        //VALIDANDO SUELDO
         private void TxtSueldo_Validating(object sender, CancelEventArgs e)
         {
             if (!ValidarCampoNumerico(TxtSueldo.Text, out string mensaje))
@@ -172,6 +174,22 @@ namespace Presentación
         private void TxtSueldo_Validated(object sender, EventArgs e)
         {
             error.SetError(TxtSueldo, "");
+        }
+
+        //VALIDANDO SEXO
+        private void CbxSexo_Validating(object sender, CancelEventArgs e)
+        {
+            if (CbxSexo.Text.Equals(""))
+            {
+                error.SetError(CbxSexo, "llena este campo");
+                e.Cancel = true;
+                CbxSexo.Select(0, CbxSexo.Text.Length);
+            }
+        }
+
+        private void CbxSexo_Validated(object sender, EventArgs e)
+        {
+            error.SetError(CbxSexo, "");
         }
     }
 }

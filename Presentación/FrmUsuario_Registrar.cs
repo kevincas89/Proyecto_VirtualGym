@@ -191,5 +191,21 @@ namespace Presentación
         {
             error.SetError(TxtPeso, "");
         }
+
+        //VALIDANDO SEXO
+        private void CbxSexo_Validating(object sender, CancelEventArgs e)
+        {
+            if (CbxSexo.Text.Equals(""))
+            {
+                error.SetError(CbxSexo, "llena este campo");
+                e.Cancel = true;
+                CbxSexo.Select(0, CbxSexo.Text.Length);
+            }
+        }
+
+        private void CbxSexo_Validated(object sender, EventArgs e)
+        {
+            error.SetError(CbxSexo, "");
+        }
     }
 }
