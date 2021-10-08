@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    class Plan
+    public class Plan
     {
 
         public string CodigoPlan { get; set; }
-        public double ValorPlan { get; set; }
+        public decimal ValorPlan { get; set; }
         public string Nombre { get; set; }
+        public int Dias { get; set; }
 
     }
 }

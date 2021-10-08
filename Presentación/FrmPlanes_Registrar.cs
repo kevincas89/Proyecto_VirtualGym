@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidad;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +14,17 @@ namespace Presentación
 {
     public partial class FrmPlanes_Registrar : Form
     {
+        PlanService service;
+
         public FrmPlanes_Registrar()
         {
+
             InitializeComponent();
+            service = new PlanService(ConfigConnection.connectionString);
         }
 
+        
+       
 
         // LIMPIAR CAMPOS
         private void LimpiarCampos(Control parent)
@@ -125,5 +133,27 @@ namespace Presentación
             error.SetError(TxtDias, "");
         }
 
+        private void BtnGuardar_PlanesRegistro_Click(object sender, EventArgs e)
+        {
+            if (ValidateChildren())
+            {
+                Int32.TryParse(TxtDias.Text,out int Dias);
+                Int32.TryParse(TxtValor.Text, out int Valor);
+
+                Plan plan = new Plan()
+                {
+                    CodigoPlan = TxtCodigoPlan.Text,
+                    Nombre = TxtNombre.Text,
+                    ValorPlan = Valor,
+                    Dias = Dias
+                };
+                MessageBox.Show(service.regitrarPlan(plan));
+                LimpiarCampos(this);
+            }
+            else
+            {
+                MessageBox.Show("Verifique los campos.");
+            }
+        }
     }
 }
