@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    class Entrenador: Persona
+    public class Entrenador: Persona
     {
-
+        public Entrenador()
+        {
+            Tipo = "Entrenador";
+        }
         public double Sueldo { get; set; }
 
     }
