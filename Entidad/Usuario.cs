@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    class Usuario : Persona
-    {
+    public class Usuario : Persona
+    {      
         public Usuario()
         {
             Tipo = "Usuario";
         }
 
-        public int DiasDisponibles { get; set; }
-        public Plan plan { get; set; }
+        public int DiasDisponibles { get; set; }        
         public double Peso { get; set; }
         public double Altura { get; set; }
         public double IndiceMasaCorporal { get; set; }
 
-
         public void CalcularIndiceMasaCorporal()
         {
-
             IndiceMasaCorporal = Peso / Altura;
-
         }
 
+        public string CodigoPlan { get; set; }
+        public Plan plan { get; set; }
+
+        public string IdEntrenador { get; set; }
+        public Entrenador Entrenador { get; set; }
     }
 
 
