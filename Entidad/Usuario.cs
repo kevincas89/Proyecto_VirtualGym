@@ -22,7 +22,16 @@ namespace Entidad
         {
             IndiceMasaCorporal = Peso / Altura;
         }
+<<<<<<< HEAD
         public Plan plan { get; set; }
+=======
+
+        public string CodigoPlan { get; set; }
+        public Plan plan { get; set; }
+
+        public string IdEntrenador { get; set; }
+        public Entrenador Entrenador { get; set; }
+>>>>>>> 3718cf7eb41d52ead7e0d16111d86f3f55d9e440
     }
 
 

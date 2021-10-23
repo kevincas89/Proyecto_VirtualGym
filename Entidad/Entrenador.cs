@@ -14,5 +14,7 @@ namespace Entidad
         }
         public double Sueldo { get; set; }
 
+        public ICollection<Usuario> Usuarios { get; set; }
+
     }
 }
