@@ -52,7 +52,7 @@ namespace Presentación
             // 
             this.LblFecha.AutoSize = true;
             this.LblFecha.Font = new System.Drawing.Font("Bahnschrift Condensed", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFecha.Location = new System.Drawing.Point(300, 469);
+            this.LblFecha.Location = new System.Drawing.Point(306, 454);
             this.LblFecha.Name = "LblFecha";
             this.LblFecha.Size = new System.Drawing.Size(117, 57);
             this.LblFecha.TabIndex = 4;
