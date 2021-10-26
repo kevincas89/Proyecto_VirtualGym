@@ -19,7 +19,7 @@ namespace Logica
             repository = new PlanRepository(connection);
         }
        
-        public string regitrarPlan(Plan plan)
+        public string regitrarPlan(Usuario plan)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Logica
             finally { connection.Close(); }
         }
 
-        public string Modificar(Plan plan, string CodPlan)
+        public string Modificar(Usuario plan, string CodPlan)
         {
             try
             {
@@ -76,10 +76,10 @@ namespace Logica
     public class PlanConsultaResponse
     {
         public string Mensaje { get; set; }
-        public List<Plan> Planes { get; set; }
+        public List<Usuario> Planes { get; set; }
         public bool Errror { get; set; }
 
-        public PlanConsultaResponse(List<Plan> planes)
+        public PlanConsultaResponse(List<Usuario> planes)
         {
             Planes = planes;
             Errror = false;

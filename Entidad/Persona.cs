@@ -13,11 +13,15 @@ namespace Entidad
         public string Tipo { get; set; }
        
         public string Identificacion { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Direccion { get; set; }
-        public string Celular { get; set; }
-        public string Sexo { get; set; }
+        public string PrimerNombre { get; set; }
+        public string SegundoNombre { get; set; }
+        public string PrimerApellido { get; set; }
+        public string SegundoApellido { get; set; }
+        public string Celular1 { get; set; }
+        public string Celular2 { get; set; }
+        public char Sexo { get; set; }
+        public DateTime FechaNacimiento { get; set; } 
+
 
     }
 }

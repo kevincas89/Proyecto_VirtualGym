@@ -62,7 +62,7 @@ namespace Presentación
 
         private void DtgPlanes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Plan plan = (Plan)DtgPlanes.CurrentRow.DataBoundItem;
+            Usuario plan = (Usuario)DtgPlanes.CurrentRow.DataBoundItem;
             TxtCodigoPlan.Text = plan.CodigoPlan;
             TxtNombre.Text = plan.Nombre;
             TxtValor.Text = Convert.ToString(plan.ValorPlan);
@@ -88,7 +88,7 @@ namespace Presentación
             Int32.TryParse(TxtDuracion.Text, out int Dias);
             Int32.TryParse(TxtValor.Text, out int Valor);
 
-            Plan plan = new Plan()
+            Usuario plan = new Usuario()
             {
                 CodigoPlan = TxtCodigoPlan.Text,
                 Nombre = TxtNombre.Text,

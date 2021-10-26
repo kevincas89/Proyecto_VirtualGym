@@ -8,6 +8,7 @@ namespace Entidad
 {
     public class Entrenador: Persona
     {
+
         public Entrenador()
         {
             Tipo = "Entrenador";

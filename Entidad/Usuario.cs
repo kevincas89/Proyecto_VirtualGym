@@ -22,7 +22,8 @@ namespace Entidad
         {
             IndiceMasaCorporal = Peso / Altura;
         }
-        public Plan plan { get; set; }
+        public Usuario plan { get; set; }
+        public Entrenador entrenador { get; set; }
 
     }
 

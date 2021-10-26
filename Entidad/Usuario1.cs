@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    public class Plan
+    public class Usuario
     {
 
         public string CodigoPlan { get; set; }
