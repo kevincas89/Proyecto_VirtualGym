@@ -85,7 +85,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContextVritualGim.cs" />
+    <Compile Include="UsuarioRepository.cs" />
+    <Compile Include="EntrenadorRepository.cs" />
+    <Compile Include="InformeRepository.cs" />
     <Compile Include="PlanRepository.cs" />
     <Compile Include="ConnectionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

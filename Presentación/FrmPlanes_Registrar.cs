@@ -140,7 +140,7 @@ namespace Presentación
                 Int32.TryParse(TxtDias.Text,out int Dias);
                 Int32.TryParse(TxtValor.Text, out int Valor);
 
-                Plan plan = new Plan()
+                Usuario plan = new Usuario()
                 {
                     CodigoPlan = TxtCodigoPlan.Text,
                     Nombre = TxtNombre.Text,
