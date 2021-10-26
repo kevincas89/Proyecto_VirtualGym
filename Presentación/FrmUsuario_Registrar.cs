@@ -125,22 +125,6 @@ namespace Presentación
             error.SetError(TxtEdad, "");
         }
 
-        //VALIDANDO DIRECCION
-        private void TxtDireccion_Validating(object sender, CancelEventArgs e)
-        {
-            if (TxtDireccion.Text.Equals(""))
-            {
-                error.SetError(TxtDireccion, "llena este campo");
-                e.Cancel = true;
-                TxtDireccion.Select(0, TxtDireccion.Text.Length);
-            }
-        }
-
-        private void TxtDireccion_Validated(object sender, EventArgs e)
-        {
-            error.SetError(TxtDireccion, "");
-        }
-
 
         //VALIDANDO CELULAR
         private void TxtCelular_Validating(object sender, CancelEventArgs e)
@@ -207,5 +191,7 @@ namespace Presentación
         {
             error.SetError(CbxSexo, "");
         }
+
+       
     }
 }

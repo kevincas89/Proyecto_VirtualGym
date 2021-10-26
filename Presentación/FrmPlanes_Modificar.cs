@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidad;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,13 @@ namespace Presentación
 {
     public partial class FrmPlanes_Modificar : Form
     {
+        private PlanService servicio;
         public FrmPlanes_Modificar()
         {
+            servicio = new PlanService(ConfigConnection.connectionString);
             InitializeComponent();
+            CargarTabla();
+
         }
 
         
@@ -54,8 +60,43 @@ namespace Presentación
             error.SetError(TxtCodigoPlan, "");
         }
 
+        private void DtgPlanes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Usuario plan = (Usuario)DtgPlanes.CurrentRow.DataBoundItem;
+            TxtCodigoPlan.Text = plan.CodigoPlan;
+            TxtNombre.Text = plan.Nombre;
+            TxtValor.Text = Convert.ToString(plan.ValorPlan);
+            TxtDuracion.Text =Convert.ToString(plan.Dias);
+        }
 
+        private void CargarTabla()
+        {
+            var respuesta = servicio.Consultar();
+            if (!respuesta.Errror)
+            {
+                DtgPlanes.DataSource = respuesta.Planes;
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje);
+            }
+        }
 
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
 
+            Int32.TryParse(TxtDuracion.Text, out int Dias);
+            Int32.TryParse(TxtValor.Text, out int Valor);
+
+            Usuario plan = new Usuario()
+            {
+                CodigoPlan = TxtCodigoPlan.Text,
+                Nombre = TxtNombre.Text,
+                ValorPlan = Valor,
+                Dias = Dias
+            };
+            MessageBox.Show(servicio.Modificar(plan,plan.CodigoPlan));
+           
+        }
     }
 }

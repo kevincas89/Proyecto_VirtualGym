@@ -8,13 +8,14 @@ namespace Entidad
 {
     public class Entrenador: Persona
     {
+
         public Entrenador()
         {
             Tipo = "Entrenador";
         }
         public double Sueldo { get; set; }
 
-        public ICollection<Usuario> Usuarios { get; set; }
+       
 
     }
 }

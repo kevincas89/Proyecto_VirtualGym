@@ -45,7 +45,7 @@
     <Compile Include="Entrenador.cs" />
     <Compile Include="InformeGeneral.cs" />
     <Compile Include="Persona.cs" />
-    <Compile Include="Plan.cs" />
+    <Compile Include="Usuario1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
