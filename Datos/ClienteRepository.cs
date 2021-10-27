@@ -42,7 +42,7 @@ namespace Datos
                 command.Parameters.Add(":Altura", OracleDbType.Double).Value = cliente.Altura;
                 command.Parameters.Add(":IMC", OracleDbType.Double).Value = cliente.IndiceMasaCorporal;
                 command.Parameters.Add(":CodPlan", OracleDbType.Varchar2).Value = cliente.plan.CodigoPlan;
-                command.Parameters.Add(":IdentificacionEntrenador", OracleDbType.Varchar2).Value = cliente.entrenador;
+                command.Parameters.Add(":IdentificacionEntrenador", OracleDbType.Varchar2).Value = cliente.entrenador.Identificacion;
                 var filas = command.ExecuteNonQuery();
                 return filas;
             }
