@@ -67,19 +67,19 @@ namespace Presentación
 
 
         //VALIDANDO NOMBRE
-        private void TxtNombre_Validating(object sender, CancelEventArgs e)
+        private void TxtPrimerNombre_Validating(object sender, CancelEventArgs e)
         {
-            if (TxtNombre.Text.Equals(""))
+            if (TxtPrimerNombre.Text.Equals(""))
             {
-                error.SetError(TxtNombre, "llena este campo");
+                error.SetError(TxtPrimerNombre, "llena este campo");
                 e.Cancel = true;
-                TxtNombre.Select(0, TxtNombre.Text.Length);
+                TxtPrimerNombre.Select(0, TxtPrimerNombre.Text.Length);
             }
         }
 
-        private void TxtNombre_Validated(object sender, EventArgs e)
+        private void TxtPrimerNombre_Validated(object sender, EventArgs e)
         {
-            error.SetError(TxtNombre, "");
+            error.SetError(TxtPrimerNombre, "");
         }
 
 
@@ -123,22 +123,7 @@ namespace Presentación
             return true;
         }
 
-        //VALIDANDO CELULAR
-        private void TxtCelular_Validating(object sender, CancelEventArgs e)
-        {
-            if (!ValidarCampoNumerico(TxtCelular.Text, out string mensaje))
-            {
-                error.SetError(TxtCelular, mensaje);
-                e.Cancel = true;
-                TxtCelular.Select(0, TxtCelular.Text.Length);
-            }
-        }
-
-        private void TxtCelular_Validated(object sender, EventArgs e)
-        {
-            error.SetError(TxtCelular, "");
-        }
-
+        
 
         //VALIDANDO ALTURA
         private void TxtAltura_Validating(object sender, CancelEventArgs e)
@@ -203,12 +188,13 @@ namespace Presentación
 
 
                     cliente.Identificacion = TxtIdentificacion.Text;
-                    cliente.PrimerNombre = TxtNombre.Text;
+                    cliente.PrimerNombre = TxtPrimerNombre.Text;
                     cliente.PrimerApellido = TxtApellido.Text;
                     cliente.Sexo = Sexo; cliente.FechaNacimiento = Fecha;
                     cliente.Celular1 = TxtCelular.Text;
                     cliente.Altura = Altura;
                     cliente.Peso = Peso;
+
                 if (entrenador != null)
                 {
                     foreach (var item in entrenadores)
