@@ -25,6 +25,7 @@ namespace Logica
         {
             try
             {
+                
                 connection. Open();
                 if (repository.BuscarPorIdentificacionCliente(cliente.Identificacion) == null)
                 {

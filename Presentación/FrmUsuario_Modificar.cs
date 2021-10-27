@@ -1,4 +1,5 @@
 ﻿using Entidad;
+using Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,10 @@ namespace Presentación
 {
     public partial class FrmUsuario_Modificar : Form
     {
+        private ClienteService servicio;
         public FrmUsuario_Modificar()
         {
+            servicio = new ClienteService(ConfigConnection.connectionString);
             InitializeComponent();
             LblPrimerNombre.Visible = false;
             TxtPrimerNombre.Visible = false;
