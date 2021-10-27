@@ -25,12 +25,13 @@ namespace Presentación
             var respuesta = entrenador.ConsultarEntrenador();
             if (!respuesta.Errror)
             {
-                DtgEntrenadores.DataSource = respuesta.Entrenadores;
+                DtgEntrenadores.DataSource = respuesta.Entrenador;
             }
             else
             {
                 MessageBox.Show(respuesta.Mensaje);
             }
+
         }
 
         private void BtnActualizar_Click(object sender, EventArgs e)

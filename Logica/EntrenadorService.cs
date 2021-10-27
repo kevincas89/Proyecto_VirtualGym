@@ -26,7 +26,7 @@ namespace Logica
                 connection.Open();
 
                 repository.GuardarEntrenador(entrenador);
-                return $"se guardo el entrenador {entrenador.PrimerNombre} exitosamente.";
+                return $"Se guardo el entrenador {entrenador.PrimerNombre} exitosamente.";
             }
             catch (Exception e)
             {
@@ -47,7 +47,7 @@ namespace Logica
                 return new EntrenadorConsultaResponse(repository.ConsultarTodosEntrenadores());
 
             }
-            catch (Exception e) { return new EntrenadorConsultaResponse($"Error{e.Message}"); }
+            catch (Exception e) { return new EntrenadorConsultaResponse($"Error {e.Message}"); }
             finally { connection.Close(); }
         }
 
@@ -77,12 +77,12 @@ namespace Logica
     public class EntrenadorConsultaResponse
     {
         public string Mensaje { get; set; }
-        public List<Entrenador> Entrenadores { get; set; }
+        public List<Entrenador> Entrenador { get; set; }
         public bool Errror { get; set; }
 
         public EntrenadorConsultaResponse(List<Entrenador> entrenadores)
         {
-            Entrenadores = entrenadores;
+            Entrenador = entrenadores;
             Errror = false;
         }
 

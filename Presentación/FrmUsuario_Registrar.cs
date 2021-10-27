@@ -16,13 +16,18 @@ namespace Presentación
     {
         ClienteService service;
         PlanService plan;
+        EntrenadorService entrenador;
         List<Planes> planes = new List<Planes>();
+        List<Entrenador> entrenadores = new List<Entrenador>();   
         public FrmUsuario_Registrar()
         {
             InitializeComponent();
             plan = new PlanService(ConfigConnection.connectionString);
             service = new ClienteService(ConfigConnection.connectionString);
+            entrenador = new EntrenadorService(ConfigConnection.connectionString);
+            CargarCombo2();
             CargarCombo();
+            
         }
 
         // LIMPIAR CAMPOS
@@ -204,7 +209,19 @@ namespace Presentación
                     cliente.Celular1 = TxtCelular.Text;
                     cliente.Altura = Altura;
                     cliente.Peso = Peso;
-                     if (planes != null)
+                if (entrenador != null)
+                {
+                    foreach (var item in entrenadores)
+                    {
+                        if (item.PrimerNombre.Equals(CbxEntrenador.Text))
+                        {
+                            cliente.entrenador = item;
+                            MessageBox.Show(service.regitrarUsuario(cliente));
+                            LimpiarCampos(this);
+                        }
+                    }
+                }
+                if (planes != null)
                      {
                         foreach (var item in planes)
                         {
@@ -216,10 +233,13 @@ namespace Presentación
                             }
                         }
                      }
-                      else
-                      {
-                           MessageBox.Show("No se pudo guardar esta Cliente");
-                      }
+
+                    
+
+                    else
+                    {
+                        MessageBox.Show("No se pudo guardar esta Cliente");
+                    }
                                       
             }
             else
@@ -227,7 +247,7 @@ namespace Presentación
                 MessageBox.Show("Verifique los campos.");
             }
         }
-
+        
         private void CargarCombo()
         {
             var respuesta = plan.Consultar();
@@ -247,6 +267,25 @@ namespace Presentación
             }
         }
 
-        
+        private void CargarCombo2()
+        {
+            var respuesta2 = entrenador.ConsultarEntrenador();
+
+            if (!respuesta2.Errror)
+            {
+                entrenadores = respuesta2.Entrenador;
+                foreach (var item in entrenadores)
+                {
+                    CbxEntrenador.Items.Add(item.PrimerNombre);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show(respuesta2.Mensaje);
+            }
+        }
+
+
     }
 }

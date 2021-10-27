@@ -33,6 +33,7 @@ namespace Presentación
             this.panel1 = new System.Windows.Forms.Panel();
             this.DtgPlanes = new System.Windows.Forms.DataGridView();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.BtnActualizar = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgPlanes)).BeginInit();
             this.SuspendLayout();
@@ -40,6 +41,7 @@ namespace Presentación
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.BtnActualizar);
             this.panel1.Controls.Add(this.DtgPlanes);
             this.panel1.Controls.Add(this.rjButton1);
             this.panel1.Location = new System.Drawing.Point(61, 75);
@@ -80,6 +82,28 @@ namespace Presentación
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnActualizar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnActualizar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnActualizar.BorderRadius = 3;
+            this.BtnActualizar.BorderSize = 0;
+            this.BtnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnActualizar.FlatAppearance.BorderSize = 0;
+            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnActualizar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.ForeColor = System.Drawing.Color.White;
+            this.BtnActualizar.Location = new System.Drawing.Point(774, 497);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(115, 26);
+            this.BtnActualizar.TabIndex = 19;
+            this.BtnActualizar.Text = "Actualizar";
+            this.BtnActualizar.TextColor = System.Drawing.Color.White;
+            this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            // 
             // FrmPlanes_Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -102,5 +126,6 @@ namespace Presentación
         private System.Windows.Forms.Panel panel1;
         private CustomControls.RJControls.RJButton rjButton1;
         private System.Windows.Forms.DataGridView DtgPlanes;
+        private CustomControls.RJControls.RJButton BtnActualizar;
     }
 }

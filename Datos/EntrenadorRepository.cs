@@ -21,12 +21,12 @@ namespace Datos
         {
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = @"Insert into entrenador (IdentificacionEntrenador,
-                                        PrimerNombre, SegundoNombre, PrimerApellido , SegundoApellido ,
-                                        Sexo ,FechaNacimiento ,Telefono1 ,Telefono2,Sueldo)
-                                        values (:IdentificacionEntrenador,:PrimerNombre, :SegundoNombre,
-                                        :PrimerApellido ,:SegundoApellido, :Sexo ,:FechaNacimiento,
-                                        :Telefono1 ,:Telefono2,:Sueldo)";
+                command.CommandText = @"INSERT INTO entrenador (IdentificacionEntrenador,
+                                        PrimerNombre,SegundoNombre,PrimerApellido ,SegundoApellido ,
+                                        Sexo,FechaNacimiento,Telefono1,Telefono2,Sueldo)
+                                        VALUES (:IdentificacionEntrenador,:PrimerNombre,:SegundoNombre,
+                                        :PrimerApellido,:SegundoApellido,:Sexo,:FechaNacimiento,
+                                        :Telefono1,:Telefono2,:Sueldo)";
                 command.Parameters.Add(":IdentificacionCliente", OracleDbType.Varchar2).Value = entrenador.Identificacion;
                 command.Parameters.Add(":PrimerNombre", OracleDbType.Varchar2).Value = entrenador.PrimerNombre;
                 command.Parameters.Add(":SegundoNombre", OracleDbType.Varchar2).Value = entrenador.SegundoNombre;
@@ -48,7 +48,7 @@ namespace Datos
             using (var command = _connection.CreateCommand())
             {
                 command.Parameters.Add(":IdentificacionEntrenador", OracleDbType.Varchar2).Value = IdentificacionEntrenador;
-                command.CommandText = "select * from entrenador where IdentificacionEntrenador =:IdentificacionEntrenador";
+                command.CommandText = "SELECT * FROM entrenador WHERE IdentificacionEntrenador = :IdentificacionEntrenador";
 
                 dataReader = command.ExecuteReader();
                 dataReader.Read();
@@ -63,9 +63,7 @@ namespace Datos
             List<Entrenador> entrenadores = new List<Entrenador>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "Select IdentificacionEntrenador," +
-                                        "PrimerNombre, SegundoNombre, PrimerApellido , SegundoApellido," +
-                                        "Sexo ,FechaNacimiento ,Telefono1 ,Telefono2,Sueldo from entrenador";
+                command.CommandText = "SELECT IdentificacionEntrenador,PrimerNombre, SegundoNombre, PrimerApellido , SegundoApellido,Sexo ,FechaNacimiento ,Telefono1 ,Telefono2,Sueldo FROM entrenador";
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {
@@ -87,20 +85,14 @@ namespace Datos
             Entrenador entrenador = new Entrenador();
 
             entrenador.Identificacion = dataReader.GetString(0);
-            entrenador.PrimerNombre = dataReader.GetString(1);
-            /*if (dataReader.GetString(2)!=null)
-            {
-                entrenador.SegundoNombre = dataReader.GetString(2);
-            }  */
-            entrenador.PrimerApellido = dataReader.GetString(3);
-            /*if (dataReader.GetString(4)!=null)
-            {
-                entrenador.SegundoApellido = dataReader.GetString(4);
-            }*/
-            entrenador.Sexo = (char)dataReader.GetChar(5);
-            entrenador.FechaNacimiento = dataReader.GetDateTime(6);
-            /*entrenador.Celular1 = dataReader.GetString(7);
-            entrenador.Celular2 = dataReader.GetString(8);*/
+            entrenador.PrimerNombre = dataReader.GetString(1);  
+            entrenador.SegundoNombre = dataReader.GetString(2);
+            entrenador.PrimerApellido = dataReader.GetString(3);       
+            entrenador.SegundoApellido = dataReader.GetString(4);         
+            entrenador.Sexo = Convert.ToChar(dataReader.GetString(5));
+            entrenador.FechaNacimiento =(DateTime) dataReader.GetDateTime(6);
+            entrenador.Celular1 = dataReader.GetString(7);
+            entrenador.Celular2 = dataReader.GetString(8);
             entrenador.Sueldo = dataReader.GetDouble(9);
             
 
@@ -127,7 +119,7 @@ namespace Datos
                                         "PrimerApellido = :PrimerApellido, SegundoApellido =:SegundoApellido" +
                                         "Sexo = :Sexo,FechaNacimiento = :FechaNacimiento,Telefono1 = :Telefono1" +
                                         "Telefono2 = :Telefono2,Sueldo = :Sueldo" +
-                                       "WHERE IdentificacionEntrenador = :IdentificacionEntrenador";
+                                        "WHERE IdentificacionEntrenador = :IdentificacionEntrenador";
                 return command.ExecuteNonQuery();
             }
         }

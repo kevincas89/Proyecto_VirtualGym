@@ -36,5 +36,9 @@ namespace Presentación
             }
         }
 
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            CargarTabla();
+        }
     }
 }

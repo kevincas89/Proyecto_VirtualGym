@@ -98,8 +98,8 @@ namespace Datos
             clientes.SegundoNombre = dataReader.GetString(2);
             clientes.PrimerApellido = dataReader.GetString(3);
             clientes.SegundoApellido = dataReader.GetString(4);
-            clientes.Sexo = (char)dataReader.GetChar(5);
-            clientes.FechaNacimiento = dataReader.GetDateTime(6);
+            clientes.Sexo = Convert.ToChar(dataReader.GetChar(5));
+            clientes.FechaNacimiento = (DateTime)dataReader.GetDateTime(6);
             clientes.Celular1 = dataReader.GetString(7);
             clientes.Celular2 = dataReader.GetString(8);
             clientes.Peso = dataReader.GetDouble(9);
