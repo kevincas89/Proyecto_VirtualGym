@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,27 @@ namespace Presentación
         public FrmUsuario_Modificar()
         {
             InitializeComponent();
+            LblPrimerNombre.Visible = false;
+            TxtPrimerNombre.Visible = false;
+            LblSegundoNombre.Visible = false;
+            TxtSegundoNombre.Visible = false;
+            LblPrimerApellido.Visible = false;
+            TxtPrimerApellido.Visible = false;
+            LblSegundoApellido.Visible = false;
+            TxtSegundoApellido.Visible = false;
+            LblSexo.Visible = false;
+            CbxSexo.Visible = false;
+            LblFechaDeNacimiento.Visible = false;
+            DTFecha.Visible = false;
+            LblCelular.Visible = false;
+            TxtCelular.Visible = false;
+            LblAltura.Visible = false;
+            TxtAltura.Visible = false;
+            LblMt.Visible = false;
+            LblPeso.Visible = false;
+            TxtPeso.Visible = false;
+            LblKg.Visible = false;
+
         }
 
         //LIMPIAR CAMPOS
@@ -33,6 +55,37 @@ namespace Presentación
         private void BtnCancelar_UsuarioModificar_Click(object sender, EventArgs e)
         {
             LimpiarCampos(this);
+        }
+
+        private void BtnGuardar_UsuarioModificar_Click(object sender, EventArgs e)
+        {
+            LblPrimerNombre.Visible = true;
+            TxtPrimerNombre.Visible = true;
+            LblSegundoNombre.Visible = true;
+            TxtSegundoNombre.Visible = true;
+            LblPrimerApellido.Visible = true;
+            TxtPrimerApellido.Visible = true;
+            LblSegundoApellido.Visible = true;
+            TxtSegundoApellido.Visible = true;
+            LblSexo.Visible = true;
+            CbxSexo.Visible = true;
+            LblFechaDeNacimiento.Visible = true;
+            DTFecha.Visible = true;
+            LblCelular.Visible = true;
+            TxtCelular.Visible = true;
+            LblAltura.Visible = true;
+            TxtAltura.Visible = true;
+            LblMt.Visible = true;
+            LblPeso.Visible = true;
+            TxtPeso.Visible = true;
+            LblKg.Visible = true;
+
+            /*TxtPrimerNombre.Text = Cliente.;
+            TxtNombre.Text = plan.Nombre;
+            TxtValor.Text = Convert.ToString(plan.ValorPlan);
+            TxtDuracion.Text = Convert.ToString(plan.Dias);*/
+
+
         }
 
         //VALIDANDO IDENTIFICACIÓN
