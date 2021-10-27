@@ -32,8 +32,13 @@ namespace Presentación
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEntrenadores_Registrar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtSegundoApellido = new System.Windows.Forms.TextBox();
+            this.TxtSegundoNombre = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.TxtCelular2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.DTFecha = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.CbxSexo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,11 +58,6 @@ namespace Presentación
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.TxtSegundoNombre = new System.Windows.Forms.TextBox();
-            this.TxtSegundoApellido = new System.Windows.Forms.TextBox();
-            this.DTFecha = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,50 @@ namespace Presentación
             this.panel1.Size = new System.Drawing.Size(527, 434);
             this.panel1.TabIndex = 1;
             // 
+            // TxtSegundoApellido
+            // 
+            this.TxtSegundoApellido.BackColor = System.Drawing.Color.Gray;
+            this.TxtSegundoApellido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TxtSegundoApellido.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.TxtSegundoApellido.Location = new System.Drawing.Point(402, 199);
+            this.TxtSegundoApellido.Name = "TxtSegundoApellido";
+            this.TxtSegundoApellido.Size = new System.Drawing.Size(110, 23);
+            this.TxtSegundoApellido.TabIndex = 34;
+            // 
+            // TxtSegundoNombre
+            // 
+            this.TxtSegundoNombre.BackColor = System.Drawing.Color.Gray;
+            this.TxtSegundoNombre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TxtSegundoNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.TxtSegundoNombre.Location = new System.Drawing.Point(402, 153);
+            this.TxtSegundoNombre.Name = "TxtSegundoNombre";
+            this.TxtSegundoNombre.Size = new System.Drawing.Size(110, 23);
+            this.TxtSegundoNombre.TabIndex = 33;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(263, 202);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(142, 16);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Segundo  Apellido";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(263, 156);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(133, 16);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Segundo Nombre";
+            // 
             // TxtCelular2
             // 
             this.TxtCelular2.BackColor = System.Drawing.Color.Gray;
@@ -106,6 +150,7 @@ namespace Presentación
             this.TxtCelular2.Name = "TxtCelular2";
             this.TxtCelular2.Size = new System.Drawing.Size(110, 23);
             this.TxtCelular2.TabIndex = 30;
+         
             // 
             // label4
             // 
@@ -118,6 +163,14 @@ namespace Presentación
             this.label4.Size = new System.Drawing.Size(77, 19);
             this.label4.TabIndex = 29;
             this.label4.Text = "Celular2";
+            // 
+            // DTFecha
+            // 
+            this.DTFecha.Location = new System.Drawing.Point(266, 250);
+            this.DTFecha.Margin = new System.Windows.Forms.Padding(2);
+            this.DTFecha.Name = "DTFecha";
+            this.DTFecha.Size = new System.Drawing.Size(200, 20);
+            this.DTFecha.TabIndex = 28;
             // 
             // label9
             // 
@@ -222,8 +275,8 @@ namespace Presentación
             this.TxtCelular1.Name = "TxtCelular1";
             this.TxtCelular1.Size = new System.Drawing.Size(110, 23);
             this.TxtCelular1.TabIndex = 21;
-            this.TxtCelular1.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCelular_Validating);
-            this.TxtCelular1.Validated += new System.EventHandler(this.TxtCelular_Validated);
+            this.TxtCelular1.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCelular1_Validating);
+            this.TxtCelular1.Validated += new System.EventHandler(this.TxtCelular1_Validated);
             // 
             // TxtIdentificacion
             // 
@@ -373,58 +426,6 @@ namespace Presentación
             // error
             // 
             this.error.ContainerControl = this;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(263, 202);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(142, 16);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Segundo  Apellido";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(263, 156);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 16);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Segundo Nombre";
-            // 
-            // TxtSegundoNombre
-            // 
-            this.TxtSegundoNombre.BackColor = System.Drawing.Color.Gray;
-            this.TxtSegundoNombre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TxtSegundoNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.TxtSegundoNombre.Location = new System.Drawing.Point(402, 153);
-            this.TxtSegundoNombre.Name = "TxtSegundoNombre";
-            this.TxtSegundoNombre.Size = new System.Drawing.Size(110, 23);
-            this.TxtSegundoNombre.TabIndex = 33;
-            // 
-            // TxtSegundoApellido
-            // 
-            this.TxtSegundoApellido.BackColor = System.Drawing.Color.Gray;
-            this.TxtSegundoApellido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TxtSegundoApellido.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.TxtSegundoApellido.Location = new System.Drawing.Point(402, 199);
-            this.TxtSegundoApellido.Name = "TxtSegundoApellido";
-            this.TxtSegundoApellido.Size = new System.Drawing.Size(110, 23);
-            this.TxtSegundoApellido.TabIndex = 34;
-            // 
-            // DTFecha
-            // 
-            this.DTFecha.Location = new System.Drawing.Point(266, 250);
-            this.DTFecha.Margin = new System.Windows.Forms.Padding(2);
-            this.DTFecha.Name = "DTFecha";
-            this.DTFecha.Size = new System.Drawing.Size(200, 20);
-            this.DTFecha.TabIndex = 28;
             // 
             // FrmEntrenadores_Registrar
             // 

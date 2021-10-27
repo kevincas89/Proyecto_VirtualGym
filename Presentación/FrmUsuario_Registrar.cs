@@ -48,6 +48,67 @@ namespace Presentación
             LimpiarCampos(this);
         }
 
+        private void BtnGuardar_UsuarioRegistro_Click(object sender, EventArgs e)
+        {
+            if (ValidateChildren())
+            {
+                Char.TryParse(CbxSexo.Text, out char Sexo);
+                DateTime.TryParse(DTFecha.Text, out DateTime Fecha);
+                Double.TryParse(TxtAltura.Text, out double Altura);
+                Double.TryParse(TxtPeso.Text, out double Peso);
+
+
+                Clientes cliente = new Clientes();
+
+
+                cliente.Identificacion = TxtIdentificacion.Text;
+                cliente.PrimerNombre = TxtPrimerNombre.Text;
+                cliente.PrimerApellido = TxtApellido.Text;
+                cliente.Sexo = Sexo; cliente.FechaNacimiento = Fecha;
+                cliente.Celular1 = TxtCelular.Text;
+                cliente.Altura = Altura;
+                cliente.Peso = Peso;
+
+                if (entrenador != null)
+                {
+                    foreach (var item in entrenadores)
+                    {
+                        if (item.PrimerNombre.Equals(CbxEntrenador.Text))
+                        {
+                            cliente.entrenador = item;
+                            MessageBox.Show(service.regitrarUsuario(cliente));
+                            LimpiarCampos(this);
+                        }
+                    }
+                }
+                if (planes != null)
+                {
+                    foreach (var item in planes)
+                    {
+                        if (item.Nombre.Equals(CbxPlanes.Text))
+                        {
+                            cliente.plan = item;
+                            MessageBox.Show(service.regitrarUsuario(cliente));
+                            LimpiarCampos(this);
+                        }
+                    }
+                }
+
+
+
+                else
+                {
+                    MessageBox.Show("No se pudo guardar esta Cliente");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Verifique los campos.");
+            }
+        }
+
+
 
         //VALIDANDO IDENTIFACIÓN
         private void TxtIdentificacion_Validating(object sender, CancelEventArgs e)
@@ -174,65 +235,6 @@ namespace Presentación
             error.SetError(CbxSexo, "");
         }
 
-        private void BtnGuardar_UsuarioRegistro_Click(object sender, EventArgs e)
-        {
-            if (ValidateChildren())
-            {
-                Char.TryParse(CbxSexo.Text, out char Sexo);
-                DateTime.TryParse(DTFecha.Text, out DateTime Fecha);
-                Double.TryParse(TxtAltura.Text, out double Altura);
-                Double.TryParse(TxtPeso.Text, out double Peso);
-
-
-                Clientes cliente = new Clientes();
-
-
-                    cliente.Identificacion = TxtIdentificacion.Text;
-                    cliente.PrimerNombre = TxtPrimerNombre.Text;
-                    cliente.PrimerApellido = TxtApellido.Text;
-                    cliente.Sexo = Sexo; cliente.FechaNacimiento = Fecha;
-                    cliente.Celular1 = TxtCelular.Text;
-                    cliente.Altura = Altura;
-                    cliente.Peso = Peso;
-
-                if (entrenador != null)
-                {
-                    foreach (var item in entrenadores)
-                    {
-                        if (item.PrimerNombre.Equals(CbxEntrenador.Text))
-                        {
-                            cliente.entrenador = item;
-                            MessageBox.Show(service.regitrarUsuario(cliente));
-                            LimpiarCampos(this);
-                        }
-                    }
-                }
-                if (planes != null)
-                     {
-                        foreach (var item in planes)
-                        {
-                            if (item.Nombre.Equals(CbxPlanes.Text))
-                            {
-                                cliente.plan = item;
-                                MessageBox.Show(service.regitrarUsuario(cliente));
-                                LimpiarCampos(this);
-                            }
-                        }
-                     }
-
-                    
-
-                    else
-                    {
-                        MessageBox.Show("No se pudo guardar esta Cliente");
-                    }
-                                      
-            }
-            else
-            {
-                MessageBox.Show("Verifique los campos.");
-            }
-        }
         
         private void CargarCombo()
         {

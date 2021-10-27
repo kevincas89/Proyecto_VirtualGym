@@ -94,8 +94,6 @@ namespace Presentación
         }
 
 
-        //VALIDANDO EDAD
-
         private bool ValidarCampoNumerico(string numero, out string mensaje)
         {
             if (numero.Equals(""))
@@ -118,7 +116,7 @@ namespace Presentación
 
        
         //VALIDANDO CELULAR
-        private void TxtCelular_Validating(object sender, CancelEventArgs e)
+        private void TxtCelular1_Validating(object sender, CancelEventArgs e)
         {
             if (!ValidarCampoNumerico(TxtCelular1.Text, out string mensaje))
             {
@@ -128,7 +126,7 @@ namespace Presentación
             }
         }
 
-        private void TxtCelular_Validated(object sender, EventArgs e)
+        private void TxtCelular1_Validated(object sender, EventArgs e)
         {
             error.SetError(TxtCelular1, "");
         }
