@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,25 @@ namespace Presentación
 {
     public partial class FrmUsuario_Consultar : Form
     {
+        private ClienteService cliente;
         public FrmUsuario_Consultar()
         {
             InitializeComponent();
+            cliente = new ClienteService(ConfigConnection.connectionString);
+            CargarTabla();
+        }
+
+        private void CargarTabla()
+        {
+            var respuesta = cliente.Consultar();
+            if (!respuesta.Errror)
+            {
+                DTClientes.DataSource = respuesta.Clientes;
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje);
+            }
         }
 
         //LIMPIAR CAMPOS
@@ -28,6 +45,7 @@ namespace Presentación
             }
             TxtIdentificacion.Focus();
         }
+
 
         //BOTONES CANCELAR Y BUSCAR
 

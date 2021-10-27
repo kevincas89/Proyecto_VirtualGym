@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    public class Usuario : Persona
+    public class Clientes : Persona
     {      
-        public Usuario()
+        public Clientes()
         {
             Tipo = "Usuario";
         }
@@ -22,7 +22,7 @@ namespace Entidad
         {
             IndiceMasaCorporal = Peso / Altura;
         }
-        public Usuario plan { get; set; }
+        public Planes plan { get; set; }
         public Entrenador entrenador { get; set; }
 
     }

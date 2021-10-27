@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidad;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,15 @@ namespace Presentación
 {
     public partial class FrmUsuario_Registrar : Form
     {
+        ClienteService service;
+        PlanService plan;
+        List<Planes> planes = new List<Planes>();
         public FrmUsuario_Registrar()
         {
             InitializeComponent();
+            plan = new PlanService(ConfigConnection.connectionString);
+            service = new ClienteService(ConfigConnection.connectionString);
+            CargarCombo();
         }
 
         // LIMPIAR CAMPOS
@@ -110,22 +118,6 @@ namespace Presentación
             return true;
         }
 
-        private void TxtEdad_Validating(object sender, CancelEventArgs e)
-        {
-            if (!ValidarCampoNumerico(TxtEdad.Text, out string mensaje))
-            {
-                error.SetError(TxtEdad, mensaje);
-                e.Cancel = true;
-                TxtEdad.Select(0, TxtEdad.Text.Length);
-            }
-        }
-
-        private void TxtEdad_Validated(object sender, EventArgs e)
-        {
-            error.SetError(TxtEdad, "");
-        }
-
-
         //VALIDANDO CELULAR
         private void TxtCelular_Validating(object sender, CancelEventArgs e)
         {
@@ -192,6 +184,68 @@ namespace Presentación
             error.SetError(CbxSexo, "");
         }
 
-       
+        private void BtnGuardar_UsuarioRegistro_Click(object sender, EventArgs e)
+        {
+            if (ValidateChildren())
+            {
+                Char.TryParse(CbxSexo.Text, out char Sexo);
+                DateTime.TryParse(DTFecha.Text, out DateTime Fecha);
+                Double.TryParse(TxtAltura.Text, out double Altura);
+                Double.TryParse(TxtPeso.Text, out double Peso);
+
+
+                Clientes cliente = new Clientes();
+
+
+                    cliente.Identificacion = TxtIdentificacion.Text;
+                    cliente.PrimerNombre = TxtNombre.Text;
+                    cliente.PrimerApellido = TxtApellido.Text;
+                    cliente.Sexo = Sexo; cliente.FechaNacimiento = Fecha;
+                    cliente.Celular1 = TxtCelular.Text;
+                    cliente.Altura = Altura;
+                    cliente.Peso = Peso;
+                     if (planes != null)
+                     {
+                        foreach (var item in planes)
+                        {
+                            if (item.Nombre.Equals(CbxPlanes.Text))
+                            {
+                                cliente.plan = item;
+                                MessageBox.Show(service.regitrarUsuario(cliente));
+                                LimpiarCampos(this);
+                            }
+                        }
+                     }
+                      else
+                      {
+                           MessageBox.Show("No se pudo guardar esta Cliente");
+                      }
+                                      
+            }
+            else
+            {
+                MessageBox.Show("Verifique los campos.");
+            }
+        }
+
+        private void CargarCombo()
+        {
+            var respuesta = plan.Consultar();
+            
+            if (!respuesta.Errror)
+            {
+                planes = respuesta.Planes;
+                foreach (var item in planes)
+                {
+                    CbxPlanes.Items.Add(item.Nombre);
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje);
+            }
+        }
+
     }
 }

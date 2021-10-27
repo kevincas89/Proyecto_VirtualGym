@@ -19,7 +19,7 @@ namespace Logica
             repository = new PlanRepository(connection);
         }
        
-        public string regitrarPlan(Usuario plan)
+        public string regitrarPlan(Planes plan)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Logica
             finally { connection.Close(); }
         }
 
-        public string Modificar(Usuario plan, string CodPlan)
+        public string Modificar(Planes plan, string CodPlan)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace Logica
                 }
                 return $"El codigo del plan no se ha encotrado";
             }
-            catch (Exception e) { return $"Se preseto la siguiente Excepción: {e.Message}"; }
+            catch (Exception e) { return $"Se presento la siguiente Excepción: {e.Message}"; }
             finally
             {
                 connection.Close();
@@ -76,10 +76,10 @@ namespace Logica
     public class PlanConsultaResponse
     {
         public string Mensaje { get; set; }
-        public List<Usuario> Planes { get; set; }
+        public List<Planes> Planes { get; set; }
         public bool Errror { get; set; }
 
-        public PlanConsultaResponse(List<Usuario> planes)
+        public PlanConsultaResponse(List<Planes> planes)
         {
             Planes = planes;
             Errror = false;

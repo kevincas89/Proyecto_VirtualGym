@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidad;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace Presentación
 {
     public partial class FrmEntrenadores_Registrar : Form
     {
+        EntrenadorService entrenadores;
         public FrmEntrenadores_Registrar()
         {
             InitializeComponent();
+            entrenadores = new EntrenadorService(ConfigConnection.connectionString);
+
         }
 
 
@@ -111,38 +116,7 @@ namespace Presentación
             return true;
         }
 
-        private void TxtEdad_Validating(object sender, CancelEventArgs e)
-        {
-            if (!ValidarCampoNumerico(TxtEdad.Text, out string mensaje))
-            {
-                error.SetError(TxtEdad, mensaje);
-                e.Cancel = true;
-                TxtEdad.Select(0, TxtEdad.Text.Length);
-            }
-        }
-
-        private void TxtEdad_Validated(object sender, EventArgs e)
-        {
-            error.SetError(TxtEdad, "");
-        }
-
-        //VALIDANDO DIRECCION
-        private void TxtDireccion_Validating(object sender, CancelEventArgs e)
-        {
-            if (TxtDireccion.Text.Equals(""))
-            {
-                error.SetError(TxtDireccion, "llena este campo");
-                e.Cancel = true;
-                TxtDireccion.Select(0, TxtDireccion.Text.Length);
-            }
-        }
-
-        private void TxtDireccion_Validated(object sender, EventArgs e)
-        {
-            error.SetError(TxtDireccion, "");
-        }
-
-
+       
         //VALIDANDO CELULAR
         private void TxtCelular_Validating(object sender, CancelEventArgs e)
         {
@@ -191,6 +165,35 @@ namespace Presentación
         {
             error.SetError(CbxSexo, "");
         }
+
+
+        private void BtnGuardar_EntrenadoresRegistro_Click(object sender, EventArgs e)
+        {
+            if (ValidateChildren())
+            {
+                Char.TryParse(CbxSexo.Text, out char Sexo);
+                DateTime.TryParse(DTFecha.Text, out DateTime Fecha);
+                Double.TryParse(TxtSueldo.Text,out double Sueldo);
+
+                Entrenador entrenador = new Entrenador();
+
+                entrenador.Identificacion = TxtIdentificacion.Text;
+                entrenador.PrimerNombre = TxtNombre.Text;
+                entrenador.PrimerApellido = TxtApellido.Text;
+                entrenador.Sexo = Sexo; entrenador.FechaNacimiento = Fecha;
+                entrenador.Celular1 = TxtCelular.Text;
+                entrenador.Sueldo = Sueldo;
+                
+                MessageBox.Show(entrenadores.regitrarEntrenador(entrenador));         
+                LimpiarCampos(this);
+            }
+            else
+            {
+                MessageBox.Show("Verifique los campos.");
+            }
+
+        }
     }
 }
+
 

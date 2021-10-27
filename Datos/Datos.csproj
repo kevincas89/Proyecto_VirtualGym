@@ -85,7 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UsuarioRepository.cs" />
+    <Compile Include="ClienteRepository.cs" />
     <Compile Include="EntrenadorRepository.cs" />
     <Compile Include="InformeRepository.cs" />
     <Compile Include="PlanRepository.cs" />

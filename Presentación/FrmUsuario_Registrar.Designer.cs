@@ -40,25 +40,23 @@ namespace Presentación
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.BtnGuardar_UsuarioRegistro = new CustomControls.RJControls.RJButton();
+            this.BtnCancelar_UsuarioRegistro = new CustomControls.RJControls.RJButton();
             this.CbxPlanes = new System.Windows.Forms.ComboBox();
             this.TxtCelular = new System.Windows.Forms.TextBox();
-            this.TxtEdad = new System.Windows.Forms.TextBox();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.TxtIdentificacion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.error = new System.Windows.Forms.ErrorProvider(this.components);
-            this.DTFecha = new System.Windows.Forms.DateTimePicker();
-            this.BtnGuardar_UsuarioRegistro = new CustomControls.RJControls.RJButton();
-            this.BtnCancelar_UsuarioRegistro = new CustomControls.RJControls.RJButton();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DTFecha = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
@@ -79,14 +77,12 @@ namespace Presentación
             this.panel1.Controls.Add(this.BtnCancelar_UsuarioRegistro);
             this.panel1.Controls.Add(this.CbxPlanes);
             this.panel1.Controls.Add(this.TxtCelular);
-            this.panel1.Controls.Add(this.TxtEdad);
             this.panel1.Controls.Add(this.TxtApellido);
             this.panel1.Controls.Add(this.TxtNombre);
             this.panel1.Controls.Add(this.TxtIdentificacion);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -131,7 +127,7 @@ namespace Presentación
             this.CbxSexo.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.CbxSexo.Location = new System.Drawing.Point(300, 216);
+            this.CbxSexo.Location = new System.Drawing.Point(182, 216);
             this.CbxSexo.Name = "CbxSexo";
             this.CbxSexo.Size = new System.Drawing.Size(63, 28);
             this.CbxSexo.TabIndex = 23;
@@ -190,11 +186,53 @@ namespace Presentación
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(243, 220);
+            this.label8.Location = new System.Drawing.Point(26, 220);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 24);
             this.label8.TabIndex = 16;
             this.label8.Text = "Sexo";
+            // 
+            // BtnGuardar_UsuarioRegistro
+            // 
+            this.BtnGuardar_UsuarioRegistro.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnGuardar_UsuarioRegistro.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnGuardar_UsuarioRegistro.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnGuardar_UsuarioRegistro.BorderRadius = 3;
+            this.BtnGuardar_UsuarioRegistro.BorderSize = 0;
+            this.BtnGuardar_UsuarioRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnGuardar_UsuarioRegistro.FlatAppearance.BorderSize = 0;
+            this.BtnGuardar_UsuarioRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar_UsuarioRegistro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar_UsuarioRegistro.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar_UsuarioRegistro.Location = new System.Drawing.Point(427, 400);
+            this.BtnGuardar_UsuarioRegistro.Name = "BtnGuardar_UsuarioRegistro";
+            this.BtnGuardar_UsuarioRegistro.Size = new System.Drawing.Size(86, 31);
+            this.BtnGuardar_UsuarioRegistro.TabIndex = 15;
+            this.BtnGuardar_UsuarioRegistro.Text = "Guardar";
+            this.BtnGuardar_UsuarioRegistro.TextColor = System.Drawing.Color.White;
+            this.BtnGuardar_UsuarioRegistro.UseVisualStyleBackColor = false;
+            this.BtnGuardar_UsuarioRegistro.Click += new System.EventHandler(this.BtnGuardar_UsuarioRegistro_Click);
+            // 
+            // BtnCancelar_UsuarioRegistro
+            // 
+            this.BtnCancelar_UsuarioRegistro.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnCancelar_UsuarioRegistro.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnCancelar_UsuarioRegistro.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnCancelar_UsuarioRegistro.BorderRadius = 3;
+            this.BtnCancelar_UsuarioRegistro.BorderSize = 0;
+            this.BtnCancelar_UsuarioRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCancelar_UsuarioRegistro.FlatAppearance.BorderSize = 0;
+            this.BtnCancelar_UsuarioRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar_UsuarioRegistro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar_UsuarioRegistro.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar_UsuarioRegistro.Location = new System.Drawing.Point(13, 400);
+            this.BtnCancelar_UsuarioRegistro.Name = "BtnCancelar_UsuarioRegistro";
+            this.BtnCancelar_UsuarioRegistro.Size = new System.Drawing.Size(85, 31);
+            this.BtnCancelar_UsuarioRegistro.TabIndex = 14;
+            this.BtnCancelar_UsuarioRegistro.Text = "Cancelar";
+            this.BtnCancelar_UsuarioRegistro.TextColor = System.Drawing.Color.White;
+            this.BtnCancelar_UsuarioRegistro.UseVisualStyleBackColor = false;
+            this.BtnCancelar_UsuarioRegistro.Click += new System.EventHandler(this.BtnCancelar_UsuarioRegistro_Click);
             // 
             // CbxPlanes
             // 
@@ -216,17 +254,6 @@ namespace Presentación
             this.TxtCelular.TabIndex = 12;
             this.TxtCelular.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCelular_Validating);
             this.TxtCelular.Validated += new System.EventHandler(this.TxtCelular_Validated);
-            // 
-            // TxtEdad
-            // 
-            this.TxtEdad.BackColor = System.Drawing.Color.Gray;
-            this.TxtEdad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TxtEdad.Location = new System.Drawing.Point(182, 217);
-            this.TxtEdad.Name = "TxtEdad";
-            this.TxtEdad.Size = new System.Drawing.Size(36, 27);
-            this.TxtEdad.TabIndex = 10;
-            this.TxtEdad.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEdad_Validating);
-            this.TxtEdad.Validated += new System.EventHandler(this.TxtEdad_Validated);
             // 
             // TxtApellido
             // 
@@ -297,18 +324,6 @@ namespace Presentación
             this.label5.TabIndex = 6;
             this.label5.Text = "Fecha de nacimiento";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(26, 220);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 24);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Edad";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -345,58 +360,6 @@ namespace Presentación
             this.label1.TabIndex = 2;
             this.label1.Text = "Nombres";
             // 
-            // error
-            // 
-            this.error.ContainerControl = this;
-            // 
-            // DTFecha
-            // 
-            this.DTFecha.Location = new System.Drawing.Point(394, 328);
-            this.DTFecha.Name = "DTFecha";
-            this.DTFecha.Size = new System.Drawing.Size(266, 27);
-            this.DTFecha.TabIndex = 26;
-            // 
-            // BtnGuardar_UsuarioRegistro
-            // 
-            this.BtnGuardar_UsuarioRegistro.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.BtnGuardar_UsuarioRegistro.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.BtnGuardar_UsuarioRegistro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.BtnGuardar_UsuarioRegistro.BorderRadius = 3;
-            this.BtnGuardar_UsuarioRegistro.BorderSize = 0;
-            this.BtnGuardar_UsuarioRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnGuardar_UsuarioRegistro.FlatAppearance.BorderSize = 0;
-            this.BtnGuardar_UsuarioRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar_UsuarioRegistro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar_UsuarioRegistro.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar_UsuarioRegistro.Location = new System.Drawing.Point(427, 400);
-            this.BtnGuardar_UsuarioRegistro.Name = "BtnGuardar_UsuarioRegistro";
-            this.BtnGuardar_UsuarioRegistro.Size = new System.Drawing.Size(86, 21);
-            this.BtnGuardar_UsuarioRegistro.TabIndex = 15;
-            this.BtnGuardar_UsuarioRegistro.Text = "Guardar";
-            this.BtnGuardar_UsuarioRegistro.TextColor = System.Drawing.Color.White;
-            this.BtnGuardar_UsuarioRegistro.UseVisualStyleBackColor = false;
-            // 
-            // BtnCancelar_UsuarioRegistro
-            // 
-            this.BtnCancelar_UsuarioRegistro.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.BtnCancelar_UsuarioRegistro.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.BtnCancelar_UsuarioRegistro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.BtnCancelar_UsuarioRegistro.BorderRadius = 3;
-            this.BtnCancelar_UsuarioRegistro.BorderSize = 0;
-            this.BtnCancelar_UsuarioRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCancelar_UsuarioRegistro.FlatAppearance.BorderSize = 0;
-            this.BtnCancelar_UsuarioRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar_UsuarioRegistro.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar_UsuarioRegistro.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar_UsuarioRegistro.Location = new System.Drawing.Point(13, 400);
-            this.BtnCancelar_UsuarioRegistro.Name = "BtnCancelar_UsuarioRegistro";
-            this.BtnCancelar_UsuarioRegistro.Size = new System.Drawing.Size(86, 21);
-            this.BtnCancelar_UsuarioRegistro.TabIndex = 14;
-            this.BtnCancelar_UsuarioRegistro.Text = "Cancelar";
-            this.BtnCancelar_UsuarioRegistro.TextColor = System.Drawing.Color.White;
-            this.BtnCancelar_UsuarioRegistro.UseVisualStyleBackColor = false;
-            this.BtnCancelar_UsuarioRegistro.Click += new System.EventHandler(this.BtnCancelar_UsuarioRegistro_Click);
-            // 
             // rjButton2
             // 
             this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
@@ -430,9 +393,20 @@ namespace Presentación
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(528, 55);
             this.rjButton1.TabIndex = 0;
-            this.rjButton1.Text = "REGISTRO USUARIO";
+            this.rjButton1.Text = "REGISTRO CLIENTE";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
+            // DTFecha
+            // 
+            this.DTFecha.Location = new System.Drawing.Point(394, 328);
+            this.DTFecha.Name = "DTFecha";
+            this.DTFecha.Size = new System.Drawing.Size(266, 27);
+            this.DTFecha.TabIndex = 26;
             // 
             // FrmUsuario_Registrar
             // 
@@ -464,7 +438,6 @@ namespace Presentación
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -472,7 +445,6 @@ namespace Presentación
         private CustomControls.RJControls.RJButton BtnCancelar_UsuarioRegistro;
         private System.Windows.Forms.ComboBox CbxPlanes;
         private System.Windows.Forms.TextBox TxtCelular;
-        private System.Windows.Forms.TextBox TxtEdad;
         private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.TextBox TxtIdentificacion;

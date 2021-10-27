@@ -17,7 +17,7 @@ namespace Datos
             _connection = connection._connection;
         }
         
-        public int GuardarPlan(Usuario plan)
+        public int GuardarPlan(Planes plan)
         {
             using (var command = _connection.CreateCommand() )
             {
@@ -32,7 +32,7 @@ namespace Datos
             }
         }
 
-        public Usuario BuscarPorCodigoPlan(string CodigoPlan)
+        public Planes BuscarPorCodigoPlan(string CodigoPlan)
         {
             OracleDataReader dataReader;
             using (var command = _connection.CreateCommand())
@@ -42,15 +42,15 @@ namespace Datos
 
                 dataReader = command.ExecuteReader();
                 dataReader.Read();
-                Usuario plan = DataReaderMapToPlan(dataReader);
+                Planes plan = DataReaderMapToPlan(dataReader);
                 return plan;
             }
         }
 
-        public List<Usuario> ConsultarTodosPlanes()
+        public List<Planes> ConsultarTodosPlanes()
         {
             OracleDataReader dataReader;
-            List<Usuario> planes = new List<Usuario>();
+            List<Planes> planes = new List<Planes>();
             using (var command = _connection.CreateCommand())
             {
                 command.CommandText = "Select CodPlan,NombrePlan,ValorPlan,Duracion from planes";
@@ -59,7 +59,7 @@ namespace Datos
                 {
                     while (dataReader.Read())
                     {
-                        Usuario plan = DataReaderMapToPlan(dataReader);
+                        Planes plan = DataReaderMapToPlan(dataReader);
                         planes.Add(plan);
                     }
                 }
@@ -67,12 +67,12 @@ namespace Datos
             return planes;
         }
 
-        private Usuario DataReaderMapToPlan(OracleDataReader dataReader)
+        private Planes DataReaderMapToPlan(OracleDataReader dataReader)
         {
             if (!dataReader.HasRows)
                 return null;
 
-            Usuario plan = new Usuario();
+            Planes plan = new Planes();
 
             plan.CodigoPlan = dataReader.GetString(0);
             plan.Nombre = dataReader.GetString(1);
@@ -81,7 +81,7 @@ namespace Datos
             return plan;
         }
 
-        public int Modificar(Usuario plan)
+        public int Modificar(Planes plan)
         {
             using (var command = _connection.CreateCommand())
             {

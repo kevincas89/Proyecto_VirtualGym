@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,29 @@ namespace Presentación
 {
     public partial class FrmEntrenadores_Informe : Form
     {
+        private EntrenadorService entrenador;
         public FrmEntrenadores_Informe()
         {
             InitializeComponent();
+            entrenador = new EntrenadorService(ConfigConnection.connectionString);
+            CargarTabla();
+        }
+        private void CargarTabla()
+        {
+            var respuesta = entrenador.ConsultarEntrenador();
+            if (!respuesta.Errror)
+            {
+                DtgEntrenadores.DataSource = respuesta.Entrenadores;
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje);
+            }
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            CargarTabla();
         }
     }
 }

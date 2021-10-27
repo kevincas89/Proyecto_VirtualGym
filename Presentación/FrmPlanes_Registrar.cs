@@ -15,12 +15,13 @@ namespace Presentación
     public partial class FrmPlanes_Registrar : Form
     {
         PlanService service;
-
+        
         public FrmPlanes_Registrar()
         {
 
             InitializeComponent();
             service = new PlanService(ConfigConnection.connectionString);
+
         }
 
         
@@ -140,7 +141,7 @@ namespace Presentación
                 Int32.TryParse(TxtDias.Text,out int Dias);
                 Int32.TryParse(TxtValor.Text, out int Valor);
 
-                Usuario plan = new Usuario()
+                Planes plan = new Planes()
                 {
                     CodigoPlan = TxtCodigoPlan.Text,
                     Nombre = TxtNombre.Text,
