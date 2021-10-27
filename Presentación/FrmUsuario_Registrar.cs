@@ -66,7 +66,8 @@ namespace Presentación
                 cliente.SegundoNombre = TxtSegundoNombre.Text;
                 cliente.PrimerApellido = TxtPrimerApellido.Text;
                 cliente.SegundoApellido = TxtSegundoApellido.Text;
-                cliente.Sexo = Sexo; cliente.FechaNacimiento = Fecha;
+                cliente.Sexo = Sexo;
+                cliente.FechaNacimiento = Fecha;
                 cliente.Celular1 = TxtCelular1.Text;
                 cliente.Celular2 = TxtCelular2.Text;
                 cliente.Altura = Altura;

@@ -69,7 +69,9 @@ namespace Datos
             List<Clientes> clientes = new List<Clientes>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "Select IdentificacionCliente,PrimerNombre, SegundoNombre, PrimerApellido , SegundoApellido,Sexo ,FechaNacimiento ,Telefono1 ,Telefono2,Peso,Altura, IMC,CodPlan,IdentificacionEntrenador from clientes";
+                command.CommandText = "SELECT IdentificacionCliente,PrimerNombre, SegundoNombre, PrimerApellido , SegundoApellido," +
+                    "Sexo ,FechaNacimiento ,Telefono1 ,Telefono2,Peso,Altura," +
+                    " IMC,CodPlan,IdentificacionEntrenador FROM clientes";
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {
@@ -95,7 +97,7 @@ namespace Datos
             clientes.SegundoNombre = dataReader.GetString(2);
             clientes.PrimerApellido = dataReader.GetString(3);
             clientes.SegundoApellido = dataReader.GetString(4);
-            clientes.Sexo = Convert.ToChar(dataReader.GetChar(5));
+            clientes.Sexo = (char)dataReader.GetChar(5);
             clientes.FechaNacimiento = (DateTime)dataReader.GetDateTime(6);
             clientes.Celular1 = dataReader.GetString(7);
             clientes.Celular2 = dataReader.GetString(8);
