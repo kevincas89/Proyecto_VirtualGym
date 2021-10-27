@@ -120,17 +120,17 @@ namespace Presentación
         //VALIDANDO CELULAR
         private void TxtCelular_Validating(object sender, CancelEventArgs e)
         {
-            if (!ValidarCampoNumerico(TxtCelular.Text, out string mensaje))
+            if (!ValidarCampoNumerico(TxtCelular1.Text, out string mensaje))
             {
-                error.SetError(TxtCelular, mensaje);
+                error.SetError(TxtCelular1, mensaje);
                 e.Cancel = true;
-                TxtCelular.Select(0, TxtCelular.Text.Length);
+                TxtCelular1.Select(0, TxtCelular1.Text.Length);
             }
         }
 
         private void TxtCelular_Validated(object sender, EventArgs e)
         {
-            error.SetError(TxtCelular, "");
+            error.SetError(TxtCelular1, "");
         }
 
 
@@ -181,7 +181,7 @@ namespace Presentación
                 entrenador.PrimerNombre = TxtNombre.Text;
                 entrenador.PrimerApellido = TxtApellido.Text;
                 entrenador.Sexo = Sexo; entrenador.FechaNacimiento = Fecha;
-                entrenador.Celular1 = TxtCelular.Text;
+                entrenador.Celular1 = TxtCelular1.Text;
                 entrenador.Sueldo = Sueldo;
                 
                 MessageBox.Show(entrenadores.regitrarEntrenador(entrenador));         

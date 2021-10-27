@@ -32,6 +32,10 @@ namespace Presentación
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario_Registrar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtCelular2 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.CbxEntrenador = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.CbxSexo = new System.Windows.Forms.ComboBox();
@@ -57,8 +61,6 @@ namespace Presentación
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.DTFecha = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.CbxEntrenador = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +69,8 @@ namespace Presentación
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.TxtCelular2);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.CbxEntrenador);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label12);
@@ -98,6 +102,49 @@ namespace Presentación
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(527, 434);
             this.panel1.TabIndex = 0;
+            // 
+            // TxtCelular2
+            // 
+            this.TxtCelular2.BackColor = System.Drawing.Color.Gray;
+            this.TxtCelular2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TxtCelular2.Location = new System.Drawing.Point(182, 352);
+            this.TxtCelular2.Name = "TxtCelular2";
+            this.TxtCelular2.Size = new System.Drawing.Size(112, 23);
+            this.TxtCelular2.TabIndex = 29;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(26, 352);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 19);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Celular2";
+            // 
+            // CbxEntrenador
+            // 
+            this.CbxEntrenador.BackColor = System.Drawing.Color.Gray;
+            this.CbxEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CbxEntrenador.FormattingEnabled = true;
+            this.CbxEntrenador.Location = new System.Drawing.Point(412, 305);
+            this.CbxEntrenador.Name = "CbxEntrenador";
+            this.CbxEntrenador.Size = new System.Drawing.Size(101, 24);
+            this.CbxEntrenador.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(308, 306);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 19);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Entrenador";
             // 
             // label12
             // 
@@ -243,7 +290,7 @@ namespace Presentación
             this.CbxPlanes.BackColor = System.Drawing.Color.Gray;
             this.CbxPlanes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CbxPlanes.FormattingEnabled = true;
-            this.CbxPlanes.Location = new System.Drawing.Point(182, 348);
+            this.CbxPlanes.Location = new System.Drawing.Point(401, 352);
             this.CbxPlanes.Name = "CbxPlanes";
             this.CbxPlanes.Size = new System.Drawing.Size(112, 24);
             this.CbxPlanes.TabIndex = 13;
@@ -298,7 +345,7 @@ namespace Presentación
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(26, 352);
+            this.label7.Location = new System.Drawing.Point(331, 357);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 19);
             this.label7.TabIndex = 8;
@@ -312,9 +359,9 @@ namespace Presentación
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(26, 306);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 19);
+            this.label6.Size = new System.Drawing.Size(77, 19);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Celular";
+            this.label6.Text = "Celular1";
             // 
             // label5
             // 
@@ -412,28 +459,6 @@ namespace Presentación
             this.DTFecha.Size = new System.Drawing.Size(266, 23);
             this.DTFecha.TabIndex = 26;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(308, 306);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 19);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Entrenador";
-            // 
-            // CbxEntrenador
-            // 
-            this.CbxEntrenador.BackColor = System.Drawing.Color.Gray;
-            this.CbxEntrenador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CbxEntrenador.FormattingEnabled = true;
-            this.CbxEntrenador.Location = new System.Drawing.Point(412, 305);
-            this.CbxEntrenador.Name = "CbxEntrenador";
-            this.CbxEntrenador.Size = new System.Drawing.Size(101, 24);
-            this.CbxEntrenador.TabIndex = 27;
-            // 
             // FrmUsuario_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -486,5 +511,7 @@ namespace Presentación
         private System.Windows.Forms.DateTimePicker DTFecha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CbxEntrenador;
+        private System.Windows.Forms.TextBox TxtCelular2;
+        private System.Windows.Forms.Label label13;
     }
 }

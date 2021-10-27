@@ -15,6 +15,24 @@ namespace Presentación
         public FrmEntrenadores_Modificar()
         {
             InitializeComponent();
+            LblPrimerNombre.Visible = false;
+            TxtPrimerNombre.Visible = false;
+            LblSegundoNombre.Visible = false;
+            TxtSegundoNombre.Visible = false;
+            LblPrimerApellido.Visible = false;
+            TxtPrimerApellido.Visible = false;
+            LblSegundoApellido.Visible = false;
+            TxtSegundoApellido.Visible = false;
+            LblSexo.Visible = false;
+            CbxSexo.Visible = false;
+            LblFechaDeNacimiento.Visible = false;
+            DTFecha.Visible = false;
+            LblCelular1.Visible = false;
+            TxtCelular1.Visible = false;
+            LblCelular2.Visible = false;
+            TxtCelular2.Visible = false;
+            LblSueldo.Visible = false;
+            TxtSueldo.Visible = false;
         }
 
         //LIMPIAR CAMPOS
@@ -35,6 +53,30 @@ namespace Presentación
             LimpiarCampos(this);
         }
 
+        private void BtnGuardar_EntrenadoresModificar_Click(object sender, EventArgs e)
+        {
+            LblPrimerNombre.Visible = true;
+            TxtPrimerNombre.Visible = true;
+            LblSegundoNombre.Visible = true;
+            TxtSegundoNombre.Visible = true;
+            LblPrimerApellido.Visible = true;
+            TxtPrimerApellido.Visible = true;
+            LblSegundoApellido.Visible = true;
+            TxtSegundoApellido.Visible = true;
+            LblSexo.Visible = true;
+            CbxSexo.Visible = true;
+            LblFechaDeNacimiento.Visible = true;
+            DTFecha.Visible = true;
+            LblCelular1.Visible = true;
+            TxtCelular1.Visible = true;
+            LblCelular2.Visible = true;
+            TxtCelular2.Visible = true;
+            LblSueldo.Visible = true;
+            TxtSueldo.Visible = true;
+
+
+        }
+
         //VALIDANDO IDENTIFICACIÓN
 
         private void TxtIdentificacion_Validating(object sender, CancelEventArgs e)
@@ -52,5 +94,6 @@ namespace Presentación
             error.SetError(TxtIdentificacion, "");
         }
 
+       
     }
 }

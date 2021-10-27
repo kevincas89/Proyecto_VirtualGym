@@ -32,6 +32,7 @@ namespace Presentación
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPlanes_Modificar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnGuardar = new CustomControls.RJControls.RJButton();
             this.LbDuracion = new System.Windows.Forms.Label();
             this.LbValor = new System.Windows.Forms.Label();
             this.LbNombre = new System.Windows.Forms.Label();
@@ -39,14 +40,13 @@ namespace Presentación
             this.TxtValor = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.DtgPlanes = new System.Windows.Forms.DataGridView();
-            this.TxtCodigoPlan = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.error = new System.Windows.Forms.ErrorProvider(this.components);
-            this.BtnGuardar = new CustomControls.RJControls.RJButton();
             this.BtnBuscarPlanes = new CustomControls.RJControls.RJButton();
             this.BtnCancelar_PlanesModificar = new CustomControls.RJControls.RJButton();
+            this.TxtCodigoPlan = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgPlanes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
@@ -70,110 +70,11 @@ namespace Presentación
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.rjButton2);
             this.panel1.Controls.Add(this.rjButton1);
-            this.panel1.Location = new System.Drawing.Point(204, 91);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.panel1.Location = new System.Drawing.Point(153, 74);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(757, 534);
+            this.panel1.Size = new System.Drawing.Size(492, 434);
             this.panel1.TabIndex = 5;
-            // 
-            // LbDuracion
-            // 
-            this.LbDuracion.AutoSize = true;
-            this.LbDuracion.BackColor = System.Drawing.Color.Transparent;
-            this.LbDuracion.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbDuracion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LbDuracion.Location = new System.Drawing.Point(451, 358);
-            this.LbDuracion.Name = "LbDuracion";
-            this.LbDuracion.Size = new System.Drawing.Size(108, 17);
-            this.LbDuracion.TabIndex = 25;
-            this.LbDuracion.Text = "Nueva duracion";
-            // 
-            // LbValor
-            // 
-            this.LbValor.AutoSize = true;
-            this.LbValor.BackColor = System.Drawing.Color.Transparent;
-            this.LbValor.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbValor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LbValor.Location = new System.Drawing.Point(451, 294);
-            this.LbValor.Name = "LbValor";
-            this.LbValor.Size = new System.Drawing.Size(139, 17);
-            this.LbValor.TabIndex = 24;
-            this.LbValor.Text = "Nuevo valor del Plan";
-            // 
-            // LbNombre
-            // 
-            this.LbNombre.AutoSize = true;
-            this.LbNombre.BackColor = System.Drawing.Color.Transparent;
-            this.LbNombre.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LbNombre.Location = new System.Drawing.Point(451, 229);
-            this.LbNombre.Name = "LbNombre";
-            this.LbNombre.Size = new System.Drawing.Size(158, 17);
-            this.LbNombre.TabIndex = 23;
-            this.LbNombre.Text = "Nuevo Nombre del Plan";
-            // 
-            // TxtDuracion
-            // 
-            this.TxtDuracion.Location = new System.Drawing.Point(454, 378);
-            this.TxtDuracion.Name = "TxtDuracion";
-            this.TxtDuracion.Size = new System.Drawing.Size(147, 22);
-            this.TxtDuracion.TabIndex = 22;
-            // 
-            // TxtValor
-            // 
-            this.TxtValor.Location = new System.Drawing.Point(454, 314);
-            this.TxtValor.Name = "TxtValor";
-            this.TxtValor.Size = new System.Drawing.Size(147, 22);
-            this.TxtValor.TabIndex = 21;
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Location = new System.Drawing.Point(454, 250);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(147, 22);
-            this.TxtNombre.TabIndex = 20;
-            // 
-            // DtgPlanes
-            // 
-            this.DtgPlanes.BackgroundColor = System.Drawing.Color.White;
-            this.DtgPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgPlanes.Location = new System.Drawing.Point(17, 229);
-            this.DtgPlanes.Name = "DtgPlanes";
-            this.DtgPlanes.RowHeadersWidth = 51;
-            this.DtgPlanes.RowTemplate.Height = 24;
-            this.DtgPlanes.Size = new System.Drawing.Size(405, 225);
-            this.DtgPlanes.TabIndex = 19;
-            this.DtgPlanes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgPlanes_CellDoubleClick);
-            // 
-            // TxtCodigoPlan
-            // 
-            this.TxtCodigoPlan.BackColor = System.Drawing.Color.White;
-            this.TxtCodigoPlan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TxtCodigoPlan.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCodigoPlan.Location = new System.Drawing.Point(17, 173);
-            this.TxtCodigoPlan.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtCodigoPlan.Name = "TxtCodigoPlan";
-            this.TxtCodigoPlan.Size = new System.Drawing.Size(176, 27);
-            this.TxtCodigoPlan.TabIndex = 11;
-            this.TxtCodigoPlan.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCodigoPlan_Validating);
-            this.TxtCodigoPlan.Validated += new System.EventHandler(this.TxtIdentificacion_Validated);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(12, 133);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(269, 26);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Ingrese codigo del plan";
-            // 
-            // error
-            // 
-            this.error.ContainerControl = this;
             // 
             // BtnGuardar
             // 
@@ -187,15 +88,90 @@ namespace Presentación
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(613, 428);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnGuardar.Location = new System.Drawing.Point(394, 398);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(115, 26);
+            this.BtnGuardar.Size = new System.Drawing.Size(86, 21);
             this.BtnGuardar.TabIndex = 26;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.TextColor = System.Drawing.Color.White;
             this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // LbDuracion
+            // 
+            this.LbDuracion.AutoSize = true;
+            this.LbDuracion.BackColor = System.Drawing.Color.Transparent;
+            this.LbDuracion.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbDuracion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LbDuracion.Location = new System.Drawing.Point(338, 291);
+            this.LbDuracion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LbDuracion.Name = "LbDuracion";
+            this.LbDuracion.Size = new System.Drawing.Size(100, 14);
+            this.LbDuracion.TabIndex = 25;
+            this.LbDuracion.Text = "Nueva duracion";
+            // 
+            // LbValor
+            // 
+            this.LbValor.AutoSize = true;
+            this.LbValor.BackColor = System.Drawing.Color.Transparent;
+            this.LbValor.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbValor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LbValor.Location = new System.Drawing.Point(338, 239);
+            this.LbValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LbValor.Name = "LbValor";
+            this.LbValor.Size = new System.Drawing.Size(127, 14);
+            this.LbValor.TabIndex = 24;
+            this.LbValor.Text = "Nuevo valor del Plan";
+            // 
+            // LbNombre
+            // 
+            this.LbNombre.AutoSize = true;
+            this.LbNombre.BackColor = System.Drawing.Color.Transparent;
+            this.LbNombre.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LbNombre.Location = new System.Drawing.Point(338, 186);
+            this.LbNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LbNombre.Name = "LbNombre";
+            this.LbNombre.Size = new System.Drawing.Size(142, 14);
+            this.LbNombre.TabIndex = 23;
+            this.LbNombre.Text = "Nuevo Nombre del Plan";
+            // 
+            // TxtDuracion
+            // 
+            this.TxtDuracion.Location = new System.Drawing.Point(340, 307);
+            this.TxtDuracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtDuracion.Name = "TxtDuracion";
+            this.TxtDuracion.Size = new System.Drawing.Size(111, 20);
+            this.TxtDuracion.TabIndex = 22;
+            // 
+            // TxtValor
+            // 
+            this.TxtValor.Location = new System.Drawing.Point(340, 255);
+            this.TxtValor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtValor.Name = "TxtValor";
+            this.TxtValor.Size = new System.Drawing.Size(111, 20);
+            this.TxtValor.TabIndex = 21;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Location = new System.Drawing.Point(340, 203);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(111, 20);
+            this.TxtNombre.TabIndex = 20;
+            // 
+            // DtgPlanes
+            // 
+            this.DtgPlanes.BackgroundColor = System.Drawing.Color.White;
+            this.DtgPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgPlanes.Location = new System.Drawing.Point(13, 186);
+            this.DtgPlanes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtgPlanes.Name = "DtgPlanes";
+            this.DtgPlanes.RowHeadersWidth = 51;
+            this.DtgPlanes.RowTemplate.Height = 24;
+            this.DtgPlanes.Size = new System.Drawing.Size(304, 183);
+            this.DtgPlanes.TabIndex = 19;
+            this.DtgPlanes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgPlanes_CellDoubleClick);
             // 
             // BtnBuscarPlanes
             // 
@@ -209,10 +185,9 @@ namespace Presentación
             this.BtnBuscarPlanes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarPlanes.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarPlanes.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscarPlanes.Location = new System.Drawing.Point(246, 173);
-            this.BtnBuscarPlanes.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnBuscarPlanes.Location = new System.Drawing.Point(184, 141);
             this.BtnBuscarPlanes.Name = "BtnBuscarPlanes";
-            this.BtnBuscarPlanes.Size = new System.Drawing.Size(115, 26);
+            this.BtnBuscarPlanes.Size = new System.Drawing.Size(86, 21);
             this.BtnBuscarPlanes.TabIndex = 18;
             this.BtnBuscarPlanes.Text = "Buscar";
             this.BtnBuscarPlanes.TextColor = System.Drawing.Color.White;
@@ -230,15 +205,38 @@ namespace Presentación
             this.BtnCancelar_PlanesModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar_PlanesModificar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar_PlanesModificar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar_PlanesModificar.Location = new System.Drawing.Point(17, 490);
-            this.BtnCancelar_PlanesModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnCancelar_PlanesModificar.Location = new System.Drawing.Point(13, 398);
             this.BtnCancelar_PlanesModificar.Name = "BtnCancelar_PlanesModificar";
-            this.BtnCancelar_PlanesModificar.Size = new System.Drawing.Size(115, 26);
+            this.BtnCancelar_PlanesModificar.Size = new System.Drawing.Size(86, 21);
             this.BtnCancelar_PlanesModificar.TabIndex = 17;
             this.BtnCancelar_PlanesModificar.Text = "Cancelar";
             this.BtnCancelar_PlanesModificar.TextColor = System.Drawing.Color.White;
             this.BtnCancelar_PlanesModificar.UseVisualStyleBackColor = false;
             this.BtnCancelar_PlanesModificar.Click += new System.EventHandler(this.BtnCancelar_PlanesModificar_Click);
+            // 
+            // TxtCodigoPlan
+            // 
+            this.TxtCodigoPlan.BackColor = System.Drawing.Color.White;
+            this.TxtCodigoPlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TxtCodigoPlan.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigoPlan.Location = new System.Drawing.Point(13, 141);
+            this.TxtCodigoPlan.Name = "TxtCodigoPlan";
+            this.TxtCodigoPlan.Size = new System.Drawing.Size(133, 23);
+            this.TxtCodigoPlan.TabIndex = 11;
+            this.TxtCodigoPlan.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCodigoPlan_Validating);
+            this.TxtCodigoPlan.Validated += new System.EventHandler(this.TxtIdentificacion_Validated);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(9, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(225, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Ingrese codigo del plan";
             // 
             // rjButton2
             // 
@@ -250,10 +248,10 @@ namespace Presentación
             this.rjButton2.FlatAppearance.BorderSize = 0;
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(0, 641);
-            this.rjButton2.Margin = new System.Windows.Forms.Padding(5);
+            this.rjButton2.Location = new System.Drawing.Point(0, 521);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(1052, 17);
+            this.rjButton2.Size = new System.Drawing.Size(789, 14);
             this.rjButton2.TabIndex = 1;
             this.rjButton2.TextColor = System.Drawing.Color.White;
             this.rjButton2.UseVisualStyleBackColor = false;
@@ -270,23 +268,26 @@ namespace Presentación
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(-1, 0);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(758, 68);
+            this.rjButton1.Size = new System.Drawing.Size(493, 55);
             this.rjButton1.TabIndex = 0;
             this.rjButton1.Text = "MODIFICAR PLAN";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
             // FrmPlanes_Modificar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(131)))), ((int)(((byte)(149)))));
-            this.ClientSize = new System.Drawing.Size(1067, 699);
+            this.ClientSize = new System.Drawing.Size(800, 568);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPlanes_Modificar";
             this.Text = "FrmPlanes_Modificar";
             this.panel1.ResumeLayout(false);
