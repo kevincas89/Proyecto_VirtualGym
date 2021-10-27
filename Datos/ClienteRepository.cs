@@ -28,7 +28,7 @@ namespace Datos
                                         IdentificacionEntrenador)
                                         values (:IdentificacionCliente,:PrimerNombre, :SegundoNombre,
                                         :PrimerApellido ,:SegundoApellido, :Sexo ,:FechaNacimiento,
-                                        :Telefono1 ,:Telefono2,:Peso,:Altura, :IMC,:CodPlan,:IdentificacionEntrenador)";
+                                        :Telefono1 ,:Telefono2 ,:Peso,:Altura, :IMC,:CodPlan,:IdentificacionEntrenador)";
                 command.Parameters.Add(":IdentificacionCliente", OracleDbType.Varchar2).Value = cliente.Identificacion;
                 command.Parameters.Add(":PrimerNombre", OracleDbType.Varchar2).Value = cliente.PrimerNombre;
                 command.Parameters.Add(":SegundoNombre", OracleDbType.Varchar2).Value = cliente.SegundoNombre;
@@ -69,10 +69,7 @@ namespace Datos
             List<Clientes> clientes = new List<Clientes>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "Select IdentificacionCliente,"+
-                                        "PrimerNombre, SegundoNombre, PrimerApellido , SegundoApellido,"+
-                                        "Sexo ,FechaNacimiento ,Telefono1 ,Telefono2,Peso,Altura, IMC,CodPlan,"+
-                                        "IdentificacionEntrenado from clientes";
+                command.CommandText = "Select IdentificacionCliente,PrimerNombre, SegundoNombre, PrimerApellido , SegundoApellido,Sexo ,FechaNacimiento ,Telefono1 ,Telefono2,Peso,Altura, IMC,CodPlan,IdentificacionEntrenador from clientes";
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
                 {
@@ -105,8 +102,9 @@ namespace Datos
             clientes.Peso = dataReader.GetDouble(9);
             clientes.Altura = dataReader.GetDouble(10);
             clientes.IndiceMasaCorporal = dataReader.GetDouble(11);
-            clientes.plan.CodigoPlan = dataReader.GetString(12);
-            clientes.entrenador.Identificacion = dataReader.GetString(13);
+            clientes.IndiceMasaCorporal = dataReader.GetDouble(12);
+            clientes.plan.CodigoPlan = dataReader.GetString(13);
+            clientes.entrenador.Identificacion = dataReader.GetString(14);
 
             return clientes;
         }

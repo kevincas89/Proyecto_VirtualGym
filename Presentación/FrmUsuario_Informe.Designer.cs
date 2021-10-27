@@ -31,57 +31,25 @@ namespace Presentación
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario_Informe));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DtgUsuario = new System.Windows.Forms.DataGridView();
+            this.BtnActualizar = new CustomControls.RJControls.RJButton();
+            this.DtgUsuarios = new System.Windows.Forms.DataGridView();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.BtnActualizar = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DtgUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.BtnActualizar);
-            this.panel1.Controls.Add(this.DtgUsuario);
+            this.panel1.Controls.Add(this.DtgUsuarios);
             this.panel1.Controls.Add(this.rjButton1);
             this.panel1.Location = new System.Drawing.Point(61, 76);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(953, 526);
             this.panel1.TabIndex = 0;
-            // 
-            // DtgUsuario
-            // 
-            this.DtgUsuario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DtgUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DtgUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgUsuario.Location = new System.Drawing.Point(19, 77);
-            this.DtgUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DtgUsuario.Name = "DtgUsuario";
-            this.DtgUsuario.RowHeadersWidth = 51;
-            this.DtgUsuario.Size = new System.Drawing.Size(912, 411);
-            this.DtgUsuario.TabIndex = 2;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 2;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(0, 0);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(960, 68);
-            this.rjButton1.TabIndex = 1;
-            this.rjButton1.Text = "INFORME USUARIO";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
             // 
             // BtnActualizar
             // 
@@ -105,6 +73,38 @@ namespace Presentación
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
+            // DtgUsuarios
+            // 
+            this.DtgUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DtgUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgUsuarios.Location = new System.Drawing.Point(19, 77);
+            this.DtgUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.DtgUsuarios.Name = "DtgUsuarios";
+            this.DtgUsuarios.RowHeadersWidth = 51;
+            this.DtgUsuarios.Size = new System.Drawing.Size(912, 411);
+            this.DtgUsuarios.TabIndex = 2;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 2;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(0, 0);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(960, 68);
+            this.rjButton1.TabIndex = 1;
+            this.rjButton1.Text = "INFORME USUARIO";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
             // FrmUsuario_Informe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -114,11 +114,11 @@ namespace Presentación
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUsuario_Informe";
             this.Text = "FrmUsuario_Informe";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DtgUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,7 +127,7 @@ namespace Presentación
 
         private System.Windows.Forms.Panel panel1;
         private CustomControls.RJControls.RJButton rjButton1;
-        private System.Windows.Forms.DataGridView DtgUsuario;
+        private System.Windows.Forms.DataGridView DtgUsuarios;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private CustomControls.RJControls.RJButton BtnActualizar;
     }

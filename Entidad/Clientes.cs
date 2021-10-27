@@ -10,10 +10,10 @@ namespace Entidad
     {      
         public Clientes()
         {
-            Tipo = "Usuario";
+            Tipo = "Clientes";
         }
 
-        public int DiasDisponibles { get; set; }        
+        //public int DiasDisponibles { get; set; }        
         public double Peso { get; set; }
         public double Altura { get; set; }
         public double IndiceMasaCorporal { get; set; }

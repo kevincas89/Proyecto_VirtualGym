@@ -63,38 +63,37 @@ namespace Presentación
 
                 cliente.Identificacion = TxtIdentificacion.Text;
                 cliente.PrimerNombre = TxtPrimerNombre.Text;
-                cliente.PrimerApellido = TxtApellido.Text;
+                cliente.SegundoNombre = TxtSegundoNombre.Text;
+                cliente.PrimerApellido = TxtPrimerApellido.Text;
+                cliente.SegundoApellido = TxtSegundoApellido.Text;
                 cliente.Sexo = Sexo; cliente.FechaNacimiento = Fecha;
-                cliente.Celular1 = TxtCelular.Text;
+                cliente.Celular1 = TxtCelular1.Text;
+                cliente.Celular2 = TxtCelular2.Text;
                 cliente.Altura = Altura;
                 cliente.Peso = Peso;
 
-                if (entrenador != null)
+                if (entrenador != null && planes != null)
                 {
                     foreach (var item in entrenadores)
                     {
                         if (item.PrimerNombre.Equals(CbxEntrenador.Text))
                         {
                             cliente.entrenador = item;
-                            MessageBox.Show(service.regitrarUsuario(cliente));
-                            LimpiarCampos(this);
+                            
                         }
+                        
                     }
-                }
-                if (planes != null)
-                {
                     foreach (var item in planes)
                     {
                         if (item.Nombre.Equals(CbxPlanes.Text))
                         {
                             cliente.plan = item;
-                            MessageBox.Show(service.regitrarUsuario(cliente));
-                            LimpiarCampos(this);
+                            
                         }
                     }
+                    MessageBox.Show(service.regitrarUsuario(cliente));
+                    LimpiarCampos(this);
                 }
-
-
 
                 else
                 {
@@ -148,21 +147,19 @@ namespace Presentación
 
         private void TxtApellido_Validating(object sender, CancelEventArgs e)
         {
-            if (TxtApellido.Text.Equals(""))
+            if (TxtPrimerApellido.Text.Equals(""))
             {
-                error.SetError(TxtApellido, "llena este campo");
+                error.SetError(TxtPrimerApellido, "llena este campo");
                 e.Cancel = true;
-                TxtApellido.Select(0, TxtApellido.Text.Length);
+                TxtPrimerApellido.Select(0, TxtPrimerApellido.Text.Length);
             }
         }
 
         private void TxtApellido_Validated(object sender, EventArgs e)
         {
-            error.SetError(TxtApellido, "");
+            error.SetError(TxtPrimerApellido, "");
         }
 
-
-        //VALIDANDO EDAD
 
         private bool ValidarCampoNumerico(string numero, out string mensaje)
         {
@@ -274,6 +271,6 @@ namespace Presentación
             }
         }
 
-
+        
     }
 }
