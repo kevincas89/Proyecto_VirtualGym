@@ -113,13 +113,13 @@ namespace Datos
                 command.Parameters.Add(":Telefono1", OracleDbType.Varchar2).Value = entrenador.Celular1;
                 command.Parameters.Add(":Telefono2", OracleDbType.Varchar2).Value = entrenador.Celular2;
                 command.Parameters.Add(":Peso", OracleDbType.Double).Value = entrenador.Sueldo;
-                command.Parameters.Add(":IdentificacionEntrenador", OracleDbType.Varchar2).Value = entrenador.Identificacion;
+                command.Parameters.Add(":Identificacion", OracleDbType.Varchar2).Value = entrenador.Identificacion;
 
                 command.CommandText = "UPDATE entrenador SET PrimerNombre = :PrimerNombre, SegundoNombre = :SegundoNombre," +
                                         "PrimerApellido = :PrimerApellido, SegundoApellido =:SegundoApellido" +
                                         "Sexo = :Sexo,FechaNacimiento = :FechaNacimiento,Telefono1 = :Telefono1" +
-                                        "Telefono2 = :Telefono2,Sueldo = :Sueldo" +
-                                        "WHERE IdentificacionEntrenador = :IdentificacionEntrenador";
+                                        "Telefono2 = :Telefono2, Sueldo = :Sueldo" +
+                                        "WHERE IdentificacionEntrenador = :Identificacion";
                 return command.ExecuteNonQuery();
             }
         }

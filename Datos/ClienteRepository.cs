@@ -10,11 +10,14 @@ namespace Datos
 {
     public class ClienteRepository
     {
-        
+        PlanRepository planes;
+        EntrenadorRepository entrenadores;
         private readonly OracleConnection _connection;
 
         public ClienteRepository(ConnectionManager connection)
         {
+            planes = new PlanRepository(connection);
+            entrenadores = new EntrenadorRepository(connection);
             _connection = connection._connection;
         }
 
@@ -97,16 +100,15 @@ namespace Datos
             clientes.SegundoNombre = dataReader.GetString(2);
             clientes.PrimerApellido = dataReader.GetString(3);
             clientes.SegundoApellido = dataReader.GetString(4);
-            clientes.Sexo = (char)dataReader.GetChar(5);
+            clientes.Sexo = Convert.ToChar( dataReader.GetString(5));
             clientes.FechaNacimiento = (DateTime)dataReader.GetDateTime(6);
             clientes.Celular1 = dataReader.GetString(7);
             clientes.Celular2 = dataReader.GetString(8);
             clientes.Peso = dataReader.GetDouble(9);
             clientes.Altura = dataReader.GetDouble(10);
-            clientes.IndiceMasaCorporal = dataReader.GetDouble(11);
-            clientes.IndiceMasaCorporal = dataReader.GetDouble(12);
-            clientes.plan.CodigoPlan = dataReader.GetString(13);
-            clientes.entrenador.Identificacion = dataReader.GetString(14);
+            clientes.IndiceMasaCorporal = dataReader.GetDouble(11);   
+            clientes.plan = planes.BuscarPorCodigoPlan(dataReader.GetString(12));
+            clientes.entrenador = entrenadores.BuscarPorIdentificacionEntrenador(dataReader.GetString(13));
 
             return clientes;
         }
@@ -134,9 +136,9 @@ namespace Datos
                 command.CommandText = "UPDATE clientes SET PrimerNombre = :PrimerNombre, SegundoNombre = :SegundoNombre," +
                                         "PrimerApellido = :PrimerApellido, SegundoApellido =:SegundoApellido" +
                                         "Sexo = :Sexo,FechaNacimiento = :FechaNacimiento,Telefono1 = :Telefono1" +
-                                        "Telefono2 = :Telefono2,Peso = :Peso,Altura = :Altura,IMC =: IMC" +
-                                        "CodPlan = :CodPlan,IdentificacionEntrenador = :IdentificacionEntrenador" +
+                                        "Telefono2 = :Telefono2,Peso = :Peso,Altura = :Altura,IMC =:IMC" +
                                        "WHERE IdentificacionCliente = :IdentificacionCliente";
+                                           
                 return command.ExecuteNonQuery();
             }
         }

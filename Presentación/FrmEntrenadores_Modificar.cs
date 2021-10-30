@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidad;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,10 @@ namespace Presentación
 {
     public partial class FrmEntrenadores_Modificar : Form
     {
+        private EntrenadorService servicio;
         public FrmEntrenadores_Modificar()
         {
+            servicio = new EntrenadorService(ConfigConnection.connectionString);
             InitializeComponent();
             LblPrimerNombre.Visible = false;
             TxtPrimerNombre.Visible = false;
@@ -50,6 +54,24 @@ namespace Presentación
         //BOTONES CANCELAR Y BUSCAR
         private void BtnCancelar_EntrenadoresModificar_Click(object sender, EventArgs e)
         {
+            LblPrimerNombre.Visible = false;
+            TxtPrimerNombre.Visible = false;
+            LblSegundoNombre.Visible = false;
+            TxtSegundoNombre.Visible = false;
+            LblPrimerApellido.Visible = false;
+            TxtPrimerApellido.Visible = false;
+            LblSegundoApellido.Visible = false;
+            TxtSegundoApellido.Visible = false;
+            LblSexo.Visible = false;
+            CbxSexo.Visible = false;
+            LblFechaDeNacimiento.Visible = false;
+            DTFecha.Visible = false;
+            LblCelular1.Visible = false;
+            TxtCelular1.Visible = false;
+            LblCelular2.Visible = false;
+            TxtCelular2.Visible = false;
+            LblSueldo.Visible = false;
+            TxtSueldo.Visible = false;
             LimpiarCampos(this);
         }
 
@@ -73,7 +95,30 @@ namespace Presentación
             TxtCelular2.Visible = true;
             LblSueldo.Visible = true;
             TxtSueldo.Visible = true;
+            var respuesta = servicio.BuscarRegistro(TxtIdentificacion.Text);
+            if (!respuesta.Errror)
+            {
 
+
+                TxtIdentificacion.Text = respuesta.entrenador.Identificacion;
+                TxtPrimerNombre.Text = respuesta.entrenador.PrimerNombre;
+                TxtSegundoNombre.Text = respuesta.entrenador.SegundoNombre;
+                TxtPrimerApellido.Text = respuesta.entrenador.PrimerApellido;
+                TxtSegundoApellido.Text = respuesta.entrenador.SegundoApellido;
+                CbxSexo.SelectedItem = respuesta.entrenador.Sexo;
+                DTFecha.Value = respuesta.entrenador.FechaNacimiento;
+                TxtCelular1.Text = respuesta.entrenador.Celular1;
+                TxtCelular2.Text = respuesta.entrenador.Celular2;
+                TxtSueldo.Text = Convert.ToString(respuesta.entrenador.Sueldo);
+
+
+
+
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje);
+            }
 
         }
 
@@ -94,6 +139,30 @@ namespace Presentación
             error.SetError(TxtIdentificacion, "");
         }
 
-       
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            
+            Double.TryParse(TxtSueldo.Text, out double Sueldo);
+            Char.TryParse(CbxSexo.Text, out char Sexo);
+            DateTime.TryParse(DTFecha.Text, out DateTime Fecha);
+
+            Entrenador entrenador = new Entrenador()
+            {
+
+                Identificacion = TxtIdentificacion.Text,
+                PrimerNombre = TxtPrimerNombre.Text,
+                SegundoNombre = TxtSegundoNombre.Text,
+                PrimerApellido = TxtPrimerApellido.Text,
+                SegundoApellido = TxtSegundoApellido.Text,
+                Sexo = Sexo,
+                FechaNacimiento = Fecha,
+                Celular1 = TxtCelular1.Text,
+                Celular2 = TxtCelular2.Text,
+                Sueldo = Sueldo
+                
+            };
+            MessageBox.Show(servicio.ModificarEntrenador(entrenador, entrenador.Identificacion));
+
+        }
     }
 }

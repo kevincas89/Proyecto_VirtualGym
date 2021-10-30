@@ -71,6 +71,22 @@ namespace Logica
 
         }
 
+        public PlanRegistroResponse BuscarRegistro(string CodPlan)
+        {
+            try
+            {
+                connection.Open();
+                Planes plan =  repository.BuscarPorCodigoPlan(CodPlan);
+                if (plan!=null)
+                {
+                    return new PlanRegistroResponse(plan);
+                }
+                return new PlanRegistroResponse("El plan no se encuetra registrado");
+
+            }
+            catch (Exception e) { return new PlanRegistroResponse($"Error{e.Message}"); }
+            finally { connection.Close(); }
+        }
     }
 
     public class PlanConsultaResponse
@@ -90,8 +106,24 @@ namespace Logica
             Mensaje = mensaje;
             Errror = true;
         }
+    }
 
+    public class PlanRegistroResponse
+    {
+        public string Mensaje { get; set; }
+        public Planes Planes { get; set; }
+        public bool Errror { get; set; }
 
+        public PlanRegistroResponse(Planes planes)
+        {
+            Planes = planes;
+            Errror = false;
+        }
 
+        public PlanRegistroResponse(string mensaje)
+        {
+            Mensaje = mensaje;
+            Errror = true;
+        }
     }
 }

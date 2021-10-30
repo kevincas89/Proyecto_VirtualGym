@@ -31,14 +31,17 @@ namespace Presentación
             CbxSexo.Visible = false;
             LblFechaDeNacimiento.Visible = false;
             DTFecha.Visible = false;
-            LblCelular.Visible = false;
-            TxtCelular.Visible = false;
+            LblCelular1.Visible = false;
+            TxtCelular1.Visible = false;
+            LblCelular2.Visible = false;
+            TxtCelular2.Visible = false;
             LblAltura.Visible = false;
             TxtAltura.Visible = false;
             LblMt.Visible = false;
             LblPeso.Visible = false;
             TxtPeso.Visible = false;
             LblKg.Visible = false;
+            BtnActualizar.Visible = false;
 
         }
 
@@ -74,19 +77,43 @@ namespace Presentación
             CbxSexo.Visible = true;
             LblFechaDeNacimiento.Visible = true;
             DTFecha.Visible = true;
-            LblCelular.Visible = true;
-            TxtCelular.Visible = true;
+            LblCelular1.Visible = true;
+            TxtCelular1.Visible = true;
+            LblCelular2.Visible = true;
+            TxtCelular2.Visible = true;
             LblAltura.Visible = true;
             TxtAltura.Visible = true;
             LblMt.Visible = true;
             LblPeso.Visible = true;
             TxtPeso.Visible = true;
             LblKg.Visible = true;
+            BtnActualizar.Visible = true;
 
-            /*TxtPrimerNombre.Text = Cliente.;
-            TxtNombre.Text = plan.Nombre;
-            TxtValor.Text = Convert.ToString(plan.ValorPlan);
-            TxtDuracion.Text = Convert.ToString(plan.Dias);*/
+            var respuesta = servicio.BuscarRegistro(TxtIdentificacion.Text);
+            if (!respuesta.Errror)
+            {
+
+
+                TxtIdentificacion.Text = respuesta.cliente.Identificacion;
+                TxtPrimerNombre.Text = respuesta.cliente.PrimerNombre;
+                TxtSegundoNombre.Text = respuesta.cliente.SegundoNombre;
+                TxtPrimerApellido.Text = respuesta.cliente.PrimerApellido;
+                TxtSegundoApellido.Text = respuesta.cliente.SegundoApellido;
+                CbxSexo.SelectedItem = respuesta.cliente.Sexo;
+                DTFecha.Value = respuesta.cliente.FechaNacimiento;
+                TxtCelular1.Text = respuesta.cliente.Celular1;
+                TxtCelular2.Text = respuesta.cliente.Celular2;
+                TxtAltura.Text = Convert.ToString(respuesta.cliente.Altura);
+                TxtPeso.Text = Convert.ToString(respuesta.cliente.Peso);
+
+                
+
+
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje);
+            }
 
 
         }
@@ -108,6 +135,29 @@ namespace Presentación
             error.SetError(TxtIdentificacion, "");
         }
 
-        
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            Double.TryParse(TxtAltura.Text, out double Altura);
+            Double.TryParse(TxtPeso.Text, out double Peso);
+            Char.TryParse(CbxSexo.Text, out char Sexo);
+            DateTime.TryParse(DTFecha.Text, out DateTime Fecha);
+
+            Clientes cliente = new Clientes()
+            {
+
+                Identificacion = TxtIdentificacion.Text,
+                PrimerNombre = TxtPrimerNombre.Text,
+                SegundoNombre = TxtSegundoNombre.Text,
+                PrimerApellido = TxtPrimerApellido.Text, 
+                SegundoApellido = TxtSegundoApellido.Text, 
+                Sexo = Sexo,
+                FechaNacimiento = Fecha,
+                Celular1 = TxtCelular1.Text,
+                Celular2 = TxtCelular2.Text,
+                Altura = Altura,
+                Peso = Peso,             
+            };
+            MessageBox.Show(servicio.Modificar(cliente, cliente.Identificacion));
+        }
     }
 }

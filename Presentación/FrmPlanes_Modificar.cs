@@ -20,6 +20,12 @@ namespace Presentación
             servicio = new PlanService(ConfigConnection.connectionString);
             InitializeComponent();
             CargarTabla();
+            LbDuracion.Visible = false;
+            LbNombre.Visible = false;
+            LbValor.Visible = false;
+            TxtNombre.Visible = false;
+            TxtDuracion.Visible = false;
+            TxtValor.Visible = false;
 
         }
 
@@ -39,6 +45,12 @@ namespace Presentación
         //BOTONES CANCELAR Y BUSCAR
         private void BtnCancelar_PlanesModificar_Click(object sender, EventArgs e)
         {
+            LbDuracion.Visible = false;
+            LbNombre.Visible = false;
+            LbValor.Visible = false;
+            TxtNombre.Visible = false;
+            TxtDuracion.Visible = false;
+            TxtValor.Visible = false;
             LimpiarCampos(this);
         }
 
@@ -62,6 +74,12 @@ namespace Presentación
 
         private void DtgPlanes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            LbDuracion.Visible = true;
+            LbNombre.Visible = true;
+            LbValor.Visible = true;
+            TxtNombre.Visible = true;
+            TxtDuracion.Visible = true;
+            TxtValor.Visible = true;
             Planes plan = (Planes)DtgPlanes.CurrentRow.DataBoundItem;
             TxtCodigoPlan.Text = plan.CodigoPlan;
             TxtNombre.Text = plan.Nombre;
@@ -97,6 +115,32 @@ namespace Presentación
             };
             MessageBox.Show(servicio.Modificar(plan,plan.CodigoPlan));
            
+        }
+
+        private void BtnBuscarPlanes_Click(object sender, EventArgs e)
+        {
+            var respuesta = servicio.BuscarRegistro(TxtCodigoPlan.Text);
+            LbDuracion.Visible = true;
+            LbNombre.Visible = true;
+            LbValor.Visible = true;
+            TxtNombre.Visible = true;
+            TxtDuracion.Visible = true;
+            TxtValor.Visible = true;
+            if (!respuesta.Errror)
+            {
+                
+                
+                  TxtCodigoPlan.Text = respuesta.Planes.CodigoPlan;
+                  TxtNombre.Text = respuesta.Planes.Nombre;
+                  TxtValor.Text = Convert.ToString(respuesta.Planes.ValorPlan);
+                  TxtDuracion.Text = Convert.ToString(respuesta.Planes.Dias);
+                
+                
+            }
+            else
+            {
+                MessageBox.Show(respuesta.Mensaje);
+            }
         }
     }
 }

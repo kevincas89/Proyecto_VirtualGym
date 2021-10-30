@@ -70,6 +70,7 @@ namespace Logica
 
                 if (repository.BuscarPorIdentificacionCliente(IdentifiacionCliente) != null)
                 {
+                    cliente.CalcularIndiceMasaCorporal();
                     repository.ModificarCliente(cliente);
                     return $"Cliente modificado de manera exitosa";
                 }
@@ -81,6 +82,22 @@ namespace Logica
                 connection.Close();
             }
 
+        }
+        public ClienteRegistroResponse BuscarRegistro(string IdentifiacionCliente)
+        {
+            try
+            {
+                connection.Open();
+                Clientes cliente = repository.BuscarPorIdentificacionCliente(IdentifiacionCliente);
+                if (cliente != null)
+                {
+                    return new ClienteRegistroResponse(cliente);
+                }
+                return new ClienteRegistroResponse("El cliente no se encuetra registrado");
+
+            }
+            catch (Exception e) { return new ClienteRegistroResponse($"Error{e.Message}"); }
+            finally { connection.Close(); }
         }
 
     }
@@ -103,6 +120,24 @@ namespace Logica
             Errror = true;
         }
 
+    }
+    public class ClienteRegistroResponse
+    {
+        public string Mensaje { get; set; }
+        public Clientes cliente { get; set; }
+        public bool Errror { get; set; }
+
+        public ClienteRegistroResponse(Clientes clientes)
+        {
+            cliente = clientes;
+            Errror = false;
+        }
+
+        public ClienteRegistroResponse(string mensaje)
+        {
+            Mensaje = mensaje;
+            Errror = true;
+        }
     }
 }
 

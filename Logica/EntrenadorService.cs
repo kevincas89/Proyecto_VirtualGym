@@ -71,6 +71,22 @@ namespace Logica
             }
 
         }
+        public EntrenadorRegistroResponse BuscarRegistro(string IdentifiacionEntrenador)
+        {
+            try
+            {
+                connection.Open();
+                Entrenador entrenador = repository.BuscarPorIdentificacionEntrenador(IdentifiacionEntrenador);
+                if (entrenador != null)
+                {
+                    return new EntrenadorRegistroResponse(entrenador);
+                }
+                return new EntrenadorRegistroResponse("El entrenador no se encuetra registrado");
+
+            }
+            catch (Exception e) { return new EntrenadorRegistroResponse($"Error{e.Message}"); }
+            finally { connection.Close(); }
+        }
 
     }
 
@@ -92,8 +108,24 @@ namespace Logica
             Errror = true;
         }
 
+    }
+    public class EntrenadorRegistroResponse
+    {
+        public string Mensaje { get; set; }
+        public Entrenador entrenador { get; set; }
+        public bool Errror { get; set; }
 
+        public EntrenadorRegistroResponse(Entrenador entrenadores)
+        {
+            entrenador = entrenadores;
+            Errror = false;
+        }
 
+        public EntrenadorRegistroResponse(string mensaje)
+        {
+            Mensaje = mensaje;
+            Errror = true;
+        }
     }
 }
 

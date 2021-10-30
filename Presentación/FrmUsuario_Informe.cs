@@ -18,27 +18,15 @@ namespace Presentación
         {
             InitializeComponent();
             cliente = new ClienteService(ConfigConnection.connectionString);
-            LoaderTablet();
+            CargarTabla();
+            
         }
 
-        private void CargarTabla()
-        {
-            var respuesta = cliente.Consultar();
-            if (!respuesta.Errror)
-            {
-                DtgUsuarios.DataSource = respuesta.Clientes;
-            }
-            else
-            {
-                MessageBox.Show(respuesta.Mensaje);
-            }
-        }
-        
         private void addsColumnas()
         {
-            DtgUsuarios.ColumnCount = 15;
-            DtgUsuarios.ColumnHeadersVisible = true;
-                                      
+            
+            DtgUsuarios.ColumnCount = 14;
+            DtgUsuarios.ColumnHeadersVisible = true;                        
             DtgUsuarios.Columns[0].Name = "IdentificacionCliente";
             DtgUsuarios.Columns[1].Name = "PrimerNombre";
             DtgUsuarios.Columns[2].Name = "SegundoNombre";
@@ -50,13 +38,13 @@ namespace Presentación
             DtgUsuarios.Columns[8].Name = "Telefono2";
             DtgUsuarios.Columns[9].Name = "Peso";
             DtgUsuarios.Columns[10].Name = "Altura";
-            DtgUsuarios.Columns[12].Name = "IMC";
-            DtgUsuarios.Columns[13].Name = "CodPlan";
-            DtgUsuarios.Columns[14].Name = "IdentificacionEntrenador";
+            DtgUsuarios.Columns[11].Name = "IMC";
+            DtgUsuarios.Columns[12].Name = "CodPlan";
+            DtgUsuarios.Columns[13].Name = "IdentificacionEntrenador";
             
         }
         
-        private void LoaderTablet()
+        private void CargarTabla()
         {
             ClienteConsultaResponse response = cliente.Consultar();
 
@@ -76,9 +64,25 @@ namespace Presentación
             else { MessageBox.Show(response.Mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
+        private void ConfigurarGrid()
+        {
+            // Create an unbound DataGridView by declaring a column count.
+            DtgUsuarios.ColumnCount = 7;
+            DtgUsuarios.ColumnHeadersVisible = true;
+
+            // Set the column header style.
+            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+
+            columnHeaderStyle.BackColor = Color.Beige;
+            columnHeaderStyle.Font = new Font("Verdana", 9, FontStyle.Bold);
+            DtgUsuarios.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+        }
+
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
-            LoaderTablet();
+            DtgUsuarios.Rows.Clear();
+            CargarTabla();
+            
         }
     }
 }

@@ -30,9 +30,11 @@ namespace Presentación
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario_Informe));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnActualizar = new CustomControls.RJControls.RJButton();
             this.DtgUsuarios = new System.Windows.Forms.DataGridView();
+            this.BtnActualizar = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
@@ -42,14 +44,38 @@ namespace Presentación
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.BtnActualizar);
             this.panel1.Controls.Add(this.DtgUsuarios);
+            this.panel1.Controls.Add(this.BtnActualizar);
             this.panel1.Controls.Add(this.rjButton1);
             this.panel1.Location = new System.Drawing.Point(61, 76);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(953, 526);
             this.panel1.TabIndex = 0;
+            // 
+            // DtgUsuarios
+            // 
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.DtgUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DtgUsuarios.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DtgUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DtgUsuarios.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DtgUsuarios.Location = new System.Drawing.Point(25, 92);
+            this.DtgUsuarios.Name = "DtgUsuarios";
+            this.DtgUsuarios.RowHeadersWidth = 51;
+            this.DtgUsuarios.RowTemplate.Height = 24;
+            this.DtgUsuarios.Size = new System.Drawing.Size(891, 334);
+            this.DtgUsuarios.TabIndex = 18;
             // 
             // BtnActualizar
             // 
@@ -72,18 +98,6 @@ namespace Presentación
             this.BtnActualizar.TextColor = System.Drawing.Color.White;
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
-            // 
-            // DtgUsuarios
-            // 
-            this.DtgUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DtgUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgUsuarios.Location = new System.Drawing.Point(19, 77);
-            this.DtgUsuarios.Margin = new System.Windows.Forms.Padding(4);
-            this.DtgUsuarios.Name = "DtgUsuarios";
-            this.DtgUsuarios.RowHeadersWidth = 51;
-            this.DtgUsuarios.Size = new System.Drawing.Size(912, 411);
-            this.DtgUsuarios.TabIndex = 2;
             // 
             // rjButton1
             // 
@@ -127,8 +141,8 @@ namespace Presentación
 
         private System.Windows.Forms.Panel panel1;
         private CustomControls.RJControls.RJButton rjButton1;
-        private System.Windows.Forms.DataGridView DtgUsuarios;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private CustomControls.RJControls.RJButton BtnActualizar;
+        private System.Windows.Forms.DataGridView DtgUsuarios;
     }
 }
