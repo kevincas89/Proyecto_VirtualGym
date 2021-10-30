@@ -101,25 +101,25 @@ namespace Datos
 
         public int ModificarEntrenador(Entrenador entrenador)
         {
+            string Id = entrenador.Identificacion;
             using (var command = _connection.CreateCommand())
             {
-
                 command.Parameters.Add(":PrimerNombre", OracleDbType.Varchar2).Value = entrenador.PrimerNombre;
                 command.Parameters.Add(":SegundoNombre", OracleDbType.Varchar2).Value = entrenador.SegundoNombre;
                 command.Parameters.Add(":PrimerApellido", OracleDbType.Varchar2).Value = entrenador.PrimerApellido;
                 command.Parameters.Add(":SegundoApellido", OracleDbType.Varchar2).Value = entrenador.SegundoApellido;
-                command.Parameters.Add(":Sexo", OracleDbType.Char).Value = entrenador.Sexo;
+                command.Parameters.Add(":Sexo", OracleDbType.Varchar2).Value = entrenador.Sexo;
                 command.Parameters.Add(":FechaNacimiento", OracleDbType.Date).Value = entrenador.FechaNacimiento;
                 command.Parameters.Add(":Telefono1", OracleDbType.Varchar2).Value = entrenador.Celular1;
                 command.Parameters.Add(":Telefono2", OracleDbType.Varchar2).Value = entrenador.Celular2;
-                command.Parameters.Add(":Peso", OracleDbType.Double).Value = entrenador.Sueldo;
-                command.Parameters.Add(":Identificacion", OracleDbType.Varchar2).Value = entrenador.Identificacion;
+                command.Parameters.Add(":Sueldo", OracleDbType.Decimal).Value = entrenador.Sueldo;
+                command.Parameters.Add(":Id", OracleDbType.Varchar2).Value = Id;
 
-                command.CommandText = "UPDATE entrenador SET PrimerNombre = :PrimerNombre, SegundoNombre = :SegundoNombre," +
-                                        "PrimerApellido = :PrimerApellido, SegundoApellido =:SegundoApellido" +
-                                        "Sexo = :Sexo,FechaNacimiento = :FechaNacimiento,Telefono1 = :Telefono1" +
-                                        "Telefono2 = :Telefono2, Sueldo = :Sueldo" +
-                                        "WHERE IdentificacionEntrenador = :Identificacion";
+                command.CommandText = "Update entrenador set PrimerNombre = :PrimerNombre," +
+                    " SegundoNombre = :SegundoNombre, PrimerApellido = :PrimerApellido," +
+                    " SegundoApellido = :SegundoApellido, Sexo = :Sexo, FechaNacimiento = :FechaNacimiento," +
+                    " Telefono1 = :Telefono1,Telefono2 = :Telefono2, Sueldo = :Sueldo where IdentificacionEntrenador = :Id";
+                                        
                 return command.ExecuteNonQuery();
             }
         }

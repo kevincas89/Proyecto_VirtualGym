@@ -96,6 +96,7 @@ namespace Presentación
             LblSueldo.Visible = true;
             TxtSueldo.Visible = true;
             var respuesta = servicio.BuscarRegistro(TxtIdentificacion.Text);
+            char sexo = respuesta.entrenador.Sexo;
             if (!respuesta.Errror)
             {
 
@@ -105,7 +106,7 @@ namespace Presentación
                 TxtSegundoNombre.Text = respuesta.entrenador.SegundoNombre;
                 TxtPrimerApellido.Text = respuesta.entrenador.PrimerApellido;
                 TxtSegundoApellido.Text = respuesta.entrenador.SegundoApellido;
-                CbxSexo.SelectedItem = respuesta.entrenador.Sexo;
+                CbxSexo.SelectedItem = Convert.ToString(sexo);
                 DTFecha.Value = respuesta.entrenador.FechaNacimiento;
                 TxtCelular1.Text = respuesta.entrenador.Celular1;
                 TxtCelular2.Text = respuesta.entrenador.Celular2;

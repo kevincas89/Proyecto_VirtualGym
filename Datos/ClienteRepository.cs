@@ -129,15 +129,15 @@ namespace Datos
                 command.Parameters.Add(":Peso", OracleDbType.Double).Value = cliente.Peso;
                 command.Parameters.Add(":Altura", OracleDbType.Double).Value = cliente.Altura;
                 command.Parameters.Add(":IMC", OracleDbType.Double).Value = cliente.IndiceMasaCorporal;
-                command.Parameters.Add(":CodPlan", OracleDbType.Varchar2).Value = cliente.plan;
-                command.Parameters.Add(":IdentificacionEntrenador", OracleDbType.Varchar2).Value = cliente.entrenador;
+                //command.Parameters.Add(":CodPlan", OracleDbType.Varchar2).Value = cliente.plan;
+                //command.Parameters.Add(":IdentificacionEntrenador", OracleDbType.Varchar2).Value = cliente.entrenador;
                 command.Parameters.Add(":IdentificacionCliente", OracleDbType.Varchar2).Value = cliente.Identificacion;
 
-                command.CommandText = "UPDATE clientes SET PrimerNombre = :PrimerNombre, SegundoNombre = :SegundoNombre," +
-                                        "PrimerApellido = :PrimerApellido, SegundoApellido =:SegundoApellido" +
-                                        "Sexo = :Sexo,FechaNacimiento = :FechaNacimiento,Telefono1 = :Telefono1" +
-                                        "Telefono2 = :Telefono2,Peso = :Peso,Altura = :Altura,IMC =:IMC" +
-                                       "WHERE IdentificacionCliente = :IdentificacionCliente";
+                command.CommandText = "UPDATE clientes SET PrimerNombre = :PrimerNombre," +
+                    " SegundoNombre = :SegundoNombre, PrimerApellido = :PrimerApellido," +
+                    " SegundoApellido =:SegundoApellido, Sexo = :Sexo," +
+                    " FechaNacimiento = :FechaNacimiento, Telefono1 = :Telefono1, Telefono2 = :Telefono2," +
+                    " Peso = :Peso, Altura = :Altura, IMC =:IMC WHERE IdentificacionCliente = :IdentificacionCliente";
                                            
                 return command.ExecuteNonQuery();
             }

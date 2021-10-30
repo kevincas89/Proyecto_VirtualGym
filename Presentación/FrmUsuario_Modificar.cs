@@ -90,16 +90,17 @@ namespace Presentación
             BtnActualizar.Visible = true;
 
             var respuesta = servicio.BuscarRegistro(TxtIdentificacion.Text);
+            char sexo = respuesta.cliente.Sexo;
             if (!respuesta.Errror)
             {
 
-
+                
                 TxtIdentificacion.Text = respuesta.cliente.Identificacion;
                 TxtPrimerNombre.Text = respuesta.cliente.PrimerNombre;
                 TxtSegundoNombre.Text = respuesta.cliente.SegundoNombre;
                 TxtPrimerApellido.Text = respuesta.cliente.PrimerApellido;
                 TxtSegundoApellido.Text = respuesta.cliente.SegundoApellido;
-                CbxSexo.SelectedItem = respuesta.cliente.Sexo;
+                CbxSexo.SelectedItem = Convert.ToString(sexo);
                 DTFecha.Value = respuesta.cliente.FechaNacimiento;
                 TxtCelular1.Text = respuesta.cliente.Celular1;
                 TxtCelular2.Text = respuesta.cliente.Celular2;
