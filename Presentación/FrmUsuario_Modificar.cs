@@ -61,6 +61,31 @@ namespace Presentación
         private void BtnCancelar_UsuarioModificar_Click(object sender, EventArgs e)
         {
             LimpiarCampos(this);
+
+            LblPrimerNombre.Visible = false;
+            TxtPrimerNombre.Visible = false;
+            LblSegundoNombre.Visible = false;
+            TxtSegundoNombre.Visible = false;
+            LblPrimerApellido.Visible = false;
+            TxtPrimerApellido.Visible = false;
+            LblSegundoApellido.Visible = false;
+            TxtSegundoApellido.Visible = false;
+            LblSexo.Visible = false;
+            CbxSexo.Visible = false;
+            LblFechaDeNacimiento.Visible = false;
+            DTFecha.Visible = false;
+            LblCelular1.Visible = false;
+            TxtCelular1.Visible = false;
+            LblCelular2.Visible = false;
+            TxtCelular2.Visible = false;
+            LblAltura.Visible = false;
+            TxtAltura.Visible = false;
+            LblMt.Visible = false;
+            LblPeso.Visible = false;
+            TxtPeso.Visible = false;
+            LblKg.Visible = false;
+            BtnActualizar.Visible = false;
+
         }
 
         private void BtnGuardar_UsuarioModificar_Click(object sender, EventArgs e)

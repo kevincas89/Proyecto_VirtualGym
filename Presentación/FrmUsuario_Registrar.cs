@@ -27,7 +27,8 @@ namespace Presentación
             entrenador = new EntrenadorService(ConfigConnection.connectionString);
             CargarCombo2();
             CargarCombo();
-            
+
+
         }
 
         // LIMPIAR CAMPOS
@@ -46,6 +47,7 @@ namespace Presentación
         private void BtnCancelar_UsuarioRegistro_Click(object sender, EventArgs e)
         {
             LimpiarCampos(this);
+
         }
 
         private void BtnGuardar_UsuarioRegistro_Click(object sender, EventArgs e)
