@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Presentación
 {
-    class ConfigConnection
+    public class ConfigConnection
     {
 
         public static string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;

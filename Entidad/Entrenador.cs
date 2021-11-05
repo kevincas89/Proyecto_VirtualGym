@@ -12,6 +12,10 @@ namespace Entidad
         public Entrenador()
         {
             Tipo = "Entrenador";
+            SegundoNombre = "vacio";
+            SegundoApellido = "vacio";
+            Celular1 = "vacio";
+            Celular2 = "vacio";
         }
         public double Sueldo { get; set; }
 

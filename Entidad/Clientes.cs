@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 namespace Entidad
 {
     public class Clientes : Persona
-    {      
+    {
+        
         public Clientes()
         {
-            Tipo = "Clientes";
+            Tipo = "Clientes";       
+            SegundoNombre = "vacio";
+            SegundoApellido = "vacio";
+            Celular1 = "vacio";
+            Celular2 = "vacio";
         }
 
         //public int DiasDisponibles { get; set; }        
