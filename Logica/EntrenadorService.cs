@@ -24,9 +24,12 @@ namespace Logica
             try
             {
                 connection.Open();
-
-                repository.GuardarEntrenador(entrenador);
-                return $"Se guardo el entrenador {entrenador.PrimerNombre} exitosamente.";
+                if (repository.BuscarPorIdentificacionEntrenador(entrenador.Identificacion)==null)
+                {
+                    repository.GuardarEntrenador(entrenador);
+                    return $"Se guardo el entrenador {entrenador.PrimerNombre} exitosamente.";
+                }
+                return $"El entrenador ya se encuentra registrado.";
             }
             catch (Exception e)
             {
