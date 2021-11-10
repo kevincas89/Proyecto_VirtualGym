@@ -10,7 +10,7 @@ namespace Datos
 {
     public class PlanRepository
     {
-        //HOLA
+        //KEVIN PAGAME MI PLATA
         private readonly OracleConnection _connection;
 
         public PlanRepository(ConnectionManager connection)
