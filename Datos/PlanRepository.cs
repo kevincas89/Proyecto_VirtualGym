@@ -10,6 +10,7 @@ namespace Datos
 {
     public class PlanRepository
     {
+        //No te voy a pagar nada
         private readonly OracleConnection _connection;
 
         public PlanRepository(ConnectionManager connection)
