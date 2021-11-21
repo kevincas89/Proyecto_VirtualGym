@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class PlanRepository
+    public class PlanRepository {
     
         private readonly OracleConnection _connection;
 
