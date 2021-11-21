@@ -88,11 +88,11 @@
     <Compile Include="FrmContabilidad.Designer.cs">
       <DependentUpon>FrmContabilidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEntrenadores_Consultar.cs">
+    <Compile Include="FrmEntrenadores_Eliminar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEntrenadores_Consultar.Designer.cs">
-      <DependentUpon>FrmEntrenadores_Consultar.cs</DependentUpon>
+    <Compile Include="FrmEntrenadores_Eliminar.Designer.cs">
+      <DependentUpon>FrmEntrenadores_Eliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEntrenadores_Informe.cs">
       <SubType>Form</SubType>
@@ -142,11 +142,11 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuario_Consultar.cs">
+    <Compile Include="FrmUsuario_Eliminar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuario_Consultar.Designer.cs">
-      <DependentUpon>FrmUsuario_Consultar.cs</DependentUpon>
+    <Compile Include="FrmUsuario_Eliminar.Designer.cs">
+      <DependentUpon>FrmUsuario_Eliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuario_Informe.cs">
       <SubType>Form</SubType>
@@ -171,8 +171,8 @@
     <EmbeddedResource Include="FrmContabilidad.resx">
       <DependentUpon>FrmContabilidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEntrenadores_Consultar.resx">
-      <DependentUpon>FrmEntrenadores_Consultar.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEntrenadores_Eliminar.resx">
+      <DependentUpon>FrmEntrenadores_Eliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEntrenadores_Informe.resx">
       <DependentUpon>FrmEntrenadores_Informe.cs</DependentUpon>
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuario_Consultar.resx">
-      <DependentUpon>FrmUsuario_Consultar.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUsuario_Eliminar.resx">
+      <DependentUpon>FrmUsuario_Eliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario_Informe.resx">
       <DependentUpon>FrmUsuario_Informe.cs</DependentUpon>

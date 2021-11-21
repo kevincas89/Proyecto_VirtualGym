@@ -144,7 +144,7 @@ namespace Presentación
         {
 
             SubMenuUsuarios.Visible = false;
-            AbrirFormHijo(new FrmUsuario_Consultar());
+            AbrirFormHijo(new FrmUsuario_Eliminar());
             PosicionInicial();
         }
 
@@ -201,7 +201,7 @@ namespace Presentación
         private void BtnEntrenadores_consultar_Click(object sender, EventArgs e)
         {
             SubMenuEntrenadores.Visible = false;
-            AbrirFormHijo(new FrmEntrenadores_Consultar());
+            AbrirFormHijo(new FrmEntrenadores_Eliminar());
             PosicionInicial();
         }
 

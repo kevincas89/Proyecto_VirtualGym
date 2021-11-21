@@ -132,26 +132,29 @@ namespace Presentación
             this.MenuVertical.Controls.Add(this.PanelUsuarios);
             this.MenuVertical.Controls.Add(this.BtnUsuarios);
             this.MenuVertical.Controls.Add(this.SubMenuUsuarios);
-            this.MenuVertical.Location = new System.Drawing.Point(-2, 25);
+            this.MenuVertical.Location = new System.Drawing.Point(-3, 31);
+            this.MenuVertical.Margin = new System.Windows.Forms.Padding(4);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(186, 570);
+            this.MenuVertical.Size = new System.Drawing.Size(248, 702);
             this.MenuVertical.TabIndex = 1;
             // 
             // PanelContabilidad
             // 
             this.PanelContabilidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.PanelContabilidad.Controls.Add(this.panel29);
-            this.PanelContabilidad.Location = new System.Drawing.Point(0, 474);
+            this.PanelContabilidad.Location = new System.Drawing.Point(0, 583);
+            this.PanelContabilidad.Margin = new System.Windows.Forms.Padding(4);
             this.PanelContabilidad.Name = "PanelContabilidad";
-            this.PanelContabilidad.Size = new System.Drawing.Size(5, 30);
+            this.PanelContabilidad.Size = new System.Drawing.Size(7, 37);
             this.PanelContabilidad.TabIndex = 4;
             // 
             // panel29
             // 
             this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel29.Location = new System.Drawing.Point(-85, 0);
+            this.panel29.Location = new System.Drawing.Point(-113, 0);
+            this.panel29.Margin = new System.Windows.Forms.Padding(4);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(5, 30);
+            this.panel29.Size = new System.Drawing.Size(7, 37);
             this.panel29.TabIndex = 2;
             // 
             // BtnContabilidad
@@ -164,9 +167,10 @@ namespace Presentación
             this.BtnContabilidad.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnContabilidad.Image = ((System.Drawing.Image)(resources.GetObject("BtnContabilidad.Image")));
             this.BtnContabilidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnContabilidad.Location = new System.Drawing.Point(4, 474);
+            this.BtnContabilidad.Location = new System.Drawing.Point(5, 583);
+            this.BtnContabilidad.Margin = new System.Windows.Forms.Padding(4);
             this.BtnContabilidad.Name = "BtnContabilidad";
-            this.BtnContabilidad.Size = new System.Drawing.Size(178, 30);
+            this.BtnContabilidad.Size = new System.Drawing.Size(237, 37);
             this.BtnContabilidad.TabIndex = 12;
             this.BtnContabilidad.Text = "       Contabilidad";
             this.BtnContabilidad.UseVisualStyleBackColor = true;
@@ -180,26 +184,29 @@ namespace Presentación
             this.SubMenuPalnes.Controls.Add(this.BtnPlanes_consultar);
             this.SubMenuPalnes.Controls.Add(this.panel33);
             this.SubMenuPalnes.Controls.Add(this.BtnPlanes_registrar);
-            this.SubMenuPalnes.Location = new System.Drawing.Point(18, 187);
+            this.SubMenuPalnes.Location = new System.Drawing.Point(24, 230);
+            this.SubMenuPalnes.Margin = new System.Windows.Forms.Padding(4);
             this.SubMenuPalnes.Name = "SubMenuPalnes";
-            this.SubMenuPalnes.Size = new System.Drawing.Size(138, 96);
+            this.SubMenuPalnes.Size = new System.Drawing.Size(184, 118);
             this.SubMenuPalnes.TabIndex = 11;
             // 
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel18.Controls.Add(this.panel28);
-            this.panel18.Location = new System.Drawing.Point(0, 65);
+            this.panel18.Location = new System.Drawing.Point(0, 80);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(6, 25);
+            this.panel18.Size = new System.Drawing.Size(8, 31);
             this.panel18.TabIndex = 4;
             // 
             // panel28
             // 
             this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel28.Location = new System.Drawing.Point(-85, 0);
+            this.panel28.Location = new System.Drawing.Point(-113, 0);
+            this.panel28.Margin = new System.Windows.Forms.Padding(4);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(5, 30);
+            this.panel28.Size = new System.Drawing.Size(7, 37);
             this.panel28.TabIndex = 2;
             // 
             // BtnPlanes_modificar
@@ -212,9 +219,10 @@ namespace Presentación
             this.BtnPlanes_modificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnPlanes_modificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnPlanes_modificar.Image")));
             this.BtnPlanes_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPlanes_modificar.Location = new System.Drawing.Point(3, 65);
+            this.BtnPlanes_modificar.Location = new System.Drawing.Point(4, 80);
+            this.BtnPlanes_modificar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPlanes_modificar.Name = "BtnPlanes_modificar";
-            this.BtnPlanes_modificar.Size = new System.Drawing.Size(135, 25);
+            this.BtnPlanes_modificar.Size = new System.Drawing.Size(180, 31);
             this.BtnPlanes_modificar.TabIndex = 9;
             this.BtnPlanes_modificar.Text = "   Modificar";
             this.BtnPlanes_modificar.UseVisualStyleBackColor = true;
@@ -224,17 +232,19 @@ namespace Presentación
             // 
             this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel31.Controls.Add(this.panel32);
-            this.panel31.Location = new System.Drawing.Point(0, 34);
+            this.panel31.Location = new System.Drawing.Point(0, 42);
+            this.panel31.Margin = new System.Windows.Forms.Padding(4);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(6, 25);
+            this.panel31.Size = new System.Drawing.Size(8, 31);
             this.panel31.TabIndex = 4;
             // 
             // panel32
             // 
             this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel32.Location = new System.Drawing.Point(-85, 0);
+            this.panel32.Location = new System.Drawing.Point(-113, 0);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(5, 30);
+            this.panel32.Size = new System.Drawing.Size(7, 37);
             this.panel32.TabIndex = 2;
             // 
             // BtnPlanes_consultar
@@ -247,9 +257,10 @@ namespace Presentación
             this.BtnPlanes_consultar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnPlanes_consultar.Image = ((System.Drawing.Image)(resources.GetObject("BtnPlanes_consultar.Image")));
             this.BtnPlanes_consultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPlanes_consultar.Location = new System.Drawing.Point(3, 34);
+            this.BtnPlanes_consultar.Location = new System.Drawing.Point(4, 42);
+            this.BtnPlanes_consultar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPlanes_consultar.Name = "BtnPlanes_consultar";
-            this.BtnPlanes_consultar.Size = new System.Drawing.Size(135, 25);
+            this.BtnPlanes_consultar.Size = new System.Drawing.Size(180, 31);
             this.BtnPlanes_consultar.TabIndex = 9;
             this.BtnPlanes_consultar.Text = "   Consultar";
             this.BtnPlanes_consultar.UseVisualStyleBackColor = true;
@@ -259,17 +270,19 @@ namespace Presentación
             // 
             this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel33.Controls.Add(this.panel34);
-            this.panel33.Location = new System.Drawing.Point(0, 3);
+            this.panel33.Location = new System.Drawing.Point(0, 4);
+            this.panel33.Margin = new System.Windows.Forms.Padding(4);
             this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(6, 25);
+            this.panel33.Size = new System.Drawing.Size(8, 31);
             this.panel33.TabIndex = 4;
             // 
             // panel34
             // 
             this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel34.Location = new System.Drawing.Point(-85, 0);
+            this.panel34.Location = new System.Drawing.Point(-113, 0);
+            this.panel34.Margin = new System.Windows.Forms.Padding(4);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(5, 30);
+            this.panel34.Size = new System.Drawing.Size(7, 37);
             this.panel34.TabIndex = 2;
             // 
             // BtnPlanes_registrar
@@ -282,9 +295,10 @@ namespace Presentación
             this.BtnPlanes_registrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnPlanes_registrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnPlanes_registrar.Image")));
             this.BtnPlanes_registrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPlanes_registrar.Location = new System.Drawing.Point(6, 3);
+            this.BtnPlanes_registrar.Location = new System.Drawing.Point(8, 4);
+            this.BtnPlanes_registrar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPlanes_registrar.Name = "BtnPlanes_registrar";
-            this.BtnPlanes_registrar.Size = new System.Drawing.Size(124, 25);
+            this.BtnPlanes_registrar.Size = new System.Drawing.Size(165, 31);
             this.BtnPlanes_registrar.TabIndex = 9;
             this.BtnPlanes_registrar.Text = "     Resgistrar";
             this.BtnPlanes_registrar.UseVisualStyleBackColor = true;
@@ -300,9 +314,10 @@ namespace Presentación
             this.BtnPlanes.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnPlanes.Image = ((System.Drawing.Image)(resources.GetObject("BtnPlanes.Image")));
             this.BtnPlanes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPlanes.Location = new System.Drawing.Point(18, 129);
+            this.BtnPlanes.Location = new System.Drawing.Point(24, 159);
+            this.BtnPlanes.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPlanes.Name = "BtnPlanes";
-            this.BtnPlanes.Size = new System.Drawing.Size(176, 30);
+            this.BtnPlanes.Size = new System.Drawing.Size(235, 37);
             this.BtnPlanes.TabIndex = 9;
             this.BtnPlanes.Text = "Planes";
             this.BtnPlanes.UseVisualStyleBackColor = true;
@@ -315,9 +330,10 @@ namespace Presentación
             this.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInicio.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnInicio.Image = ((System.Drawing.Image)(resources.GetObject("BtnInicio.Image")));
-            this.BtnInicio.Location = new System.Drawing.Point(13, 3);
+            this.BtnInicio.Location = new System.Drawing.Point(17, 4);
+            this.BtnInicio.Margin = new System.Windows.Forms.Padding(4);
             this.BtnInicio.Name = "BtnInicio";
-            this.BtnInicio.Size = new System.Drawing.Size(162, 106);
+            this.BtnInicio.Size = new System.Drawing.Size(216, 130);
             this.BtnInicio.TabIndex = 10;
             this.BtnInicio.UseVisualStyleBackColor = true;
             this.BtnInicio.Click += new System.EventHandler(this.BtnInicio_Click_1);
@@ -326,17 +342,19 @@ namespace Presentación
             // 
             this.PanelPlanes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.PanelPlanes.Controls.Add(this.panel27);
-            this.PanelPlanes.Location = new System.Drawing.Point(0, 165);
+            this.PanelPlanes.Location = new System.Drawing.Point(0, 203);
+            this.PanelPlanes.Margin = new System.Windows.Forms.Padding(4);
             this.PanelPlanes.Name = "PanelPlanes";
-            this.PanelPlanes.Size = new System.Drawing.Size(5, 30);
+            this.PanelPlanes.Size = new System.Drawing.Size(7, 37);
             this.PanelPlanes.TabIndex = 3;
             // 
             // panel27
             // 
             this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel27.Location = new System.Drawing.Point(-85, 0);
+            this.panel27.Location = new System.Drawing.Point(-113, 0);
+            this.panel27.Margin = new System.Windows.Forms.Padding(4);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(5, 30);
+            this.panel27.Size = new System.Drawing.Size(7, 37);
             this.panel27.TabIndex = 2;
             // 
             // SubMenuEntrenadores
@@ -349,26 +367,29 @@ namespace Presentación
             this.SubMenuEntrenadores.Controls.Add(this.BtnEntrenadores_consultar);
             this.SubMenuEntrenadores.Controls.Add(this.panel19);
             this.SubMenuEntrenadores.Controls.Add(this.BtnEntrenadores_registrar);
-            this.SubMenuEntrenadores.Location = new System.Drawing.Point(44, 334);
+            this.SubMenuEntrenadores.Location = new System.Drawing.Point(59, 411);
+            this.SubMenuEntrenadores.Margin = new System.Windows.Forms.Padding(4);
             this.SubMenuEntrenadores.Name = "SubMenuEntrenadores";
-            this.SubMenuEntrenadores.Size = new System.Drawing.Size(138, 127);
+            this.SubMenuEntrenadores.Size = new System.Drawing.Size(184, 156);
             this.SubMenuEntrenadores.TabIndex = 8;
             // 
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel25.Controls.Add(this.panel26);
-            this.panel25.Location = new System.Drawing.Point(0, 96);
+            this.panel25.Location = new System.Drawing.Point(0, 118);
+            this.panel25.Margin = new System.Windows.Forms.Padding(4);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(6, 25);
+            this.panel25.Size = new System.Drawing.Size(8, 31);
             this.panel25.TabIndex = 4;
             // 
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel26.Location = new System.Drawing.Point(-85, 0);
+            this.panel26.Location = new System.Drawing.Point(-113, 0);
+            this.panel26.Margin = new System.Windows.Forms.Padding(4);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(5, 30);
+            this.panel26.Size = new System.Drawing.Size(7, 37);
             this.panel26.TabIndex = 2;
             // 
             // BtnEntrenadores_modificar
@@ -381,9 +402,10 @@ namespace Presentación
             this.BtnEntrenadores_modificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnEntrenadores_modificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEntrenadores_modificar.Image")));
             this.BtnEntrenadores_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEntrenadores_modificar.Location = new System.Drawing.Point(3, 96);
+            this.BtnEntrenadores_modificar.Location = new System.Drawing.Point(4, 118);
+            this.BtnEntrenadores_modificar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEntrenadores_modificar.Name = "BtnEntrenadores_modificar";
-            this.BtnEntrenadores_modificar.Size = new System.Drawing.Size(135, 25);
+            this.BtnEntrenadores_modificar.Size = new System.Drawing.Size(180, 31);
             this.BtnEntrenadores_modificar.TabIndex = 9;
             this.BtnEntrenadores_modificar.Text = "   Modificar";
             this.BtnEntrenadores_modificar.UseVisualStyleBackColor = true;
@@ -393,17 +415,19 @@ namespace Presentación
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel23.Controls.Add(this.panel24);
-            this.panel23.Location = new System.Drawing.Point(0, 65);
+            this.panel23.Location = new System.Drawing.Point(0, 80);
+            this.panel23.Margin = new System.Windows.Forms.Padding(4);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(6, 25);
+            this.panel23.Size = new System.Drawing.Size(8, 31);
             this.panel23.TabIndex = 4;
             // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel24.Location = new System.Drawing.Point(-85, 0);
+            this.panel24.Location = new System.Drawing.Point(-113, 0);
+            this.panel24.Margin = new System.Windows.Forms.Padding(4);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(5, 30);
+            this.panel24.Size = new System.Drawing.Size(7, 37);
             this.panel24.TabIndex = 2;
             // 
             // BtnEntrenadores_informe
@@ -416,9 +440,10 @@ namespace Presentación
             this.BtnEntrenadores_informe.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnEntrenadores_informe.Image = ((System.Drawing.Image)(resources.GetObject("BtnEntrenadores_informe.Image")));
             this.BtnEntrenadores_informe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEntrenadores_informe.Location = new System.Drawing.Point(6, 65);
+            this.BtnEntrenadores_informe.Location = new System.Drawing.Point(8, 80);
+            this.BtnEntrenadores_informe.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEntrenadores_informe.Name = "BtnEntrenadores_informe";
-            this.BtnEntrenadores_informe.Size = new System.Drawing.Size(135, 25);
+            this.BtnEntrenadores_informe.Size = new System.Drawing.Size(180, 31);
             this.BtnEntrenadores_informe.TabIndex = 9;
             this.BtnEntrenadores_informe.Text = "Informe";
             this.BtnEntrenadores_informe.UseVisualStyleBackColor = true;
@@ -428,17 +453,19 @@ namespace Presentación
             // 
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel21.Controls.Add(this.panel22);
-            this.panel21.Location = new System.Drawing.Point(0, 34);
+            this.panel21.Location = new System.Drawing.Point(0, 42);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(6, 25);
+            this.panel21.Size = new System.Drawing.Size(8, 31);
             this.panel21.TabIndex = 4;
             // 
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel22.Location = new System.Drawing.Point(-85, 0);
+            this.panel22.Location = new System.Drawing.Point(-113, 0);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(5, 30);
+            this.panel22.Size = new System.Drawing.Size(7, 37);
             this.panel22.TabIndex = 2;
             // 
             // BtnEntrenadores_consultar
@@ -451,11 +478,12 @@ namespace Presentación
             this.BtnEntrenadores_consultar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnEntrenadores_consultar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEntrenadores_consultar.Image")));
             this.BtnEntrenadores_consultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEntrenadores_consultar.Location = new System.Drawing.Point(3, 34);
+            this.BtnEntrenadores_consultar.Location = new System.Drawing.Point(4, 42);
+            this.BtnEntrenadores_consultar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEntrenadores_consultar.Name = "BtnEntrenadores_consultar";
-            this.BtnEntrenadores_consultar.Size = new System.Drawing.Size(135, 25);
+            this.BtnEntrenadores_consultar.Size = new System.Drawing.Size(180, 31);
             this.BtnEntrenadores_consultar.TabIndex = 9;
-            this.BtnEntrenadores_consultar.Text = "   Consultar";
+            this.BtnEntrenadores_consultar.Text = "Eliminar";
             this.BtnEntrenadores_consultar.UseVisualStyleBackColor = true;
             this.BtnEntrenadores_consultar.Click += new System.EventHandler(this.BtnEntrenadores_consultar_Click);
             // 
@@ -463,17 +491,19 @@ namespace Presentación
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel19.Controls.Add(this.panel20);
-            this.panel19.Location = new System.Drawing.Point(0, 3);
+            this.panel19.Location = new System.Drawing.Point(0, 4);
+            this.panel19.Margin = new System.Windows.Forms.Padding(4);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(6, 25);
+            this.panel19.Size = new System.Drawing.Size(8, 31);
             this.panel19.TabIndex = 4;
             // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel20.Location = new System.Drawing.Point(-85, 0);
+            this.panel20.Location = new System.Drawing.Point(-113, 0);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(5, 30);
+            this.panel20.Size = new System.Drawing.Size(7, 37);
             this.panel20.TabIndex = 2;
             // 
             // BtnEntrenadores_registrar
@@ -486,9 +516,10 @@ namespace Presentación
             this.BtnEntrenadores_registrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnEntrenadores_registrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEntrenadores_registrar.Image")));
             this.BtnEntrenadores_registrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEntrenadores_registrar.Location = new System.Drawing.Point(6, 3);
+            this.BtnEntrenadores_registrar.Location = new System.Drawing.Point(8, 4);
+            this.BtnEntrenadores_registrar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEntrenadores_registrar.Name = "BtnEntrenadores_registrar";
-            this.BtnEntrenadores_registrar.Size = new System.Drawing.Size(124, 25);
+            this.BtnEntrenadores_registrar.Size = new System.Drawing.Size(165, 31);
             this.BtnEntrenadores_registrar.TabIndex = 9;
             this.BtnEntrenadores_registrar.Text = "     Resgistrar";
             this.BtnEntrenadores_registrar.UseVisualStyleBackColor = true;
@@ -504,9 +535,10 @@ namespace Presentación
             this.BtnEntrenadores.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnEntrenadores.Image = ((System.Drawing.Image)(resources.GetObject("BtnEntrenadores.Image")));
             this.BtnEntrenadores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEntrenadores.Location = new System.Drawing.Point(4, 298);
+            this.BtnEntrenadores.Location = new System.Drawing.Point(5, 367);
+            this.BtnEntrenadores.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEntrenadores.Name = "BtnEntrenadores";
-            this.BtnEntrenadores.Size = new System.Drawing.Size(171, 30);
+            this.BtnEntrenadores.Size = new System.Drawing.Size(228, 37);
             this.BtnEntrenadores.TabIndex = 7;
             this.BtnEntrenadores.Text = "       Entrenadores";
             this.BtnEntrenadores.UseVisualStyleBackColor = true;
@@ -516,34 +548,38 @@ namespace Presentación
             // 
             this.panel_entrenadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel_entrenadores.Controls.Add(this.panel8);
-            this.panel_entrenadores.Location = new System.Drawing.Point(0, 298);
+            this.panel_entrenadores.Location = new System.Drawing.Point(0, 367);
+            this.panel_entrenadores.Margin = new System.Windows.Forms.Padding(4);
             this.panel_entrenadores.Name = "panel_entrenadores";
-            this.panel_entrenadores.Size = new System.Drawing.Size(5, 30);
+            this.panel_entrenadores.Size = new System.Drawing.Size(7, 37);
             this.panel_entrenadores.TabIndex = 3;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel8.Location = new System.Drawing.Point(-85, 0);
+            this.panel8.Location = new System.Drawing.Point(-113, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 30);
+            this.panel8.Size = new System.Drawing.Size(7, 37);
             this.panel8.TabIndex = 2;
             // 
             // PanelUsuarios
             // 
             this.PanelUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.PanelUsuarios.Controls.Add(this.panel2);
-            this.PanelUsuarios.Location = new System.Drawing.Point(0, 129);
+            this.PanelUsuarios.Location = new System.Drawing.Point(0, 159);
+            this.PanelUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.PanelUsuarios.Name = "PanelUsuarios";
-            this.PanelUsuarios.Size = new System.Drawing.Size(5, 30);
+            this.PanelUsuarios.Size = new System.Drawing.Size(7, 37);
             this.PanelUsuarios.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel2.Location = new System.Drawing.Point(-85, 0);
+            this.panel2.Location = new System.Drawing.Point(-113, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 30);
+            this.panel2.Size = new System.Drawing.Size(7, 37);
             this.panel2.TabIndex = 2;
             // 
             // BtnUsuarios
@@ -556,9 +592,10 @@ namespace Presentación
             this.BtnUsuarios.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuarios.Image")));
             this.BtnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUsuarios.Location = new System.Drawing.Point(3, 129);
+            this.BtnUsuarios.Location = new System.Drawing.Point(4, 159);
+            this.BtnUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.BtnUsuarios.Name = "BtnUsuarios";
-            this.BtnUsuarios.Size = new System.Drawing.Size(172, 30);
+            this.BtnUsuarios.Size = new System.Drawing.Size(229, 37);
             this.BtnUsuarios.TabIndex = 1;
             this.BtnUsuarios.Text = "Usuarios";
             this.BtnUsuarios.UseVisualStyleBackColor = true;
@@ -574,9 +611,10 @@ namespace Presentación
             this.SubMenuUsuarios.Controls.Add(this.panel5);
             this.SubMenuUsuarios.Controls.Add(this.panel3);
             this.SubMenuUsuarios.Controls.Add(this.BtnUsuarios_consultar);
-            this.SubMenuUsuarios.Location = new System.Drawing.Point(45, 165);
+            this.SubMenuUsuarios.Location = new System.Drawing.Point(60, 203);
+            this.SubMenuUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.SubMenuUsuarios.Name = "SubMenuUsuarios";
-            this.SubMenuUsuarios.Size = new System.Drawing.Size(130, 127);
+            this.SubMenuUsuarios.Size = new System.Drawing.Size(173, 156);
             this.SubMenuUsuarios.TabIndex = 6;
             this.SubMenuUsuarios.Visible = false;
             // 
@@ -585,34 +623,38 @@ namespace Presentación
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel7.Controls.Add(this.panel15);
             this.panel7.Controls.Add(this.panel17);
-            this.panel7.Location = new System.Drawing.Point(0, 93);
+            this.panel7.Location = new System.Drawing.Point(0, 114);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(5, 25);
+            this.panel7.Size = new System.Drawing.Size(7, 31);
             this.panel7.TabIndex = 8;
             // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(-63, 0);
+            this.panel15.Location = new System.Drawing.Point(-84, 0);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(5, 25);
+            this.panel15.Size = new System.Drawing.Size(7, 31);
             this.panel15.TabIndex = 6;
             // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel16.Location = new System.Drawing.Point(-85, 0);
+            this.panel16.Location = new System.Drawing.Point(-113, 0);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(5, 30);
+            this.panel16.Size = new System.Drawing.Size(7, 37);
             this.panel16.TabIndex = 2;
             // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel17.Location = new System.Drawing.Point(-85, 0);
+            this.panel17.Location = new System.Drawing.Point(-113, 0);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(5, 30);
+            this.panel17.Size = new System.Drawing.Size(7, 37);
             this.panel17.TabIndex = 2;
             // 
             // BtnUsuarios_modificar
@@ -625,9 +667,10 @@ namespace Presentación
             this.BtnUsuarios_modificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnUsuarios_modificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuarios_modificar.Image")));
             this.BtnUsuarios_modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUsuarios_modificar.Location = new System.Drawing.Point(3, 93);
+            this.BtnUsuarios_modificar.Location = new System.Drawing.Point(4, 114);
+            this.BtnUsuarios_modificar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnUsuarios_modificar.Name = "BtnUsuarios_modificar";
-            this.BtnUsuarios_modificar.Size = new System.Drawing.Size(135, 25);
+            this.BtnUsuarios_modificar.Size = new System.Drawing.Size(180, 31);
             this.BtnUsuarios_modificar.TabIndex = 8;
             this.BtnUsuarios_modificar.Text = "   Modificar";
             this.BtnUsuarios_modificar.UseVisualStyleBackColor = true;
@@ -638,34 +681,38 @@ namespace Presentación
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Controls.Add(this.panel14);
-            this.panel11.Location = new System.Drawing.Point(0, 62);
+            this.panel11.Location = new System.Drawing.Point(0, 76);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(5, 25);
+            this.panel11.Size = new System.Drawing.Size(7, 31);
             this.panel11.TabIndex = 7;
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel12.Controls.Add(this.panel13);
-            this.panel12.Location = new System.Drawing.Point(-63, 0);
+            this.panel12.Location = new System.Drawing.Point(-84, 0);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(5, 25);
+            this.panel12.Size = new System.Drawing.Size(7, 31);
             this.panel12.TabIndex = 6;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel13.Location = new System.Drawing.Point(-85, 0);
+            this.panel13.Location = new System.Drawing.Point(-113, 0);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(5, 30);
+            this.panel13.Size = new System.Drawing.Size(7, 37);
             this.panel13.TabIndex = 2;
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel14.Location = new System.Drawing.Point(-85, 0);
+            this.panel14.Location = new System.Drawing.Point(-113, 0);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(5, 30);
+            this.panel14.Size = new System.Drawing.Size(7, 37);
             this.panel14.TabIndex = 2;
             // 
             // BtnUsuario_registrar
@@ -678,9 +725,10 @@ namespace Presentación
             this.BtnUsuario_registrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnUsuario_registrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuario_registrar.Image")));
             this.BtnUsuario_registrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUsuario_registrar.Location = new System.Drawing.Point(6, 0);
+            this.BtnUsuario_registrar.Location = new System.Drawing.Point(8, 0);
+            this.BtnUsuario_registrar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnUsuario_registrar.Name = "BtnUsuario_registrar";
-            this.BtnUsuario_registrar.Size = new System.Drawing.Size(124, 25);
+            this.BtnUsuario_registrar.Size = new System.Drawing.Size(165, 31);
             this.BtnUsuario_registrar.TabIndex = 3;
             this.BtnUsuario_registrar.Text = "     Resgistrar";
             this.BtnUsuario_registrar.UseVisualStyleBackColor = true;
@@ -696,9 +744,10 @@ namespace Presentación
             this.BtnUsuarios_informe.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnUsuarios_informe.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuarios_informe.Image")));
             this.BtnUsuarios_informe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUsuarios_informe.Location = new System.Drawing.Point(3, 62);
+            this.BtnUsuarios_informe.Location = new System.Drawing.Point(4, 76);
+            this.BtnUsuarios_informe.Margin = new System.Windows.Forms.Padding(4);
             this.BtnUsuarios_informe.Name = "BtnUsuarios_informe";
-            this.BtnUsuarios_informe.Size = new System.Drawing.Size(135, 25);
+            this.BtnUsuarios_informe.Size = new System.Drawing.Size(180, 31);
             this.BtnUsuarios_informe.TabIndex = 7;
             this.BtnUsuarios_informe.Text = "Informe";
             this.BtnUsuarios_informe.UseVisualStyleBackColor = true;
@@ -709,34 +758,38 @@ namespace Presentación
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel5.Controls.Add(this.panel9);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(-1, 31);
+            this.panel5.Location = new System.Drawing.Point(-1, 38);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(6, 25);
+            this.panel5.Size = new System.Drawing.Size(8, 31);
             this.panel5.TabIndex = 4;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(-63, 0);
+            this.panel9.Location = new System.Drawing.Point(-84, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(5, 25);
+            this.panel9.Size = new System.Drawing.Size(7, 31);
             this.panel9.TabIndex = 6;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel10.Location = new System.Drawing.Point(-85, 0);
+            this.panel10.Location = new System.Drawing.Point(-113, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(5, 30);
+            this.panel10.Size = new System.Drawing.Size(7, 37);
             this.panel10.TabIndex = 2;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel6.Location = new System.Drawing.Point(-85, 0);
+            this.panel6.Location = new System.Drawing.Point(-113, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(5, 30);
+            this.panel6.Size = new System.Drawing.Size(7, 37);
             this.panel6.TabIndex = 2;
             // 
             // panel3
@@ -744,16 +797,18 @@ namespace Presentación
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(-1, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(6, 25);
+            this.panel3.Size = new System.Drawing.Size(8, 31);
             this.panel3.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(49)))));
-            this.panel4.Location = new System.Drawing.Point(-85, 0);
+            this.panel4.Location = new System.Drawing.Point(-113, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 30);
+            this.panel4.Size = new System.Drawing.Size(7, 37);
             this.panel4.TabIndex = 2;
             // 
             // BtnUsuarios_consultar
@@ -766,11 +821,12 @@ namespace Presentación
             this.BtnUsuarios_consultar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnUsuarios_consultar.Image = ((System.Drawing.Image)(resources.GetObject("BtnUsuarios_consultar.Image")));
             this.BtnUsuarios_consultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUsuarios_consultar.Location = new System.Drawing.Point(3, 31);
+            this.BtnUsuarios_consultar.Location = new System.Drawing.Point(4, 38);
+            this.BtnUsuarios_consultar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnUsuarios_consultar.Name = "BtnUsuarios_consultar";
-            this.BtnUsuarios_consultar.Size = new System.Drawing.Size(135, 25);
+            this.BtnUsuarios_consultar.Size = new System.Drawing.Size(180, 31);
             this.BtnUsuarios_consultar.TabIndex = 5;
-            this.BtnUsuarios_consultar.Text = "   Consultar";
+            this.BtnUsuarios_consultar.Text = "Eliminar";
             this.BtnUsuarios_consultar.UseVisualStyleBackColor = true;
             this.BtnUsuarios_consultar.Click += new System.EventHandler(this.BtnUsuarios_consultar_Click);
             // 
@@ -781,8 +837,9 @@ namespace Presentación
             this.PnlBarraTitulo.Controls.Add(this.BtnCerrar);
             this.PnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlBarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.PnlBarraTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.PnlBarraTitulo.Name = "PnlBarraTitulo";
-            this.PnlBarraTitulo.Size = new System.Drawing.Size(990, 26);
+            this.PnlBarraTitulo.Size = new System.Drawing.Size(1320, 32);
             this.PnlBarraTitulo.TabIndex = 2;
             this.PnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlBarraTitulo_MouseDown_1);
             // 
@@ -791,9 +848,10 @@ namespace Presentación
             this.BtnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMinimizar.Image")));
-            this.BtnMinimizar.Location = new System.Drawing.Point(943, 2);
+            this.BtnMinimizar.Location = new System.Drawing.Point(1257, 2);
+            this.BtnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMinimizar.Name = "BtnMinimizar";
-            this.BtnMinimizar.Size = new System.Drawing.Size(19, 21);
+            this.BtnMinimizar.Size = new System.Drawing.Size(25, 26);
             this.BtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BtnMinimizar.TabIndex = 2;
             this.BtnMinimizar.TabStop = false;
@@ -804,9 +862,10 @@ namespace Presentación
             this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrar.Image")));
-            this.BtnCerrar.Location = new System.Drawing.Point(968, 3);
+            this.BtnCerrar.Location = new System.Drawing.Point(1291, 4);
+            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(19, 21);
+            this.BtnCerrar.Size = new System.Drawing.Size(25, 26);
             this.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BtnCerrar.TabIndex = 0;
             this.BtnCerrar.TabStop = false;
@@ -816,20 +875,22 @@ namespace Presentación
             // 
             this.PnlCentral.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PnlCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(131)))), ((int)(((byte)(149)))));
-            this.PnlCentral.Location = new System.Drawing.Point(179, 25);
+            this.PnlCentral.Location = new System.Drawing.Point(239, 31);
+            this.PnlCentral.Margin = new System.Windows.Forms.Padding(4);
             this.PnlCentral.Name = "PnlCentral";
-            this.PnlCentral.Size = new System.Drawing.Size(820, 567);
+            this.PnlCentral.Size = new System.Drawing.Size(1093, 698);
             this.PnlCentral.TabIndex = 3;
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 584);
+            this.ClientSize = new System.Drawing.Size(1320, 719);
             this.Controls.Add(this.PnlBarraTitulo);
             this.Controls.Add(this.PnlCentral);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.Text = "Form1";
             this.MenuVertical.ResumeLayout(false);

@@ -47,6 +47,7 @@ namespace Presentación
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BtnEliminar = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgPlanes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
@@ -56,6 +57,7 @@ namespace Presentación
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.BtnEliminar);
             this.panel1.Controls.Add(this.BtnGuardar);
             this.panel1.Controls.Add(this.LbDuracion);
             this.panel1.Controls.Add(this.LbValor);
@@ -71,7 +73,7 @@ namespace Presentación
             this.panel1.Controls.Add(this.rjButton2);
             this.panel1.Controls.Add(this.rjButton1);
             this.panel1.Location = new System.Drawing.Point(204, 91);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(656, 534);
             this.panel1.TabIndex = 5;
@@ -89,7 +91,7 @@ namespace Presentación
             this.BtnGuardar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
             this.BtnGuardar.Location = new System.Drawing.Point(525, 490);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(115, 26);
             this.BtnGuardar.TabIndex = 26;
@@ -184,7 +186,7 @@ namespace Presentación
             this.BtnBuscarPlanes.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarPlanes.ForeColor = System.Drawing.Color.White;
             this.BtnBuscarPlanes.Location = new System.Drawing.Point(245, 174);
-            this.BtnBuscarPlanes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnBuscarPlanes.Margin = new System.Windows.Forms.Padding(4);
             this.BtnBuscarPlanes.Name = "BtnBuscarPlanes";
             this.BtnBuscarPlanes.Size = new System.Drawing.Size(115, 26);
             this.BtnBuscarPlanes.TabIndex = 18;
@@ -206,7 +208,7 @@ namespace Presentación
             this.BtnCancelar_PlanesModificar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar_PlanesModificar.ForeColor = System.Drawing.Color.White;
             this.BtnCancelar_PlanesModificar.Location = new System.Drawing.Point(17, 490);
-            this.BtnCancelar_PlanesModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnCancelar_PlanesModificar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancelar_PlanesModificar.Name = "BtnCancelar_PlanesModificar";
             this.BtnCancelar_PlanesModificar.Size = new System.Drawing.Size(115, 26);
             this.BtnCancelar_PlanesModificar.TabIndex = 17;
@@ -221,7 +223,7 @@ namespace Presentación
             this.TxtCodigoPlan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TxtCodigoPlan.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodigoPlan.Location = new System.Drawing.Point(17, 174);
-            this.TxtCodigoPlan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCodigoPlan.Margin = new System.Windows.Forms.Padding(4);
             this.TxtCodigoPlan.Name = "TxtCodigoPlan";
             this.TxtCodigoPlan.Size = new System.Drawing.Size(176, 27);
             this.TxtCodigoPlan.TabIndex = 11;
@@ -252,7 +254,7 @@ namespace Presentación
             this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton2.ForeColor = System.Drawing.Color.White;
             this.rjButton2.Location = new System.Drawing.Point(0, 641);
-            this.rjButton2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rjButton2.Margin = new System.Windows.Forms.Padding(5);
             this.rjButton2.Name = "rjButton2";
             this.rjButton2.Size = new System.Drawing.Size(1052, 17);
             this.rjButton2.TabIndex = 1;
@@ -271,7 +273,7 @@ namespace Presentación
             this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(-1, 0);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rjButton1.Margin = new System.Windows.Forms.Padding(5);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(657, 68);
             this.rjButton1.TabIndex = 0;
@@ -283,6 +285,28 @@ namespace Presentación
             // 
             this.error.ContainerControl = this;
             // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnEliminar.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnEliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnEliminar.BorderRadius = 3;
+            this.BtnEliminar.BorderSize = 0;
+            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.White;
+            this.BtnEliminar.Location = new System.Drawing.Point(307, 460);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(115, 26);
+            this.BtnEliminar.TabIndex = 27;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.TextColor = System.Drawing.Color.White;
+            this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
             // FrmPlanes_Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,7 +315,7 @@ namespace Presentación
             this.ClientSize = new System.Drawing.Size(1067, 699);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPlanes_Modificar";
             this.Text = "FrmPlanes_Modificar";
             this.panel1.ResumeLayout(false);
@@ -320,5 +344,6 @@ namespace Presentación
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.DataGridView DtgPlanes;
         private CustomControls.RJControls.RJButton BtnGuardar;
+        private CustomControls.RJControls.RJButton BtnEliminar;
     }
 }
