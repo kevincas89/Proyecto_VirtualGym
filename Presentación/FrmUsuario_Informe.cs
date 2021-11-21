@@ -59,7 +59,6 @@ namespace Presentación
                         item.IndiceMasaCorporal,item.plan.CodigoPlan,item.entrenador.Identificacion);
                 }
 
-
             }
             else { MessageBox.Show(response.Mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
