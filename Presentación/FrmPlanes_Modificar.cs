@@ -26,6 +26,7 @@ namespace Presentación
             TxtNombre.Visible = false;
             TxtDuracion.Visible = false;
             TxtValor.Visible = false;
+            BtnEliminar.Visible = false;
 
         }
 
@@ -51,6 +52,7 @@ namespace Presentación
             TxtNombre.Visible = false;
             TxtDuracion.Visible = false;
             TxtValor.Visible = false;
+            BtnEliminar.Visible = false;
             LimpiarCampos(this);
         }
 
@@ -126,6 +128,7 @@ namespace Presentación
             TxtNombre.Visible = true;
             TxtDuracion.Visible = true;
             TxtValor.Visible = true;
+            BtnEliminar.Visible = true;
             if (!respuesta.Errror)
             {
                 
@@ -140,6 +143,15 @@ namespace Presentación
             else
             {
                 MessageBox.Show(respuesta.Mensaje);
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            var respuesta = servicio.BuscarRegistro(TxtCodigoPlan.Text);
+            if (!respuesta.Errror)
+            {
+                MessageBox.Show(servicio.Eliminar(TxtCodigoPlan.Text));
             }
         }
     }

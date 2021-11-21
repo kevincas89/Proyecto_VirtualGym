@@ -275,8 +275,6 @@ namespace Presentación
             this.TxtCelular1.Name = "TxtCelular1";
             this.TxtCelular1.Size = new System.Drawing.Size(110, 23);
             this.TxtCelular1.TabIndex = 21;
-            this.TxtCelular1.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCelular1_Validating);
-            this.TxtCelular1.Validated += new System.EventHandler(this.TxtCelular1_Validated);
             // 
             // TxtIdentificacion
             // 
