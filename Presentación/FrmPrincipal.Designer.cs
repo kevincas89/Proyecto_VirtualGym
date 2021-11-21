@@ -455,7 +455,7 @@ namespace Presentación
             this.BtnEntrenadores_consultar.Name = "BtnEntrenadores_consultar";
             this.BtnEntrenadores_consultar.Size = new System.Drawing.Size(135, 25);
             this.BtnEntrenadores_consultar.TabIndex = 9;
-            this.BtnEntrenadores_consultar.Text = "   Consultar";
+            this.BtnEntrenadores_consultar.Text = "Eliminar";
             this.BtnEntrenadores_consultar.UseVisualStyleBackColor = true;
             this.BtnEntrenadores_consultar.Click += new System.EventHandler(this.BtnEntrenadores_consultar_Click);
             // 
@@ -770,6 +770,7 @@ namespace Presentación
             this.BtnUsuarios_consultar.Name = "BtnUsuarios_consultar";
             this.BtnUsuarios_consultar.Size = new System.Drawing.Size(135, 25);
             this.BtnUsuarios_consultar.TabIndex = 5;
+
             this.BtnUsuarios_consultar.Text = "   Consultar";
             this.BtnUsuarios_consultar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnUsuarios_consultar.UseVisualStyleBackColor = true;

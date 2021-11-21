@@ -114,24 +114,6 @@ namespace Presentación
             return true;
         }
 
-       
-        //VALIDANDO CELULAR
-        private void TxtCelular1_Validating(object sender, CancelEventArgs e)
-        {
-            if (!ValidarCampoNumerico(TxtCelular1.Text, out string mensaje))
-            {
-                error.SetError(TxtCelular1, mensaje);
-                e.Cancel = true;
-                TxtCelular1.Select(0, TxtCelular1.Text.Length);
-            }
-        }
-
-        private void TxtCelular1_Validated(object sender, EventArgs e)
-        {
-            error.SetError(TxtCelular1, "");
-        }
-
-
         //VALIDANDO SUELDO
         private void TxtSueldo_Validating(object sender, CancelEventArgs e)
         {
