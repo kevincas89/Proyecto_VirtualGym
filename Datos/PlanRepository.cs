@@ -2,6 +2,7 @@
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,7 @@ using System.Threading.Tasks;
 namespace Datos
 {
     public class PlanRepository
-    {
-        //HOLA
+    {       
         private readonly OracleConnection _connection;
 
         public PlanRepository(ConnectionManager connection)
@@ -18,7 +18,7 @@ namespace Datos
             _connection = connection._connection;
         }
         
-        public int GuardarPlan(Planes plan)
+        /*public int GuardarPlan(Planes plan)
         {
             using (var command = _connection.CreateCommand() )
             {
@@ -28,6 +28,22 @@ namespace Datos
                 command.Parameters.Add(":NombrePlan", OracleDbType.Varchar2).Value = plan.Nombre;
                 command.Parameters.Add(":ValorPlan", OracleDbType.Decimal).Value = plan.ValorPlan;
                 command.Parameters.Add(":Duracion",OracleDbType.Int64).Value = plan.Dias;
+                var filas = command.ExecuteNonQuery();
+                return filas;
+            }
+        }*/
+
+        public int GuardarPlan(Planes plan)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "agg_plan";
+                command.BindByName = true;
+                command.Parameters.Add("CodPlan", OracleDbType.Varchar2).Value = plan.CodigoPlan;
+                command.Parameters.Add("NombrePlan", OracleDbType.Varchar2).Value = plan.Nombre;
+                command.Parameters.Add("ValorPlan", OracleDbType.Decimal).Value = plan.ValorPlan;
+                command.Parameters.Add("Duracion", OracleDbType.Int64).Value = plan.Dias;
                 var filas = command.ExecuteNonQuery();
                 return filas;
             }
@@ -68,8 +84,30 @@ namespace Datos
             return planes;
         }
 
-        private Planes DataReaderMapToPlan(OracleDataReader dataReader)
+       /* public List<Planes> ConsultarTodosPlanes()
         {
+            OracleDataReader dataReader;
+            List<Planes> planes = new List<Planes>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "F_MostrarPlanes";
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Planes plan = DataReaderMapToPlan(dataReader);
+                        planes.Add(plan);
+                    }
+                }
+            }
+            return planes;
+        }*/
+
+
+            private Planes DataReaderMapToPlan(OracleDataReader dataReader)
+            {
             if (!dataReader.HasRows)
                 return null;
 
@@ -82,7 +120,7 @@ namespace Datos
             return plan;
         }
 
-        public int Modificar(Planes plan)
+        /*public int Modificar(Planes plan)
         {
             using (var command = _connection.CreateCommand())
             {
@@ -95,6 +133,22 @@ namespace Datos
                 command.CommandText = "UPDATE planes SET NombrePlan = :NombrePlan, ValorPlan = :ValorPlan,"+
                     "Duracion = :Duracion WHERE CodPlan = :CodPlan";
                 
+                return command.ExecuteNonQuery();
+            }
+        }*/
+
+        public int Modificar(Planes plan)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "P_ModificarPlan";
+                command.BindByName = true;
+                command.Parameters.Add("P_CodPlan", OracleDbType.Varchar2).Value = plan.CodigoPlan;
+                command.Parameters.Add("P_NombrePlan", OracleDbType.Varchar2).Value = plan.Nombre;
+                command.Parameters.Add("P_ValorPlan", OracleDbType.Decimal).Value = plan.ValorPlan;
+                command.Parameters.Add("P_Duracion", OracleDbType.Int64).Value = plan.Dias;
+
                 return command.ExecuteNonQuery();
             }
         }
