@@ -120,9 +120,9 @@ namespace Presentación
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.MenuVertical.Controls.Add(this.SubMenuPalnes);
             this.MenuVertical.Controls.Add(this.PanelContabilidad);
             this.MenuVertical.Controls.Add(this.BtnContabilidad);
-            this.MenuVertical.Controls.Add(this.SubMenuPalnes);
             this.MenuVertical.Controls.Add(this.BtnPlanes);
             this.MenuVertical.Controls.Add(this.BtnInicio);
             this.MenuVertical.Controls.Add(this.PanelPlanes);
@@ -180,7 +180,7 @@ namespace Presentación
             this.SubMenuPalnes.Controls.Add(this.BtnPlanes_consultar);
             this.SubMenuPalnes.Controls.Add(this.panel33);
             this.SubMenuPalnes.Controls.Add(this.BtnPlanes_registrar);
-            this.SubMenuPalnes.Location = new System.Drawing.Point(18, 187);
+            this.SubMenuPalnes.Location = new System.Drawing.Point(18, 199);
             this.SubMenuPalnes.Name = "SubMenuPalnes";
             this.SubMenuPalnes.Size = new System.Drawing.Size(138, 96);
             this.SubMenuPalnes.TabIndex = 11;
@@ -771,6 +771,7 @@ namespace Presentación
             this.BtnUsuarios_consultar.Size = new System.Drawing.Size(135, 25);
             this.BtnUsuarios_consultar.TabIndex = 5;
             this.BtnUsuarios_consultar.Text = "   Consultar";
+            this.BtnUsuarios_consultar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnUsuarios_consultar.UseVisualStyleBackColor = true;
             this.BtnUsuarios_consultar.Click += new System.EventHandler(this.BtnUsuarios_consultar_Click);
             // 
