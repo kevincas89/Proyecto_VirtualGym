@@ -2,6 +2,7 @@
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Datos
             _connection = connection._connection;
         }
 
-        public int GuardarCliente(Clientes cliente)
+        /*public int GuardarCliente(Clientes cliente)
         {
             using (var command = _connection.CreateCommand())
             {
@@ -46,6 +47,33 @@ namespace Datos
                 command.Parameters.Add(":IMC", OracleDbType.Double).Value = cliente.IndiceMasaCorporal;
                 command.Parameters.Add(":CodPlan", OracleDbType.Varchar2).Value = cliente.plan.CodigoPlan;
                 command.Parameters.Add(":IdentificacionEntrenador", OracleDbType.Varchar2).Value = cliente.entrenador.Identificacion;
+                var filas = command.ExecuteNonQuery();
+                return filas;
+            }
+        }*/
+
+        public int GuardarCliente(Clientes cliente)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "agg_cliente";
+                command.BindByName = true;
+                
+                command.Parameters.Add("IdentificacionCliente", OracleDbType.Varchar2).Value = cliente.Identificacion;
+                command.Parameters.Add("PrimerNombre", OracleDbType.Varchar2).Value = cliente.PrimerNombre;
+                command.Parameters.Add("SegundoNombre", OracleDbType.Varchar2).Value = cliente.SegundoNombre;
+                command.Parameters.Add("PrimerApellido", OracleDbType.Varchar2).Value = cliente.PrimerApellido;
+                command.Parameters.Add("SegundoApellido", OracleDbType.Varchar2).Value = cliente.SegundoApellido;
+                command.Parameters.Add("Sexo", OracleDbType.Char).Value = cliente.Sexo;
+                command.Parameters.Add("FechaNacimiento", OracleDbType.Date).Value = cliente.FechaNacimiento;
+                command.Parameters.Add("Telefono1", OracleDbType.Varchar2).Value = cliente.Celular1;
+                command.Parameters.Add("Telefono2", OracleDbType.Varchar2).Value = cliente.Celular2;
+                command.Parameters.Add("Peso", OracleDbType.Double).Value = cliente.Peso;
+                command.Parameters.Add("Altura", OracleDbType.Double).Value = cliente.Altura;
+                command.Parameters.Add("IMC", OracleDbType.Double).Value = cliente.IndiceMasaCorporal;
+                command.Parameters.Add("CodPlan", OracleDbType.Varchar2).Value = cliente.plan.CodigoPlan;
+                command.Parameters.Add("IdentificacionEntrenador", OracleDbType.Varchar2).Value = cliente.entrenador.Identificacion;
                 var filas = command.ExecuteNonQuery();
                 return filas;
             }
@@ -113,7 +141,7 @@ namespace Datos
             return clientes;
         }
 
-        public int ModificarCliente(Clientes cliente)
+        /*public int ModificarCliente(Clientes cliente)
         {
             using (var command = _connection.CreateCommand())
             {
@@ -141,7 +169,45 @@ namespace Datos
                                            
                 return command.ExecuteNonQuery();
             }
+        }*/
+
+        public int ModificarCliente(Clientes cliente)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "P_ModificarCliente";
+                command.BindByName = true;
+
+                command.Parameters.Add("P_IdentificacionCliente", OracleDbType.Varchar2).Value = cliente.Identificacion;
+                command.Parameters.Add("P_PrimerNombre", OracleDbType.Varchar2).Value = cliente.PrimerNombre;
+                command.Parameters.Add("P_SegundoNombre", OracleDbType.Varchar2).Value = cliente.SegundoNombre;
+                command.Parameters.Add("P_PrimerApellido", OracleDbType.Varchar2).Value = cliente.PrimerApellido;
+                command.Parameters.Add("P_SegundoApellido", OracleDbType.Varchar2).Value = cliente.SegundoApellido;
+                command.Parameters.Add("P_Sexo", OracleDbType.Char).Value = cliente.Sexo;
+                command.Parameters.Add("P_FechaNacimiento", OracleDbType.Date).Value = cliente.FechaNacimiento;
+                command.Parameters.Add("P_Telefono1", OracleDbType.Varchar2).Value = cliente.Celular1;
+                command.Parameters.Add("P_Telefono2", OracleDbType.Varchar2).Value = cliente.Celular2;
+                command.Parameters.Add("P_Peso", OracleDbType.Double).Value = cliente.Peso;
+                command.Parameters.Add("P_Altura", OracleDbType.Double).Value = cliente.Altura;
+                command.Parameters.Add("P_IMC", OracleDbType.Double).Value = cliente.IndiceMasaCorporal;
+                
+                return command.ExecuteNonQuery();
+            }
         }
 
+        public int EliminarCliente(string IdentificacionCliente)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "P_EliminarCliente";
+                command.BindByName = true;
+
+                command.Parameters.Add("P_IdentificacionCliente", OracleDbType.Varchar2).Value = IdentificacionCliente;
+               
+                return command.ExecuteNonQuery();
+            }
+        }
     }
 }

@@ -11,11 +11,24 @@ namespace Entidad
         
         public Clientes()
         {
-            Tipo = "Clientes";       
-            SegundoNombre = "vacio";
-            SegundoApellido = "vacio";
-            Celular1 = "vacio";
-            Celular2 = "vacio";
+            Tipo = "Clientes";
+            if (SegundoNombre == null)
+            {
+                SegundoNombre = "  ";
+            }
+            if (SegundoApellido == null)
+            {
+                SegundoApellido = "  ";
+            }
+            if (Celular1 == null)
+            {
+                Celular1 = "  ";
+            }
+            if (Celular2 == null)
+            {
+                Celular2 = "  ";
+            }
+
         }
 
         //public int DiasDisponibles { get; set; }        

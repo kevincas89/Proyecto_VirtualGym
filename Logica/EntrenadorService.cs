@@ -24,9 +24,12 @@ namespace Logica
             try
             {
                 connection.Open();
-
-                repository.GuardarEntrenador(entrenador);
-                return $"Se guardo el entrenador {entrenador.PrimerNombre} exitosamente.";
+                if (repository.BuscarPorIdentificacionEntrenador(entrenador.Identificacion)==null)
+                {
+                    repository.GuardarEntrenador(entrenador);
+                    return $"Se guardo el entrenador {entrenador.PrimerNombre} exitosamente.";
+                }
+                return $"El entrenador ya se encuentra registrado.";
             }
             catch (Exception e)
             {
@@ -61,6 +64,26 @@ namespace Logica
                 {
                     repository.ModificarEntrenador(entrenador);
                     return $"El entrenador ha sido modificado de manera exitosa";
+                }
+                return $"La identificacion del entrenador no se ha encotrado";
+            }
+            catch (Exception e) { return $"Se presento la siguiente Excepción: {e.Message}"; }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
+        public string EliminarEntrenador(string IdentificacionEntrenador)
+        {
+            try
+            {
+                connection.Open();
+
+                if (repository.BuscarPorIdentificacionEntrenador(IdentificacionEntrenador) != null)
+                {
+                    repository.EliminarEntrenador(IdentificacionEntrenador);
+                    return $"El entrenador ha sido eliminado de manera exitosa";
                 }
                 return $"La identificacion del entrenador no se ha encotrado";
             }
