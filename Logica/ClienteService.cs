@@ -83,6 +83,28 @@ namespace Logica
             }
 
         }
+
+        public string EliminarCliente(string IdentifiacionCliente)
+        {
+            try
+            {
+                connection.Open();
+
+                if (repository.BuscarPorIdentificacionCliente(IdentifiacionCliente) != null)
+                { 
+                    repository.EliminarCliente(IdentifiacionCliente);
+                    return $"Cliente eliminado de manera exitosa";
+                }
+                return $"La identificacion del cliente no se ha encotrado";
+            }
+            catch (Exception e) { return $"Se presento la siguiente Excepción: {e.Message}"; }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
+
         public ClienteRegistroResponse BuscarRegistro(string IdentifiacionCliente)
         {
             try

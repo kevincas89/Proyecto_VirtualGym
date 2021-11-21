@@ -153,5 +153,17 @@ namespace Datos
             }
         }
 
+        public int Eliminar(string CodPlan)
+        {
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "P_EliminarPlan";
+                command.BindByName = true;
+                command.Parameters.Add("P_CodPlan", OracleDbType.Varchar2).Value = CodPlan;
+
+                return command.ExecuteNonQuery();
+            }
+        }
     }
 }

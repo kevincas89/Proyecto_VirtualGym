@@ -12,10 +12,23 @@ namespace Entidad
         public Entrenador()
         {
             Tipo = "Entrenador";
-            SegundoNombre = "vacio";
-            SegundoApellido = "vacio";
-            Celular1 = "vacio";
-            Celular2 = "vacio";
+            if (SegundoNombre == null)
+            {
+                SegundoNombre = "  ";
+            }
+            if (SegundoApellido == null)
+            {
+                SegundoApellido = "  ";
+            }
+            if (Celular1 == null)
+            {
+                Celular1 = "  ";
+            }
+            if (Celular2 == null)
+            {
+                Celular2 = "  ";
+            }
+             
         }
         public double Sueldo { get; set; }
 

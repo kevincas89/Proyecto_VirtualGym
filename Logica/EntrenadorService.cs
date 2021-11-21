@@ -74,6 +74,26 @@ namespace Logica
             }
 
         }
+        public string EliminarEntrenador(string IdentificacionEntrenador)
+        {
+            try
+            {
+                connection.Open();
+
+                if (repository.BuscarPorIdentificacionEntrenador(IdentificacionEntrenador) != null)
+                {
+                    repository.EliminarEntrenador(IdentificacionEntrenador);
+                    return $"El entrenador ha sido eliminado de manera exitosa";
+                }
+                return $"La identificacion del entrenador no se ha encotrado";
+            }
+            catch (Exception e) { return $"Se presento la siguiente Excepción: {e.Message}"; }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
         public EntrenadorRegistroResponse BuscarRegistro(string IdentifiacionEntrenador)
         {
             try

@@ -71,6 +71,27 @@ namespace Logica
 
         }
 
+        public string Eliminar(string CodPlan)
+        {
+            try
+            {
+                connection.Open();
+
+                if (repository.BuscarPorCodigoPlan(CodPlan) != null)
+                {
+                    repository.Eliminar(CodPlan);
+                    return $"Plan eliminado de manera exitosa";
+                }
+                return $"El codigo del plan no se ha encotrado";
+            }
+            catch (Exception e) { return $"Se presento la siguiente Excepción: {e.Message}"; }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
+
         public PlanRegistroResponse BuscarRegistro(string CodPlan)
         {
             try
