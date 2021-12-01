@@ -24,9 +24,12 @@ namespace Logica
             try
             {
                 connection.Open();
-
-                repository.GuardarPlan(plan);
-                return $"se guardo el plan {plan.Nombre} exitosamente.";
+                if (repository.BuscarPorCodigoPlan(plan.CodigoPlan) == null)
+                {
+                    repository.GuardarPlan(plan);
+                    return $"se guardo el plan {plan.Nombre} exitosamente.";
+                }
+                return $"El plan ya se encuentra registrado.";
             }
             catch (Exception e)
             {
